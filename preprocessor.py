@@ -7,9 +7,11 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
+from nltk.corpus import wordnet
 nltk.download('stopwords')
 nltk.download('punkt')
 nltk.download('wordnet')
+nltk.download('averaged_perceptron_tagger')
 
 class Preprocessor:
 
@@ -206,9 +208,31 @@ class Preprocessor:
             if palabra not in stopwords.words('english'):
                 textoNuevo = textoNuevo + " " + palabra
         return(textoNuevo)
-
+    
+    def aux_lematizar(palabra):
+        tag = nltk.pos_tag([palabra])[0][1][0].upper()
+        tag_dict = {"J": wordnet.ADJ,
+                    "N": wordnet.NOUN,
+                    "V": wordnet.VERB,
+                    "R": wordnet.ADV}
+        return tag_dict.get(tag, wordnet.NOUN)
+    
     def lematizar(texto):  # dado un string, lematiza las palabras de ese string
-        texto = word_tokenize(texto)
+        texto = nltk.word_tokenize(texto)
+    
+        # Inicializar el lematizador
+        lemmatizer = WordNetLemmatizer()
+        
+        # Lematizar cada palabra y agregarla a una lista
+        palabras_lematizadas = []
+        for palabra in texto:
+            pos = Preprocessor.aux_lematizar(palabra)
+            palabra_l = lemmatizer.lemmatize(palabra, pos=pos)
+            palabras_lematizadas.append(palabra_l)
+        
+        # Unir las palabras lematizadas en un solo string y devolverlo
+        texto_lematizado = ' '.join(palabras_lematizadas)
+        return texto_lematizado
 
 
-print(Preprocessor.lematizar("i am eating in your passport believable"))
+print(Preprocessor.lematizar("flying planes can be dangerous and became bigger"))
