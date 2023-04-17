@@ -183,7 +183,7 @@ class Preprocessor:
         return pMl_dataset,target_map
     
     def normalizarTexto(texto):
-        pass
+        return(texto.lower())
 
     def eliminarSignosPuntuacion(texto):
         pass
