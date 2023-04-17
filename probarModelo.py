@@ -49,7 +49,7 @@ if __name__ == '__main__':
         elif opt in ('-t', '--target'):
             targetColumnName = arg
         elif opt in ('-a', '--algorithm'):
-            algorithms = ['knn', 'decision tree']
+            algorithms = ['knn', 'decision tree', 'logistic regression']
             algorithm = algorithms[int(arg)]
         elif opt in ('-r', '--rescale'):
             rescaleOption = arg
