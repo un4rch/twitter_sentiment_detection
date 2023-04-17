@@ -39,6 +39,7 @@ from sklearn.metrics import confusion_matrix
 #from sklearn.metrics import recall_score
 #from sklearn.metrics import accuracy_score
 import pickle
+from sklearn.linear_model import LogisticRegression
 from preprocessor import Preprocessor
 
 inputFile = None
@@ -48,7 +49,7 @@ imputeOption = None
 imputeOptions = ['MEAN', 'MEDIAN', 'MODE', 'CONSTANT']
 algorithm = None
 printStats = False
-algorithms = ['knn', 'decision tree', 'random forest', 'naive bayes']
+algorithms = ['knn', 'decision tree', 'random forest', 'naive bayes', 'logistic regression']
 rescaleOption = None
 rescaleOptions = ['MAX', 'MINMAX', 'Z-SCALE']
 testSize = 0.2
@@ -316,6 +317,15 @@ def crearModelo(pml_dataset, palgorithm, ptarget_map):
                     #results_test = results_test.join(test[targetColumn], how='left')
                     #results_test = results_test.rename(columns= {targetColumn: 'TARGET'})
                     #print(results_test)
+    elif algorithms[palgorithm] == 'logistic regression':
+        penalizacion="l2"
+        clf = LogisticRegression(penalty=penalizacion,random_state=1337)
+        clf.class_weight = "balanced"
+        clf.fit(trainX, trainY)
+        predictions = clf.predict(testX)        
+        fScore = f1_score(testY, predictions, average=fScoreAverage)
+        reporte = classification_report(testY,predictions)
+        modelos.append([clf,fScore,reporte,penalizacion])
     ml_model = None
     fScoreBest = 0
     #modelargs = 
