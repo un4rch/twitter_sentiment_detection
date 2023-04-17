@@ -3,6 +3,13 @@ import sys
 import os
 import numpy as np
 import time
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
+nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('wordnet')
 
 class Preprocessor:
 
@@ -187,13 +194,21 @@ class Preprocessor:
 
     def eliminarSignosPuntuacion(texto):  # dado un string, devuelve el mismo string eliminando todos los caracteres que no sean alfabéticos
         textoNuevo = ""
-        for caracter in texto: # por cada caracter en el texto
+        for caracter in texto:  # por cada caracter en el texto
             if caracter.isalpha(): # si pertenece al conjunto de letras del alfabeto, se engancha a "textoNuevo"
                 textoNuevo = textoNuevo + caracter
         return(textoNuevo)
 
-    def eliminarStopWords(texto):
-        pass
+    def eliminarStopWords(texto):  # dado un string, elimina las stopwords de ese string
+        texto = word_tokenize(texto, language='english')
+        textoNuevo = ""
+        for palabra in texto:
+            if palabra not in stopwords.words('english'):
+                textoNuevo = textoNuevo + " " + palabra
+        return(textoNuevo)
 
-    def lematizar(texto):
-        pass
+    def lematizar(texto):  # dado un string, lematiza las palabras de ese string
+        texto = word_tokenize(texto)
+
+
+print(Preprocessor.lematizar("i am eating in your passport believable"))
