@@ -182,11 +182,15 @@ class Preprocessor:
         
         return pMl_dataset,target_map
     
-    def normalizarTexto(texto):
+    def normalizarTexto(texto):  # dado un string que contenga palabras, devuelve un string donde todas las letras sean minúsculas
         return(texto.lower())
 
-    def eliminarSignosPuntuacion(texto):
-        pass
+    def eliminarSignosPuntuacion(texto):  # dado un string, devuelve el mismo string eliminando todos los caracteres que no sean alfabéticos
+        textoNuevo = ""
+        for caracter in texto: # por cada caracter en el texto
+            if caracter.isalpha(): # si pertenece al conjunto de letras del alfabeto, se engancha a "textoNuevo"
+                textoNuevo = textoNuevo + caracter
+        return(textoNuevo)
 
     def eliminarStopWords(texto):
         pass
