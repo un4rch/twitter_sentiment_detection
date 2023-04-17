@@ -181,3 +181,15 @@ class Preprocessor:
         pMl_dataset, target_map = self.convertTargetToClassifyInt(pMl_dataset, pTargetColumn)
         
         return pMl_dataset,target_map
+    
+    def normalizarTexto(texto):
+        pass
+
+    def eliminarSignosPuntuacion(texto):
+        pass
+
+    def eliminarStopWords(texto):
+        pass
+
+    def lematizar(texto):
+        pass
