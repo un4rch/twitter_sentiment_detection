@@ -4,6 +4,7 @@ import os
 import numpy as np
 import time
 import nltk
+import emot
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
@@ -190,6 +191,12 @@ class Preprocessor:
         pMl_dataset, target_map = self.convertTargetToClassifyInt(pMl_dataset, pTargetColumn)
         
         return pMl_dataset,target_map
+    
+    def convertirEmojis(texto):
+        diccionario_emojis = emot.emo_unicode.EMOTICONS_EMO
+        for emoji, texto_emoji in diccionario_emojis.items():
+            texto = texto.replace(emoji, texto_emoji)
+        return texto
     
     def normalizarTexto(texto):  # dado un string que contenga palabras, devuelve un string donde todas las letras sean minúsculas
         return(texto.lower())
