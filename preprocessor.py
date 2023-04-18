@@ -233,6 +233,3 @@ class Preprocessor:
         # Unir las palabras lematizadas en un solo string y devolverlo
         texto_lematizado = ' '.join(palabras_lematizadas)
         return texto_lematizado
-
-
-print(Preprocessor.lematizar("flying planes can be dangerous and became bigger"))
