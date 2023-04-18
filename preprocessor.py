@@ -204,10 +204,10 @@ class Preprocessor:
     def eliminarSignosPuntuacion(texto):  # dado un string, devuelve el mismo string eliminando todos los caracteres que no sean alfabéticos
         textoNuevo = ""
         for caracter in texto:  # por cada caracter en el texto
-            if caracter.isalpha(): # si pertenece al conjunto de letras del alfabeto, se engancha a "textoNuevo"
+            if caracter.isalpha() or caracter == " ": # si pertenece al conjunto de letras del alfabeto, se engancha a "textoNuevo"
                 textoNuevo = textoNuevo + caracter
         return(textoNuevo)
-
+    
     def eliminarStopWords(texto):  # dado un string, elimina las stopwords de ese string
         texto = word_tokenize(texto, language='english')
         textoNuevo = ""
@@ -241,7 +241,7 @@ class Preprocessor:
         texto_lematizado = ' '.join(palabras_lematizadas)
         return texto_lematizado
     
-    def procesarLenguajeNatural(texto):  # realiza todo el preproceso de un string en el orden correcto
+    def preprocesarLenguajeNatural(texto):  # realiza todo el preproceso de un string en el orden correcto
         texto = Preprocessor.convertirEmojis(texto)
         texto = Preprocessor.eliminarSignosPuntuacion(texto)
         texto = Preprocessor.normalizarTexto(texto)
