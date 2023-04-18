@@ -192,7 +192,7 @@ class Preprocessor:
         
         return pMl_dataset,target_map
     
-    def convertirEmojis(texto):
+    def convertirEmojis(texto):  # convierte un emoji en un conjunto de palabras en inglés que lo representan
         diccionario_emojis = emot.emo_unicode.EMOTICONS_EMO
         for emoji, texto_emoji in diccionario_emojis.items():
             texto = texto.replace(emoji, texto_emoji)
@@ -240,3 +240,11 @@ class Preprocessor:
         # Unir las palabras lematizadas en un solo string y devolverlo
         texto_lematizado = ' '.join(palabras_lematizadas)
         return texto_lematizado
+    
+    def procesarLenguajeNatural(texto):  # realiza todo el preproceso de un string en el orden correcto
+        texto = Preprocessor.convertirEmojis(texto)
+        texto = Preprocessor.eliminarSignosPuntuacion(texto)
+        texto = Preprocessor.normalizarTexto(texto)
+        texto = Preprocessor.eliminarStopWords(texto)
+        texto = Preprocessor.lematizar(texto)
+        return texto
