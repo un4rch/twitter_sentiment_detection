@@ -38,6 +38,7 @@ from sklearn.metrics import confusion_matrix
 #from sklearn.metrics import precision_score
 #from sklearn.metrics import recall_score
 #from sklearn.metrics import accuracy_score
+from sklearn.linear_model import LogisticRegression
 import pickle
 from preprocessor import Preprocessor
 from sklearn.preprocessing import KBinsDiscretizer
@@ -51,7 +52,7 @@ imputeOption = None
 imputeOptions = ['MEAN', 'MEDIAN', 'MODE', 'CONSTANT']
 algorithm = None
 printStats = False
-algorithms = ['knn', 'decision tree', 'naive bayes', 'random forest']
+algorithms = ['knn', 'decision tree', 'naive bayes', 'logistic regression', 'random forest']
 rescaleOption = None
 rescaleOptions = ['MAX', 'MINMAX', 'Z-SCALE']
 testSize = 0.2
@@ -99,6 +100,7 @@ def helpPanel():
     print('\t\t\t\t\t\t\t\tmin_samples_leaf=[1,2]')
     #print('\t\t\t\t\t\t\t2: random forest')
     print('\t\t\t\t\t\t\t2: Naibe Bayes (-a 2)')
+    print('\t\t\t\t\t\t\t2: Logistic Regression (-a 3)')
     print('\t-h|--help \t\t\t\tPrint this help panel')
     print('\t-i|--impute <name>\t\t\tChoose impute method (filename,MEAN,MEDIAN,MODE,CONSTANT <n>)')
     print('\t\t\t\t\t\t\tfilename: file containing impute method for each column splicitly')
@@ -186,7 +188,7 @@ def comprobarArgumentosEntradaObligatorios():
     for i,value in enumerate(sys.argv[1:]):
         if value in ['-a', '--algorithm']:
             values = sys.argv[1:][i+shift:i+shift+3]
-            if int(sys.argv[1:][i+1]) != 2:
+            if int(sys.argv[1:][i+1]) != 2 and int(sys.argv[1:][i+1]) != 3:
                 for value in values:
                     if value not in remainder:
                         error = True
@@ -225,7 +227,6 @@ def comprobarArgumentosEntradaObligatorios():
                     print('[!] Indica bien los argumentos del algoritmo decision tree')
                     sys.exit(1)
     if error:
-        print("aaaa")
         helpPanel()
         sys.exit(1)
 
@@ -249,6 +250,7 @@ def cargarDataset(pInputFile):
 
 def crearModelo(pml_dataset, palgorithm, ptarget_map):
     global evaluation
+    global randomState
     global esMixedNB
     if evaluation != None:
         fScoreAverage = evaluation
@@ -358,6 +360,16 @@ def crearModelo(pml_dataset, palgorithm, ptarget_map):
             usedNaiveBayes = "Gaussian"
         reporte = classification_report(testY,predictions)
         modelos.append([clf,fScore,reporte,{'Naive type': usedNaiveBayes}])
+    elif algorithms[palgorithm] == 'logistic regression':
+        clf = LogisticRegression(penalty="l2",random_state=randomState, max_iter=1000)
+        clf.class_weight = "balanced"
+        clf.fit(trainX, trainY)
+        preditctionsLR = clf.predict(testX)
+        fScoreLR = f1_score(testY, preditctionsLR, average=fScoreAverage)
+        reporteLR = classification_report(testY, preditctionsLR)
+        print(reporteLR)
+        modelos.append([clf,fScoreLR,reporteLR])
+
 
     ml_model = None
     fScoreBest = 0
