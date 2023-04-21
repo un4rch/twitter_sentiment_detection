@@ -181,6 +181,11 @@ class Preprocessor:
             else:
                 pMl_dataset = self.imputeMissingValues(pMl_dataset,pImputeOption, None)
     
+        # procesar lenguaje natural
+        if pAlgorithm == "naive bayes" or pAlgorithm == "logistic regression":
+            for fila in pMl_dataset:
+                Preprocessor.preprocesarLenguajeNatural(fila)
+
         # Convertir los datos del dataset a float o unicode
         pMl_dataset = self.parseDataTypes(pMl_dataset)
     
@@ -252,6 +257,4 @@ class Preprocessor:
         texto = Preprocessor.eliminarStopWords(texto)
         texto = Preprocessor.lematizar(texto)
         return texto
-    
-texto = Preprocessor.convertirEmojis("hola 😊")
-print(Preprocessor.eliminarSignosPuntuacion(texto))
+
