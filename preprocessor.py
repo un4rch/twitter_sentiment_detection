@@ -5,6 +5,7 @@ import numpy as np
 import time
 import nltk
 import emot
+import emoji
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
@@ -193,9 +194,10 @@ class Preprocessor:
         return pMl_dataset,target_map
     
     def convertirEmojis(texto):  # convierte un emoji en un conjunto de palabras en inglés que lo representan
+        texto = emoji.demojize(texto)
         diccionario_emojis = emot.emo_unicode.EMOTICONS_EMO
-        for emoji, texto_emoji in diccionario_emojis.items():
-            texto = texto.replace(emoji, texto_emoji)
+        for emoticono, texto_emoji in diccionario_emojis.items():
+            texto = texto.replace(emoticono, texto_emoji)
         return texto
     
     def normalizarTexto(texto):  # dado un string que contenga palabras, devuelve un string donde todas las letras sean minúsculas
@@ -204,7 +206,9 @@ class Preprocessor:
     def eliminarSignosPuntuacion(texto):  # dado un string, devuelve el mismo string eliminando todos los caracteres que no sean alfabéticos
         textoNuevo = ""
         for caracter in texto:  # por cada caracter en el texto
-            if caracter.isalpha() or caracter == " ": # si pertenece al conjunto de letras del alfabeto, se engancha a "textoNuevo"
+            if caracter == "_":  # si es una barra baja, entonces se traduce como espacio
+                textoNuevo = textoNuevo + " "
+            if caracter.isalpha() or caracter == " ":  # si pertenece al conjunto de letras del alfabeto, se engancha a "textoNuevo"
                 textoNuevo = textoNuevo + caracter
         return(textoNuevo)
     
@@ -248,3 +252,6 @@ class Preprocessor:
         texto = Preprocessor.eliminarStopWords(texto)
         texto = Preprocessor.lematizar(texto)
         return texto
+    
+texto = Preprocessor.convertirEmojis("hola 😊")
+print(Preprocessor.eliminarSignosPuntuacion(texto))
