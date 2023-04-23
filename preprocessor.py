@@ -191,9 +191,7 @@ class Preprocessor:
         # Enumerar los valores de la columna TARGET para clasificarlos por numeros
         pMl_dataset, target_map = self.convertTargetToClassifyInt(pMl_dataset, pTargetColumn)
 
-        #TODO preprocesar stopwrods, etc...
-
-        # procesar lenguaje natural
+        # preprocesar lenguaje natural
         if pAlgorithm == "naive bayes" or pAlgorithm == "logistic regression":
             vectorizador = TfidfVectorizer()
             for columnaLN in pNLcolumns:
