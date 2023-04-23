@@ -12,6 +12,7 @@ from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet
 from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
 
 nltk.download('stopwords') # Palabras que no aportan valor al texto (in, of, and, ...)
 nltk.download('punkt')
@@ -194,20 +195,23 @@ class Preprocessor:
 
         # preprocesar lenguaje natural
         if pAlgorithm == "naive bayes" or pAlgorithm == "logistic regression":
+            # escogemos la técnica de preproceso de lenguaje natural
             if pNLtechnique == "tfidf":
                 vectorizador = TfidfVectorizer()
-                for columnaLN in pNLcolumns:
-                    pMl_dataset[columnaLN] = Preprocessor.preprocesarLenguajeNatural(pMl_dataset[columnaLN])
-                    columnaTFidf = vectorizador.fit_transform(pMl_dataset[columnaLN])
-                    vocabulario = vectorizador.get_feature_names_out()
-                    tfidf_df = pd.DataFrame(columnaTFidf.toarray(), columns=vocabulario)
-                    pMl_dataset = pd.concat([pMl_dataset, tfidf_df], axis=1)
+            elif pNLtechnique == "bow":
+                vectorizador = CountVectorizer()
+            
+            # realizamos el preprocesado
+            for columnaLN in pNLcolumns:
+                pMl_dataset[columnaLN] = Preprocessor.preprocesarLenguajeNatural(pMl_dataset[columnaLN])
+                columnaTech = vectorizador.fit_transform(pMl_dataset[columnaLN])
+                vocabulario = vectorizador.get_feature_names_out()
+                tech_df = pd.DataFrame(columnaTech.toarray(), columns=vocabulario)
+                pMl_dataset = pd.concat([pMl_dataset, tech_df], axis=1)
                 for columnaLN in pNLcolumns:
                     pMl_dataset = pMl_dataset.drop(columnaLN, axis=1)
                 with open('vocabulario.pkl', 'wb') as f:
                     pickle.dump(vocabulario, f)
-            elif pNLtechnique == "BOW":
-                pass
         
         return pMl_dataset,target_map
     
