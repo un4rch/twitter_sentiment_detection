@@ -48,7 +48,7 @@ from mixed_naive_bayes import MixedNB
 inputFile = None
 excludedColumns = "tweet_id,airline_sentiment_confidence,negativereason,negativereason_confidence,airline,name,retweet_count,tweet_coord,tweet_created,tweet_location,user_timezone"
 NLcolumns = ["text"]
-NLtecnique = ""
+NLtecnique = "tfidf"
 targetColumn = None
 imputeOption = None
 imputeOptions = ['MEAN', 'MEDIAN', 'MODE', 'CONSTANT']
