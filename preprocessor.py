@@ -210,7 +210,7 @@ class Preprocessor:
                 pMl_dataset = pd.concat([pMl_dataset, tech_df], axis=1)
             for columnaLN in pNLcolumns:
                 pMl_dataset = pMl_dataset.drop(columnaLN, axis=1)
-            with open('vocabulario.pkl', 'wb') as f:
+            with open(pNLtechnique + '.pkl', 'wb') as f:
                 pickle.dump(vocabulario, f)
         
         return pMl_dataset,target_map
