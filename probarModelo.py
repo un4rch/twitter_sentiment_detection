@@ -83,7 +83,7 @@ if __name__ == '__main__':
             tfidf = TfidfVectorizer(vocabulary=vocabulario)
             for columnaNL in NLcolumns:
                 testX[columnaNL] = tfidf.fit_transform(testX[columnaNL])
-        elif NLtechnique == 'BOW':
+        elif NLtechnique == 'bow':
             #TODO
             None
     except:
