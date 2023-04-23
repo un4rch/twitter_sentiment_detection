@@ -21,6 +21,8 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import LogisticRegression
 from preprocessor import Preprocessor
 from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
+
 iFile = None
 model = None
 targetColumn = None
@@ -78,14 +80,14 @@ if __name__ == '__main__':
     preprocessor = Preprocessor()
     testX, target_map = preprocessor.preprocessDataset(testX, None, algorithm, excludedColumns, imputeOption, rescaleOption, NLcolumns)
     try:
+        #
         vocabulario = pickle.load(open(NLtechnique+".pkl", 'rb'))
         if NLtechnique == 'tfidf':
-            tfidf = TfidfVectorizer(vocabulary=vocabulario)
-            for columnaNL in NLcolumns:
-                testX[columnaNL] = tfidf.fit_transform(testX[columnaNL])
+            vector = TfidfVectorizer(vocabulary=vocabulario)
         elif NLtechnique == 'bow':
-            #TODO
-            None
+            vector = CountVectorizer(vocabulary=vocabulario)
+        for columnaNL in NLcolumns:
+            testX[columnaNL] = vector.fit_transform(testX[columnaNL])
     except:
         None
     if targetColumnName != None:
