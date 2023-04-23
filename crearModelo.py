@@ -48,6 +48,7 @@ from mixed_naive_bayes import MixedNB
 inputFile = None
 excludedColumns = "tweet_id,airline_sentiment_confidence,negativereason,negativereason_confidence,airline,name,retweet_count,tweet_coord,tweet_created,tweet_location,user_timezone"
 NLcolumns = ["text"]
+NLtecnique = ""
 targetColumn = None
 imputeOption = None
 imputeOptions = ['MEAN', 'MEDIAN', 'MODE', 'CONSTANT']
@@ -393,8 +394,8 @@ if __name__ == '__main__':
 
     # Definir argumentos de entrada
     input_args = sys.argv[1:]
-    short_opts = "f:e:t:hi:a:sr:o:m:"
-    long_opts = ['file=', 'exclude=', 'target=', 'help', 'impute=', 'algorithm=', 'stats', 'rescale=', 'test-size=', 'random-state=', 'output=']
+    short_opts = "f:e:t:hi:a:c:sr:o:m:"
+    long_opts = ['file=', 'exclude=', 'target=', 'help', 'impute=', 'algorithm=', 'tecnique=', 'stats', 'rescale=', 'test-size=', 'random-state=', 'output=']
     
     # Parsear los argumentos y sus valores
     try:
@@ -435,6 +436,11 @@ if __name__ == '__main__':
                 
             if algorithm >= len(algorithms) or algorithm < 0:
                 print('[!] The algorithm selection is out of range, choose a valid one')
+                sys.exit(1)
+        elif opt in ('-c', '--tecnique'):
+            NLtecnique = arg
+            if NLtecnique != "BOW" or NLtecnique != "tfidf":
+                print('[!] The natural language tecnique must be "BOW" or "tfidf", choose one of theese two options')
                 sys.exit(1)
         elif opt in ('-s', '--stats'):
             printStats = True
@@ -477,7 +483,7 @@ if __name__ == '__main__':
 
     #print(f'{targetColumn}, {algorithms[algorithm]}, {excludedColumns}, {imputeOption}, {rescaleOption}')
     preprocessor = Preprocessor()
-    ml_dataset,target_map = preprocessor.preprocessDataset(ml_dataset, targetColumn, algorithms[algorithm], excludedColumns, imputeOption, rescaleOption, NLcolumns)
+    ml_dataset,target_map = preprocessor.preprocessDataset(ml_dataset, targetColumn, algorithms[algorithm], excludedColumns, imputeOption, rescaleOption, NLcolumns, NLtecnique)
 
     ml_model = crearModelo(ml_dataset, algorithm, target_map)
 
