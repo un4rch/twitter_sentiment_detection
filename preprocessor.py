@@ -208,10 +208,10 @@ class Preprocessor:
                 vocabulario = vectorizador.get_feature_names_out()
                 tech_df = pd.DataFrame(columnaTech.toarray(), columns=vocabulario)
                 pMl_dataset = pd.concat([pMl_dataset, tech_df], axis=1)
-                for columnaLN in pNLcolumns:
-                    pMl_dataset = pMl_dataset.drop(columnaLN, axis=1)
-                with open('vocabulario.pkl', 'wb') as f:
-                    pickle.dump(vocabulario, f)
+            for columnaLN in pNLcolumns:
+                pMl_dataset = pMl_dataset.drop(columnaLN, axis=1)
+            with open('vocabulario.pkl', 'wb') as f:
+                pickle.dump(vocabulario, f)
         
         return pMl_dataset,target_map
     
