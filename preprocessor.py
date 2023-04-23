@@ -6,6 +6,7 @@ import time
 import nltk
 import emot
 import emoji
+import pickle
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
@@ -165,7 +166,7 @@ class Preprocessor:
         #del pMl_dataset[targetColumn]
         return pMl_dataset, target_map
     
-    def preprocessDataset(self, pMl_dataset, pTargetColumn, pAlgorithm, pExcludedColumns, pImputeOption, pRescaleOption, pNLcolumns, pNLtecnique):
+    def preprocessDataset(self, pMl_dataset, pTargetColumn, pAlgorithm, pExcludedColumns, pImputeOption, pRescaleOption, pNLcolumns, pNLtechnique):
         # Eliminar columnas que no interesan
         if pExcludedColumns != None:
             columnNames = pExcludedColumns.split(',')
@@ -193,16 +194,19 @@ class Preprocessor:
 
         # preprocesar lenguaje natural
         if pAlgorithm == "naive bayes" or pAlgorithm == "logistic regression":
-            if pNLtecnique == "tfidf":
+            if pNLtechnique == "tfidf":
                 vectorizador = TfidfVectorizer()
                 for columnaLN in pNLcolumns:
                     pMl_dataset[columnaLN] = Preprocessor.preprocesarLenguajeNatural(pMl_dataset[columnaLN])
                     columnaTFidf = vectorizador.fit_transform(pMl_dataset[columnaLN])
-                    tfidf_df = pd.DataFrame(columnaTFidf.toarray(), columns=vectorizador.get_feature_names_out())
+                    vocabulario = vectorizador.get_feature_names_out()
+                    tfidf_df = pd.DataFrame(columnaTFidf.toarray(), columns=vocabulario)
                     pMl_dataset = pd.concat([pMl_dataset, tfidf_df], axis=1)
                 for columnaLN in pNLcolumns:
                     pMl_dataset = pMl_dataset.drop(columnaLN, axis=1)
-            elif pNLtecnique == "BOW":
+                with open('vocabulario.pkl', 'wb') as f:
+                    pickle.dump(vocabulario, f)
+            elif pNLtechnique == "BOW":
                 pass
         
         return pMl_dataset,target_map
