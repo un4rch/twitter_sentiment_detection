@@ -212,7 +212,7 @@ class Preprocessor:
                 vectorizador = CountVectorizer()
             # realizamos el preprocesado
             for columnaLN in pNLcolumns:
-                pMl_dataset[columnaLN] = Preprocessor.preprocesarLenguajeNatural(pMl_dataset[columnaLN])
+                pMl_dataset[columnaLN] = Preprocessor.preprocesarLenguajeNatural(pMl_dataset[columnaLN], pSwitch)
                 columnaTech = vectorizador.fit_transform(pMl_dataset[columnaLN])
                 tech_df = pd.DataFrame(columnaTech.toarray(), columns=vectorizador.get_feature_names_out())
                 pMl_dataset = pd.concat([pMl_dataset, tech_df], axis=1)
@@ -230,8 +230,9 @@ class Preprocessor:
             for emoticono, texto_emoji in diccionario_emojis.items():
                 texto = texto.replace(emoticono, texto_emoji)
         else:
-            texto = emoji.get_emoji_regexp().sub(u'', texto)
-            texto = emot.emojize(emot.demojize(texto, delimiters=('', ''))).replace('_', '')
+            #texto = emoji.get_emoji_regexp().sub(u'', texto)
+            #texto = emot.emojize(emot.demojize(texto, delimiters=('', ''))).replace('_', '')
+            texto = emoji.emojize(texto, delimiters=('', ''))
             texto = texto.strip()
         return texto
     
