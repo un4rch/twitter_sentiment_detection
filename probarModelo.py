@@ -62,7 +62,7 @@ if __name__ == '__main__':
             imputeOption = arg
         elif opt in ('-e', '--exclude'):
             excludedColumns = arg
-        elif opt in ('-c', '--technique'):
+        elif opt in ('-v', '--vectorize'):
             NLtechnique = arg.lower()
             if NLtechnique != "bow" and NLtechnique != "tfidf":
                 print("[!] The NL preprocess method should be \"bow\" or \"tfidf\"")
