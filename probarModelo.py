@@ -104,7 +104,7 @@ if __name__ == '__main__':
             print(f"\t\tAciertos: {aciertos}")
             print(f"\t\tErrores: {totalInstancias-aciertos}")
             print("\n\tInstancia\tValor real\tValor predecido")
-            print("\t---------\t----------\t---------------\n")
+            print("\t---------\t----------\t---------------")
             for index,value in targetColumn.iteritems():
                 print(f"\t{index}\t\t{target_map_reves[value]} \t{target_map_reves[predictions[index]]}")
             print()
