@@ -70,6 +70,7 @@ min_samples_leafs = None
 outputModelName = None
 evaluation = None
 esMixedNB = None
+switch = True
 
 def signal_handler(sig_num, frame):
     print("[!] Saliendo del programa...")
@@ -413,8 +414,8 @@ if __name__ == '__main__':
 
     # Definir argumentos de entrada
     input_args = sys.argv[1:]
-    short_opts = "f:e:t:hi:a:sr:o:m:n:v:"
-    long_opts = ['file=', 'exclude=', 'target=', 'help', 'impute=', 'algorithm=', 'stats', 'rescale=', 'test-size=', 'random-state=', 'output=', 'natural-language=', 'vectorize=']
+    short_opts = "f:e:t:hi:a:sr:o:m:n:v:x"
+    long_opts = ['file=', 'exclude=', 'target=', 'help', 'impute=', 'algorithm=', 'stats', 'rescale=', 'test-size=', 'random-state=', 'output=', 'natural-language=', 'vectorize=', 'switch=']
     
     # Parsear los argumentos y sus valores
     try:
@@ -493,6 +494,15 @@ if __name__ == '__main__':
             outputModelName = arg
         elif opt in ('-m', '--measure'):
             evaluation = arg
+        elif opt in ('-x', '--switch'):
+            switch = arg
+            if switch not in ["on", "off"]:
+                print('[!] Switch must be "on" (translate emojis to natural language) or "off" (delete emojis)')
+                sys.exit(0)
+            elif switch == "on":
+                switch = True
+            elif switch == "off":
+                switch = False
         elif opt in ('-n', '--natural-language'):
             NLcolumns = arg.split(",")
     
@@ -506,7 +516,7 @@ if __name__ == '__main__':
     print("[*] Preprocesando dataframe...")
     #print(f'{targetColumn}, {algorithms[algorithm]}, {excludedColumns}, {imputeOption}, {rescaleOption}')
     preprocessor = Preprocessor()
-    ml_dataset,target_map = preprocessor.preprocessDataset(ml_dataset, targetColumn, algorithms[algorithm], excludedColumns, imputeOption, rescaleOption, NLcolumns, NLtechnique, "train")
+    ml_dataset,target_map = preprocessor.preprocessDataset(ml_dataset, targetColumn, algorithms[algorithm], excludedColumns, imputeOption, rescaleOption, NLcolumns, NLtechnique, "train", switch)
 
     print("[*] Creando el modelo...")
     ml_model = crearModelo(ml_dataset, algorithm, target_map)
