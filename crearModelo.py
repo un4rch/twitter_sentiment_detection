@@ -42,7 +42,7 @@ from sklearn.linear_model import LogisticRegression
 import pickle
 from preprocessor import Preprocessor
 from sklearn.preprocessing import KBinsDiscretizer
-from sklearn.naive_bayes import GaussianNB
+from sklearn.naive_bayes import GaussianNB, MultinomialNB, BernoulliNB
 from mixed_naive_bayes import MixedNB
 
 inputFile = None
@@ -111,6 +111,7 @@ def helpPanel():
     print('\t\t\t\t\t\t\tfilename: file containing rescale method for each column splicitly')
     print('\t\t\t\t\t\t\tOTHER: one same rescale method for all columns')
     print('\t-m|--measure <name>\t\t\tChoose measure method (macro,micro,weghted)')
+    print('\t-v|--vectorize <name>\t\t\tChoose NL vectorize method (tfidf,bow)')
     print('\t--random-state <int>\t\t\tSeed to separate train and test dataset the same way')
     print('\t--test-size <float>\t\t\tChoose the test size')
     print()
@@ -341,34 +342,89 @@ def crearModelo(pml_dataset, palgorithm, ptarget_map):
                     #results_test = results_test.rename(columns= {targetColumn: 'TARGET'})
                     #print(results_test)
     elif algorithms[palgorithm] == 'naive bayes':
-        ## MIXED NAIVE BAYES ##
-        clf = MixedNB()
-        clf.class_weight = "balanced"
-        clf.fit(trainX, trainY)
-        predictionsMixedNB = clf.predict(testX)
-        clfMixedAux = clf    
-        fScoreMixedNB = f1_score(testY, predictionsMixedNB, average=fScoreAverage)
-        ## GAUSSIAN NAIVE BAYES ##
-        discretizer = KBinsDiscretizer(n_bins=3, encode='ordinal', strategy='uniform')  #Se utiliza comunmente con GaussianNB, ya que GaussianNB asume distribución normal, por lo que la discretización de las continuas puede mejorar su desempeño
-        clf = GaussianNB()
-        #trainX_ant = trainX   #por si acaso
-        trainX = discretizer.fit_transform(trainX)
-        clf.class_weight = "balanced"
-        clf.fit(trainX, trainY)
-        predictionsGaussian = clf.predict(testX)        
-        fScoreGaussian = f1_score(testY, predictionsGaussian, average=fScoreAverage)
+    #    ## MIXED NAIVE BAYES ##
+    #    clf = MixedNB()
+    #    clf.class_weight = "balanced"
+    #    clf.fit(trainX, trainY)
+    #    predictionsMixedNB = clf.predict(testX)
+    #    clfMixedAux = clf    
+    #    fScoreMixedNB = f1_score(testY, predictionsMixedNB, average=fScoreAverage)
+    #    ## GAUSSIAN NAIVE BAYES ##
+    #    discretizer = KBinsDiscretizer(n_bins=3, encode='ordinal', strategy='uniform')  #Se utiliza comunmente con GaussianNB, ya que GaussianNB asume distribución normal, por lo que la discretización de las continuas puede mejorar su desempeño
+    #    clf = GaussianNB()
+    #    #trainX_ant = trainX   #por si acaso
+    #    trainX = discretizer.fit_transform(trainX)
+    #    clf.class_weight = "balanced"
+    #    clf.fit(trainX, trainY)
+    #    predictionsGaussian = clf.predict(testX)        
+    #    fScoreGaussian = f1_score(testY, predictionsGaussian, average=fScoreAverage)
+    #    usedNaiveBayes = None
+    #    if fScoreMixedNB >= fScoreGaussian:
+    #        fScore = fScoreMixedNB
+    #        predictions = predictionsMixedNB
+    #        clf = clfMixedAux
+    #        usedNaiveBayes = "MixedNB"
+    #    else:
+    #        fScore = fScoreGaussian
+    #        predictions = predictionsGaussian
+    #        usedNaiveBayes = "Gaussian"
+    #    reporte = classification_report(testY,predictions)
+    #    modelos.append([clf,fScore,reporte,{'Naive type': usedNaiveBayes}])
+
+        #EDER
         usedNaiveBayes = None
-        if fScoreMixedNB >= fScoreGaussian:
-            fScore = fScoreMixedNB
-            predictions = predictionsMixedNB
-            clf = clfMixedAux
-            usedNaiveBayes = "MixedNB"
-        else:
-            fScore = fScoreGaussian
-            predictions = predictionsGaussian
+        models = [GaussianNB(), MixedNB(), MultinomialNB(), BernoulliNB()]
+        fscores = []
+        for clf in models:
+            clf.class_weight = "balanced"
+            if isinstance(clf, GaussianNB):
+                ## GAUSSIAN NAIVE BAYES ##
+                discretizer = KBinsDiscretizer(n_bins=3, encode='ordinal', strategy='uniform')  #Se utiliza comunmente con GaussianNB, ya que GaussianNB asume distribución normal, por lo que la discretización de las continuas puede mejorar su desempeño
+                trainX_aux = discretizer.fit_transform(trainX)
+                clf.fit(trainX_aux, trainY)
+            else:
+                clf.fit(trainX, trainY)
+            predictions = clf.predict(testX)
+            fScore = f1_score(testY, predictions, average=fScoreAverage)
+            fscores.append(fScore)
+
+            #scores = cross_val_score(model, X, y, cv=5, scoring='f1_macro')
+            #fscores.append(scores.mean())
+
+        best_model_index = fscores.index(max(fscores))
+        best_model = models[best_model_index]
+
+        clf = best_model
+        if isinstance(best_model, GaussianNB):
             usedNaiveBayes = "Gaussian"
+            print("El mejor modelo es Gaussian Naive Bayes con un F-score de", max(fscores))
+            # Guardar modelo
+            # best_model.fit(X, y)
+            # ...
+        elif isinstance(best_model, MixedNB):
+            usedNaiveBayes = "MixedNB"
+            print("El mejor modelo es Mixed Naive Bayes con un F-score de", max(fscores))
+            # Guardar modelo
+            # best_model.fit(X, y)
+            # ...
+        elif isinstance(best_model, MultinomialNB):
+            usedNaiveBayes = "MultinomialNB"
+            print("El mejor modelo es Multinomial Naive Bayes con un F-score de", max(fscores))
+            # Guardar modelo
+            # best_model.fit(X, y)
+            # ...
+        elif isinstance(best_model, BernoulliNB):
+            usedNaiveBayes = "BernoulliNB"
+            print("El mejor modelo es Bernoulli Naive Bayes con un F-score de", max(fscores))
+            # Guardar modelo
+            # best_model.fit(X, y)
+            # ...
+
         reporte = classification_report(testY,predictions)
         modelos.append([clf,fScore,reporte,{'Naive type': usedNaiveBayes}])
+        #EDER
+
+
     elif algorithms[palgorithm] == 'logistic regression':
         clf = LogisticRegression(penalty="l2",random_state=randomState, max_iter=1000)
         clf.class_weight = "balanced"
@@ -437,7 +493,7 @@ if __name__ == '__main__':
             if algorithm >= len(algorithms) or algorithm < 0:
                 print('[!] The algorithm selection is out of range, choose a valid one')
                 sys.exit(1)
-        elif opt in ('-c', '--technique'):
+        elif opt in ('-v', '--vectorize'):
             NLtechnique = arg.lower()
             if NLtechnique != "bow" and NLtechnique != "tfidf":
                 print('[!] The natural language tecnique must be "bow" or "tfidf", choose one of theese two options')
@@ -500,5 +556,3 @@ if __name__ == '__main__':
     if outputModelName != None:
         pickle.dump(ml_model[0], open(outputModelName, 'wb'))
         #print('TODO: exportar el mejor modelo entrenado de todo el for')
-    
-    
