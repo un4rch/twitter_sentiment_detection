@@ -168,7 +168,7 @@ class Preprocessor:
         #del pMl_dataset[targetColumn]
         return pMl_dataset, target_map
     
-    def preprocessDataset(self, pMl_dataset, pTargetColumn, pAlgorithm, pExcludedColumns, pImputeOption, pRescaleOption, pNLcolumns, pNLtechnique):
+    def preprocessDataset(self, pMl_dataset, pTargetColumn, pAlgorithm, pExcludedColumns, pImputeOption, pRescaleOption, pNLcolumns, pNLtechnique, switch):
         # Eliminar columnas que no interesan
         if pExcludedColumns != None:
             columnNames = pExcludedColumns.split(',')
@@ -204,7 +204,7 @@ class Preprocessor:
             
             # realizamos el preprocesado
             for columnaLN in pNLcolumns:
-                pMl_dataset[columnaLN] = Preprocessor.preprocesarLenguajeNatural(pMl_dataset[columnaLN])
+                pMl_dataset[columnaLN] = Preprocessor.preprocesarLenguajeNatural(pMl_dataset[columnaLN], switch)
                 columnaTech = vectorizador.fit_transform(pMl_dataset[columnaLN])
                 vocabulario = vectorizador.get_feature_names_out()
                 tech_df = pd.DataFrame(columnaTech.toarray(), columns=vocabulario)
@@ -216,11 +216,16 @@ class Preprocessor:
         
         return pMl_dataset,target_map
     
-    def convertirEmojis(texto):  # convierte un emoji en un conjunto de palabras en inglés que lo representan
-        texto = emoji.demojize(texto)
-        diccionario_emojis = emot.emo_unicode.EMOTICONS_EMO
-        for emoticono, texto_emoji in diccionario_emojis.items():
-            texto = texto.replace(emoticono, texto_emoji)
+    def convertirEmojis(texto, switch):  # convierte un emoji en un conjunto de palabras en inglés que lo representan (si switch es false, borra los emoticonos)
+        if switch:
+            texto = emoji.demojize(texto)
+            diccionario_emojis = emot.emo_unicode.EMOTICONS_EMO
+            for emoticono, texto_emoji in diccionario_emojis.items():
+                texto = texto.replace(emoticono, texto_emoji)
+        else:
+            texto = emot.emojize(emot.demojize(texto)).replace('_', '')
+            texto = emot.emojize(emot.demojize(texto, delimiters=('', ''))).replace('_', '')
+            texto = texto.strip()
         return texto
     
     def normalizarTexto(texto):  # dado un string que contenga palabras, devuelve un string donde todas las letras sean minúsculas
@@ -268,10 +273,10 @@ class Preprocessor:
         texto_lematizado = ' '.join(palabras_lematizadas)
         return texto_lematizado
     
-    def preprocesarLenguajeNatural(pColumna):  # realiza todo el preproceso de un string en el orden correcto
+    def preprocesarLenguajeNatural(pColumna, switch):  # realiza todo el preproceso de un string en el orden correcto
         listaLineas = []
         for index,linea in pColumna.iteritems():
-            linea = Preprocessor.convertirEmojis(linea)
+            linea = Preprocessor.convertirEmojis(linea, switch)
             linea = Preprocessor.eliminarSignosPuntuacion(linea)
             linea = Preprocessor.normalizarTexto(linea)
             linea = Preprocessor.eliminarStopWords(linea)
