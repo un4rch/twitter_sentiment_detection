@@ -42,7 +42,7 @@ from sklearn.linear_model import LogisticRegression
 import pickle
 from preprocessor import Preprocessor
 from sklearn.preprocessing import KBinsDiscretizer
-from sklearn.naive_bayes import GaussianNB, MultinomialNB, BernoulliNB
+from sklearn.naive_bayes import GaussianNB, MultinomialNB, BernoulliNB, ComplementNB
 from mixed_naive_bayes import MixedNB
 
 inputFile = None
@@ -374,7 +374,7 @@ def crearModelo(pml_dataset, palgorithm, ptarget_map):
 
         #EDER
         usedNaiveBayes = None
-        models = [GaussianNB(), MixedNB(), MultinomialNB(), BernoulliNB()]
+        models = [GaussianNB(), MixedNB(), MultinomialNB(), BernoulliNB(), ComplementNB()]
         fscores = []
         for clf in models:
             clf.class_weight = "balanced"
@@ -404,6 +404,8 @@ def crearModelo(pml_dataset, palgorithm, ptarget_map):
             usedNaiveBayes = "MultinomialNB"
         elif isinstance(best_model, BernoulliNB):
             usedNaiveBayes = "BernoulliNB"
+        elif isinstance(best_model, ComplementNB):
+            usedNaiveBayes = "ComplementNB"
         reporte = classification_report(testY,predictions)
         modelos.append([clf,fScore,reporte,{'Naive type': usedNaiveBayes}])
         #EDER
@@ -418,6 +420,24 @@ def crearModelo(pml_dataset, palgorithm, ptarget_map):
         reporteLR = classification_report(testY, preditctionsLR)
         print(reporteLR)
         modelos.append([clf,fScoreLR,reporteLR])
+
+        ##EDER
+        #parameters = {'penalty': ['l1', 'l2'], 'C': [0.1, 1, 10], 'solver': ['liblinear', 'saga']}
+        #clf = LogisticRegression()
+
+        #grid_search = GridSearchCV(clf, parameters, cv=5)     # Búsqueda de la mejor combinación de parámetros
+        ##grid_search.class_weight = "balanced"
+        #grid_search.fit(trainX, trainY) #No es un estimador, es un objeto que ayuda a encontrar el mejor estimador
+
+        #print("Mejor combinación de parámetros:", grid_search.best_params_)
+        #print("Mejor puntuación de la validación cruzada:", grid_search.best_score_)
+        #clf = grid_search.best_estimator_
+        #preditctionsLR = clf.predict(testX)
+        #fScoreLR = f1_score(testY, preditctionsLR, average=fScoreAverage)
+        #reporteLR = classification_report(testY, preditctionsLR)
+        #print(reporteLR)
+        #modelos.append([clf,fScoreLR,reporteLR])
+        ##EDER
 
     ml_model = None
     fScoreBest = 0
