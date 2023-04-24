@@ -396,7 +396,7 @@ def crearModelo(pml_dataset, palgorithm, ptarget_map):
 
         clf = best_model
         if isinstance(best_model, GaussianNB):
-            usedNaiveBayes = "Gaussian"
+            usedNaiveBayes = "GaussianNB"
         elif isinstance(best_model, MixedNB):
             usedNaiveBayes = "MixedNB"
         elif isinstance(best_model, MultinomialNB):
