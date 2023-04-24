@@ -7,6 +7,7 @@ import nltk
 import emot
 import emoji
 import pickle
+import re
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
@@ -230,8 +231,8 @@ class Preprocessor:
             for emoticono, texto_emoji in diccionario_emojis.items():
                 texto = texto.replace(emoticono, texto_emoji)
         else:
-            texto = emoji.get_emoji_regexp().sub(u'', texto)
-            texto = emoji.emojize(texto, delimiters=('', ''))
+            texto = emoji.demojize(texto)
+            texto = re.sub(":.*?:", "", texto)
             texto = texto.strip()
         return texto
     
