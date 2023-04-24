@@ -1,4 +1,8 @@
 # PredicemeEsta
+Para gestionar las dependencias de python primero hay que ejecutar un par de comandos:
+$ chmod +x installer.sh
+$ ./installer.sh
+
 Ejecutar crearModelo.py:
 
 Para Logistic Regression, tf-idf, Traducir Emojis/Emotes:
