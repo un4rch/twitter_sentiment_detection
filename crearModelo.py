@@ -397,29 +397,12 @@ def crearModelo(pml_dataset, palgorithm, ptarget_map):
         clf = best_model
         if isinstance(best_model, GaussianNB):
             usedNaiveBayes = "Gaussian"
-            print("El mejor modelo es Gaussian Naive Bayes con un F-score de", max(fscores))
-            # Guardar modelo
-            # best_model.fit(X, y)
-            # ...
         elif isinstance(best_model, MixedNB):
             usedNaiveBayes = "MixedNB"
-            print("El mejor modelo es Mixed Naive Bayes con un F-score de", max(fscores))
-            # Guardar modelo
-            # best_model.fit(X, y)
-            # ...
         elif isinstance(best_model, MultinomialNB):
             usedNaiveBayes = "MultinomialNB"
-            print("El mejor modelo es Multinomial Naive Bayes con un F-score de", max(fscores))
-            # Guardar modelo
-            # best_model.fit(X, y)
-            # ...
         elif isinstance(best_model, BernoulliNB):
             usedNaiveBayes = "BernoulliNB"
-            print("El mejor modelo es Bernoulli Naive Bayes con un F-score de", max(fscores))
-            # Guardar modelo
-            # best_model.fit(X, y)
-            # ...
-
         reporte = classification_report(testY,predictions)
         modelos.append([clf,fScore,reporte,{'Naive type': usedNaiveBayes}])
         #EDER
