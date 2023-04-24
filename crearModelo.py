@@ -516,7 +516,6 @@ if __name__ == '__main__':
     print("[*] Preprocesando dataframe...")
     #print(f'{targetColumn}, {algorithms[algorithm]}, {excludedColumns}, {imputeOption}, {rescaleOption}')
     preprocessor = Preprocessor()
-    print(switch)
     ml_dataset,target_map = preprocessor.preprocessDataset(ml_dataset, targetColumn, algorithms[algorithm], excludedColumns, imputeOption, rescaleOption, NLcolumns, NLtechnique, "train", switch)
 
     print("[*] Creando el modelo...")

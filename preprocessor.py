@@ -230,8 +230,7 @@ class Preprocessor:
             for emoticono, texto_emoji in diccionario_emojis.items():
                 texto = texto.replace(emoticono, texto_emoji)
         else:
-            #texto = emoji.get_emoji_regexp().sub(u'', texto)
-            #texto = emot.emojize(emot.demojize(texto, delimiters=('', ''))).replace('_', '')
+            texto = emoji.get_emoji_regexp().sub(u'', texto)
             texto = emoji.emojize(texto, delimiters=('', ''))
             texto = texto.strip()
         return texto
