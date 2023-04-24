@@ -439,7 +439,7 @@ if __name__ == '__main__':
                 sys.exit(1)
         elif opt in ('-c', '--technique'):
             NLtechnique = arg.lower()
-            if NLtechnique != "bow" or NLtechnique != "tfidf":
+            if NLtechnique != "bow" and NLtechnique != "tfidf":
                 print('[!] The natural language tecnique must be "bow" or "tfidf", choose one of theese two options')
                 sys.exit(1)
         elif opt in ('-s', '--stats'):
