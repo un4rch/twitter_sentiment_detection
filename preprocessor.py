@@ -168,7 +168,7 @@ class Preprocessor:
         #del pMl_dataset[targetColumn]
         return pMl_dataset, target_map
     
-    def preprocessDataset(self, pMl_dataset, pTargetColumn, pAlgorithm, pExcludedColumns, pImputeOption, pRescaleOption, pNLcolumns, pNLtechnique):
+    def preprocessDataset(self, pMl_dataset, pTargetColumn, pAlgorithm, pExcludedColumns, pImputeOption, pRescaleOption, pNLcolumns, pNLtechnique, pTarinTest):
         # Eliminar columnas que no interesan
         if pExcludedColumns != None:
             columnNames = pExcludedColumns.split(',')
@@ -194,25 +194,32 @@ class Preprocessor:
         # Enumerar los valores de la columna TARGET para clasificarlos por numeros
         pMl_dataset, target_map = self.convertTargetToClassifyInt(pMl_dataset, pTargetColumn)
 
-        # preprocesar lenguaje natural
-        if pAlgorithm == "naive bayes" or pAlgorithm == "logistic regression":
-            # escogemos la técnica de preproceso de lenguaje natural
+        # Preprocesar lenguaje natural
+        # escogemos la técnica de preproceso de lenguaje natural
+        if pTarinTest == "test":
+            vectorizador = pickle.load(open(pNLtechnique+".pkl", "rb"))
+            for columnaLN in pNLcolumns:
+                pMl_dataset[columnaLN] = Preprocessor.preprocesarLenguajeNatural(pMl_dataset[columnaLN])
+                columnaTech = vectorizador.transform(pMl_dataset[columnaLN])
+                tech_df = pd.DataFrame(columnaTech.toarray(), columns=vectorizador.get_feature_names_out())
+                pMl_dataset = pd.concat([pMl_dataset, tech_df], axis=1)
+            for columnaLN in pNLcolumns:
+                pMl_dataset = pMl_dataset.drop(columnaLN, axis=1)
+        elif pTarinTest == "train":
             if pNLtechnique == "tfidf":
                 vectorizador = TfidfVectorizer()
             elif pNLtechnique == "bow":
                 vectorizador = CountVectorizer()
-            
             # realizamos el preprocesado
             for columnaLN in pNLcolumns:
                 pMl_dataset[columnaLN] = Preprocessor.preprocesarLenguajeNatural(pMl_dataset[columnaLN])
                 columnaTech = vectorizador.fit_transform(pMl_dataset[columnaLN])
-                vocabulario = vectorizador.get_feature_names_out()
-                tech_df = pd.DataFrame(columnaTech.toarray(), columns=vocabulario)
+                tech_df = pd.DataFrame(columnaTech.toarray(), columns=vectorizador.get_feature_names_out())
                 pMl_dataset = pd.concat([pMl_dataset, tech_df], axis=1)
             for columnaLN in pNLcolumns:
                 pMl_dataset = pMl_dataset.drop(columnaLN, axis=1)
             with open(pNLtechnique + '.pkl', 'wb') as f:
-                pickle.dump(vocabulario, f)
+                pickle.dump(vectorizador, f)
         
         return pMl_dataset,target_map
     

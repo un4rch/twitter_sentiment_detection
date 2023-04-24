@@ -33,6 +33,8 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 #from sklearn.linear_model import LinearRegression
 from sklearn.metrics import f1_score
+from sklearn.metrics import recall_score
+from sklearn.metrics import precision_score
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 #from sklearn.metrics import precision_score
@@ -407,6 +409,11 @@ def crearModelo(pml_dataset, palgorithm, ptarget_map):
         elif isinstance(best_model, ComplementNB):
             usedNaiveBayes = "ComplementNB"
         reporte = classification_report(testY,predictions)
+        print("fscore: " + str(fScore))
+        recall = recall_score(testY, predictions, average=fScoreAverage)
+        print("recall: " + str(recall))
+        precision = precision_score(testY, predictions, average=fScoreAverage)
+        print("precision: " + str(precision))
         modelos.append([clf,fScore,reporte,{'Naive type': usedNaiveBayes}])
         #EDER
 
@@ -417,6 +424,11 @@ def crearModelo(pml_dataset, palgorithm, ptarget_map):
         clf.fit(trainX, trainY)
         preditctionsLR = clf.predict(testX)
         fScoreLR = f1_score(testY, preditctionsLR, average=fScoreAverage)
+        print("fscore: " + str(fScoreLR))
+        recall = recall_score(testY, preditctionsLR, average=fScoreAverage)
+        print("recall: " + str(recall))
+        precision = precision_score(testY, preditctionsLR, average=fScoreAverage)
+        print("precision: " + str(precision))
         reporteLR = classification_report(testY, preditctionsLR)
         print(reporteLR)
         modelos.append([clf,fScoreLR,reporteLR])
