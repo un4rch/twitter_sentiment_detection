@@ -46,8 +46,8 @@ from sklearn.naive_bayes import GaussianNB, MultinomialNB, BernoulliNB
 from mixed_naive_bayes import MixedNB
 
 inputFile = None
-excludedColumns = "tweet_id,airline_sentiment_confidence,negativereason,negativereason_confidence,airline,name,retweet_count,tweet_coord,tweet_created,tweet_location,user_timezone"
-NLcolumns = ["text"]
+excludedColumns = None
+NLcolumns = None
 NLtechnique = "tfidf"
 targetColumn = None
 imputeOption = None
@@ -102,7 +102,7 @@ def helpPanel():
     print('\t\t\t\t\t\t\t\tmin_samples_leaf=[1,2]')
     #print('\t\t\t\t\t\t\t2: random forest')
     print('\t\t\t\t\t\t\t2: Naibe Bayes (-a 2)')
-    print('\t\t\t\t\t\t\t2: Logistic Regression (-a 3)')
+    print('\t\t\t\t\t\t\t3: Logistic Regression (-a 3)')
     print('\t-h|--help \t\t\t\tPrint this help panel')
     print('\t-i|--impute <name>\t\t\tChoose impute method (filename,MEAN,MEDIAN,MODE,CONSTANT <n>)')
     print('\t\t\t\t\t\t\tfilename: file containing impute method for each column splicitly')
@@ -112,6 +112,7 @@ def helpPanel():
     print('\t\t\t\t\t\t\tOTHER: one same rescale method for all columns')
     print('\t-m|--measure <name>\t\t\tChoose measure method (macro,micro,weghted)')
     print('\t-v|--vectorize <name>\t\t\tChoose NL vectorize method (tfidf,bow)')
+    print('\t-n|--natural-language <colnames>\t\t\tSpecify columns that contains natural language')
     print('\t--random-state <int>\t\t\tSeed to separate train and test dataset the same way')
     print('\t--test-size <float>\t\t\tChoose the test size')
     print()
@@ -433,8 +434,8 @@ if __name__ == '__main__':
 
     # Definir argumentos de entrada
     input_args = sys.argv[1:]
-    short_opts = "f:e:t:hi:a:c:sr:o:m:"
-    long_opts = ['file=', 'exclude=', 'target=', 'help', 'impute=', 'algorithm=', 'tecnique=', 'stats', 'rescale=', 'test-size=', 'random-state=', 'output=']
+    short_opts = "f:e:t:hi:a:c:sr:o:m:n:"
+    long_opts = ['file=', 'exclude=', 'target=', 'help', 'impute=', 'algorithm=', 'tecnique=', 'stats', 'rescale=', 'test-size=', 'random-state=', 'output=', 'natural-language=']
     
     # Parsear los argumentos y sus valores
     try:
@@ -513,6 +514,8 @@ if __name__ == '__main__':
             outputModelName = arg
         elif opt in ('-m', '--measure'):
             evaluation = arg
+        elif opt in ('-n', '--natural-language'):
+            NLcolumns = arg.split(",")
     
     # Comprobar que los argumentos de entrada requeridos se han especificado en la llamada
     comprobarArgumentosEntradaObligatorios()
