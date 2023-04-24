@@ -14,11 +14,11 @@ from nltk.corpus import wordnet
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import CountVectorizer
 
-nltk.download('stopwords') # Palabras que no aportan valor al texto (in, of, and, ...)
-nltk.download('punkt')
-nltk.download('wordnet')
-nltk.download('averaged_perceptron_tagger')
-nltk.download('omw-1.4')
+nltk.download('stopwords', quiet=True) # Palabras que no aportan valor al texto (in, of, and, ...)
+nltk.download('punkt', quiet=True)
+nltk.download('wordnet', quiet=True)
+nltk.download('averaged_perceptron_tagger', quiet=True)
+nltk.download('omw-1.4', quiet=True)
 
 class Preprocessor:
 
