@@ -283,7 +283,7 @@ class Preprocessor:
     
     def preprocesarLenguajeNatural(pColumna, pSwitch):  # realiza todo el preproceso de un string en el orden correcto
         listaLineas = []
-        for index,linea in pColumna.iteritems():
+        for index,linea in pColumna.items():
             linea = Preprocessor.convertirEmojis(linea, pSwitch)
             linea = Preprocessor.eliminarSignosPuntuacion(linea)
             linea = Preprocessor.normalizarTexto(linea)
