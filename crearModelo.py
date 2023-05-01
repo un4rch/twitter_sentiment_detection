@@ -53,6 +53,7 @@ from gensim import models
 from gensim.models import LdaModel
 from sklearn.decomposition import LatentDirichletAllocation
 import chardet
+from gensim.matutils import Sparse2Corpus
 
 inputFile = None
 excludedColumns = None
@@ -427,6 +428,11 @@ def predecirRazones(pml_dataset):   #Clustering con LDA
     documentos = [doc.split() for doc in palabras]      #Divide cada columna en palabras y crea una lista de listas con todas las palabras de todas las columnas.
     diccionario = corpora.Dictionary(documentos)       #Crea un diccionario de palabras a partir de la lista de listas creada anteriormente (cada palabra con un ID único)
     corpus = [diccionario.doc2bow(doc) for doc in documentos]   #Lista de tuplas donde cada tupla representa un documento y contiene pares (palabra, frecuencia)
+
+    #with open('tfidf.pkl', 'rb') as f:
+    #    tfidf_vectorizer = pickle.load(f)
+#
+    #corpus = Sparse2Corpus(tfidf_vectorizer.transform(palabras).transpose())
 
     # Modelo LDA
     num_topics = 10     #Un tópico (o tema) es un cjto de palabras que tienden a aparecer juntas
