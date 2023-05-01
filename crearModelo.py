@@ -419,42 +419,27 @@ def crearModelo(pml_dataset, palgorithm, ptarget_map):
     return ml_model
 
 def predecirRazones(pml_dataset):   #Clustering con LDA
-    # Convertimos la columna procesada a Matriz
     print(pml_dataset.columns)
-    doc_term_matrix = pml_dataset.to_numpy()
 
     ## Modelo LDA
-    #num_topics = 5
-    #lda_model = LatentDirichletAllocation(n_components=num_topics, max_iter=10, learning_method='online', random_state=42)
-    #lda_model.fit(doc_term_matrix)
 
-    dictionary = corpora.Dictionary(pml_dataset)
-    corpus = [dictionary.doc2bow(doc) for doc in pml_dataset]
+    palabras = pml_dataset.columns.tolist()     #Crea una lista con las palabras del dataset
+    documentos = [doc.split() for doc in palabras]      #Divide cada columna en palabras y crea una lista de listas con todas las palabras de todas las columnas.
+    diccionario = corpora.Dictionary(documentos)       #Crea un diccionario de palabras a partir de la lista de listas creada anteriormente (cada palabra con un ID único)
+    corpus = [diccionario.doc2bow(doc) for doc in documentos]   #Lista de tuplas donde cada tupla representa un documento y contiene pares (palabra, frecuencia)
 
     # Modelo LDA
-    num_topics = 10
+    num_topics = 10     #Un tópico (o tema) es un cjto de palabras que tienden a aparecer juntas
     lda_model = LdaModel(corpus=corpus,
-                     id2word=dictionary,
+                     id2word=diccionario,
                      num_topics=num_topics,
-                     random_state=42,
-                     passes=10,
-                     alpha='auto',
-                     per_word_topics=True)
+                     random_state=42)
+    # Num topics, num iters, frec min de palabra y el umbral de relevancia pueden mejorar la calidad del modelo, pero aumenta el tiempo de train
 
     # Examinar tópicos descubiertos por LDA
     for idx, topic in lda_model.print_topics(-1):
         print('Tópico: {} \nPalabras clave: {}\n'.format(idx, topic))
-
-    ## Examinar tópicos descubiertos por LDA
-    #for idx, topic in enumerate(lda_model.components_):
-    #    print("Topic #%d:" % idx)
-    #    print(" ".join([vectorizer.get_feature_names()[i] for i in topic.argsort()[:-10 - 1:-1]]))
-    #    print("\n")
-#
-    ##Asignar un tópico a cada valoración
-    #topic_values = lda_model.transform(doc_term_matrix)
-    #cantTopicosMostrar = 5
-    #pml_dataset['topics'] = topic_values.argsort(axis=1)[:,-cantTopicosMostrar:].apply(lambda x: ','.join(map(str, x[::-1])), axis=1)
+    
 
 
 
