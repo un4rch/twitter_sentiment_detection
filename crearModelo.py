@@ -439,12 +439,15 @@ def predecirRazones(pml_dataset):   #Clustering con LDA
     lda_model = LdaModel(corpus=corpus,
                      id2word=diccionario,
                      num_topics=num_topics,
-                     random_state=42)
+                     random_state=42,
+                     passes = 25)
     # Num topics, num iters, frec min de palabra y el umbral de relevancia pueden mejorar la calidad del modelo, pero aumenta el tiempo de train
 
     # Examinar tópicos descubiertos por LDA
-    for idx, topic in lda_model.print_topics(-1):
+    num_palabras = 15
+    for idx, topic in lda_model.print_topics(num_topics=-1, num_words=num_palabras):
         print('Tópico: {} \nPalabras clave: {}\n'.format(idx, topic))
+
     
 
 
