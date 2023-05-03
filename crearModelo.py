@@ -421,6 +421,7 @@ def crearModelo(pml_dataset, palgorithm, ptarget_map):
 
 def predecirRazones(pml_dataset):   #Clustering con LDA
     print(pml_dataset.columns)
+    print(pml_dataset)
 
     ## Modelo LDA
 
