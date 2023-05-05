@@ -224,6 +224,61 @@ class Preprocessor:
         
         return pMl_dataset,target_map
     
+    def preprocessEvolved(self, pMl_dataset, pTargetColumn, pAlgorithm, pExcludedColumns, pImputeOption, pRescaleOption, pNLcolumns, pNLtechnique, pTarinTest, pSwitch):
+        # Eliminar columnas que no interesan
+        if pExcludedColumns != None:
+            columnNames = pExcludedColumns.split(',')
+            pMl_dataset = self.dropColumns(pMl_dataset ,columnNames)
+    
+        # Eliminar las lineas donde el valor del TARGET sea desconocido
+        pMl_dataset = self.dropNullTargetRows(pMl_dataset, pTargetColumn)
+
+        # Imputar valores que falten
+        if pImputeOption != None:
+            if pImputeOption.split(',')[0] == 'CONSTANT':
+                pMl_dataset = self.imputeMissingValues(pMl_dataset,pImputeOption.split(',')[0], pImputeOption.split(',')[1])
+            else:
+                pMl_dataset = self.imputeMissingValues(pMl_dataset,pImputeOption, None)
+
+        # Convertir los datos del dataset a float o unicode
+        pMl_dataset = self.parseDataTypes(pMl_dataset)
+    
+        # Escalar los valores
+        if pAlgorithm == 'knn' and pRescaleOption != None:
+            pMl_dataset = self.rescaleData(pMl_dataset, pRescaleOption)
+
+        # Enumerar los valores de la columna TARGET para clasificarlos por numeros
+        pMl_dataset, target_map = self.convertTargetToClassifyInt(pMl_dataset, pTargetColumn)
+
+        # Preprocesar lenguaje natural
+        # escogemos la técnica de preproceso de lenguaje natural
+        if pTarinTest == "test":
+            vectorizador = pickle.load(open(pNLtechnique+".pkl", "rb"))
+            for columnaLN in pNLcolumns:
+                pMl_dataset[columnaLN] = Preprocessor.preprocesarLenguajeNatural(pMl_dataset[columnaLN], pSwitch)
+                columnaTech = vectorizador.transform(pMl_dataset[columnaLN])
+                tech_df = pd.DataFrame(columnaTech.toarray(), columns=vectorizador.get_feature_names_out())
+                pMl_dataset = pd.concat([pMl_dataset, tech_df], axis=1)
+            for columnaLN in pNLcolumns:
+                pMl_dataset = pMl_dataset.drop(columnaLN, axis=1)
+        elif pTarinTest == "train":
+            if pNLtechnique == "tfidf":
+                vectorizador = TfidfVectorizer()
+            elif pNLtechnique == "bow":
+                vectorizador = CountVectorizer()
+            # realizamos el preprocesado
+            for columnaLN in pNLcolumns:
+                pMl_dataset[columnaLN] = Preprocessor.preprocesarLenguajeNatural(pMl_dataset[columnaLN], pSwitch)
+                columnaTech = vectorizador.fit_transform(pMl_dataset[columnaLN])
+                tech_df = pd.DataFrame(columnaTech.toarray(), columns=vectorizador.get_feature_names_out())
+                pMl_dataset = pd.concat([pMl_dataset, tech_df], axis=1)
+            for columnaLN in pNLcolumns:
+                pMl_dataset = pMl_dataset.drop(columnaLN, axis=1)
+            with open(pNLtechnique + '.pkl', 'wb') as f:
+                pickle.dump(vectorizador, f)
+        
+        return pMl_dataset,target_map
+    
     def convertirEmojis(texto, switch):  # convierte un emoji en un conjunto de palabras en inglés que lo representa. Si switch es False, entonces se eliminan los emojis
         if switch:
             texto = emoji.demojize(texto)
