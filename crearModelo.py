@@ -244,11 +244,8 @@ def comprobarArgumentosEntradaObligatorios():
 
 def cargarDataset(pInputFile):
     ml_dataset = None
-    with open(pInputFile, 'rb') as f:
-        result = chardet.detect(f.read())
-    encoding = result['encoding']
-    with open(pInputFile, 'r', encoding=encoding) as csvFile:
-        primerosDatos = csv.Sniffer().sniff(csvFile.read()) #Leer el fichero
+    with open(pInputFile, 'r', encoding='utf-8') as csvFile:
+        primerosDatos = pd.read_csv(pInputFile) # Leer el fichero
         csvFile.seek(0) # Regresa al inicio del archivo
         lector = csv.reader(csvFile, primerosDatos, delimiter=',')
         tiene_header = csv.Sniffer().has_header(csvFile.read()) # Detecta si el archivo tiene encabezado
@@ -421,7 +418,6 @@ def crearModelo(pml_dataset, palgorithm, ptarget_map):
 
 def predecirRazones(pml_dataset):   #Clustering con LDA
     print(pml_dataset.columns)
-    print(pml_dataset)
 
     ## Modelo LDA
 
@@ -429,7 +425,6 @@ def predecirRazones(pml_dataset):   #Clustering con LDA
     documentos = [doc.split() for doc in palabras]      #Divide cada columna en palabras y crea una lista de listas con todas las palabras de todas las columnas.
     diccionario = corpora.Dictionary(documentos)       #Crea un diccionario de palabras a partir de la lista de listas creada anteriormente (cada palabra con un ID único)
     corpus = [diccionario.doc2bow(doc) for doc in documentos]   #Lista de tuplas donde cada tupla representa un documento y contiene pares (palabra, frecuencia)
-
     #with open('tfidf.pkl', 'rb') as f:
     #    tfidf_vectorizer = pickle.load(f)
 #
