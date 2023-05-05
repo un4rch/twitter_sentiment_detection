@@ -263,6 +263,7 @@ class Preprocessor:
                 vectorizador = TfidfVectorizer()
             elif pNLtechnique == "bow":
                 vectorizador = CountVectorizer()
+            print(pNLcolumns)
             # realizamos el preprocesado
             for columnaLN in pNLcolumns:
                 df_airline_sentiment[columnaLN] = Preprocessor.preprocesarLenguajeNatural(df_airline_sentiment[columnaLN], pSwitch)
