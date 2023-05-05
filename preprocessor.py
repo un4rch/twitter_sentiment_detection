@@ -224,7 +224,7 @@ class Preprocessor:
         
         return pMl_dataset,target_map
     
-    def preprocessEvolved(self, pMl_dataset, pTargetColumn, pAlgorithm, pExcludedColumns, pImputeOption, pRescaleOption, pNLcolumns, pNLtechnique, pTarinTest, pSwitch):
+    def preprocessEvolved(self, pMl_dataset, pTargetColumn, pExcludedColumns, pImputeOption, pNLcolumns, pNLtechnique, pTarinTest, pSwitch, airline, sentiment):
         # Eliminar columnas que no interesan
         if pExcludedColumns != None:
             columnNames = pExcludedColumns.split(',')
@@ -242,10 +242,6 @@ class Preprocessor:
 
         # Convertir los datos del dataset a float o unicode
         pMl_dataset = self.parseDataTypes(pMl_dataset)
-    
-        # Escalar los valores
-        if pAlgorithm == 'knn' and pRescaleOption != None:
-            pMl_dataset = self.rescaleData(pMl_dataset, pRescaleOption)
 
         # Enumerar los valores de la columna TARGET para clasificarlos por numeros
         pMl_dataset, target_map = self.convertTargetToClassifyInt(pMl_dataset, pTargetColumn)
