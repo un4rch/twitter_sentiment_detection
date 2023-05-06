@@ -80,7 +80,6 @@ evaluation = None
 esMixedNB = None
 switch = True
 clustering = True
-vector = ""
 airline = "Virgin America"
 sentiment = "negative"
 
@@ -420,8 +419,8 @@ def crearModelo(pml_dataset, palgorithm, ptarget_map):
             fScoreBest = modelo[1]
     return ml_model
 
-def predecirRazones(pml_dataset):   #Clustering con LDA
-    print(pml_dataset.columns)
+def predecirRazones(pml_dataset, vector):   #Clustering con LDA
+    #print(pml_dataset.columns)
 
     ## Modelo LDA
 
@@ -567,22 +566,24 @@ if __name__ == '__main__':
     else:
         ml_dataset, vector = preprocessor.preprocessEvolved(ml_dataset, targetColumn, excludedColumns, imputeOption, NLcolumns, NLtechnique, "train", switch, airline, sentiment)
     print("[*] Creando el modelo...")
-    ml_model = crearModelo(ml_dataset, algorithm, target_map)
-    
-    print()
-    if printStats: #clf,fScore,reporte,{k: k, w: w, d: d}
-        if len(ml_model) == 4:
-            print('\n\tEstadisticas para el mejor modelo entrenado')
-            print('\t-------------------------------------------')
-            print()
-            for hyperparam in ml_model[3]:
-                print(f'\t{hyperparam} = {ml_model[3][hyperparam]}')
-            print()
-            print(ml_model[2])
-    
-    if outputModelName != None:
-        pickle.dump(ml_model[0], open(outputModelName, 'wb'))
-        #print('TODO: exportar el mejor modelo entrenado de todo el for')
 
+    if not (clustering):
+        ml_model = crearModelo(ml_dataset, algorithm, target_map)
+        
+        print()
+        if printStats: #clf,fScore,reporte,{k: k, w: w, d: d}
+            if len(ml_model) == 4:
+                print('\n\tEstadisticas para el mejor modelo entrenado')
+                print('\t-------------------------------------------')
+                print()
+                for hyperparam in ml_model[3]:
+                    print(f'\t{hyperparam} = {ml_model[3][hyperparam]}')
+                print()
+                print(ml_model[2])
+        
+        if outputModelName != None:
+            pickle.dump(ml_model[0], open(outputModelName, 'wb'))
+            #print('TODO: exportar el mejor modelo entrenado de todo el for')
 
-    predecirRazones(ml_dataset)
+    else:
+        predecirRazones(ml_dataset, vector)

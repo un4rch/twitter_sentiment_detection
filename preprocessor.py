@@ -230,12 +230,12 @@ class Preprocessor:
             columnNames = pExcludedColumns.split(',')
             pMl_dataset = self.dropColumns(pMl_dataset ,columnNames)
 
-        # Filtrar por aerolinea y sentimiento
-        pMl_dataset = pMl_dataset[pMl_dataset["airline"] == airline]
-        pMl_dataset = pMl_dataset[pMl_dataset["airline_sentiment"] == sentiment]
-    
         # Eliminar las lineas donde el valor del TARGET sea desconocido
         pMl_dataset = self.dropNullTargetRows(pMl_dataset, pTargetColumn)
+
+        # Filtrar por aerolinea y sentimiento
+        pMl_dataset = pMl_dataset[pMl_dataset["airline"] == airline]
+        #pMl_dataset = pMl_dataset[pMl_dataset["airline_sentiment"] == sentiment]
 
         # Imputar valores que falten
         if pImputeOption != None:
@@ -277,7 +277,7 @@ class Preprocessor:
             with open(pNLtechnique + '.pkl', 'wb') as f:
                 pickle.dump(vectorizador, f)
         
-        return pMl_dataset,target_map
+        return pMl_dataset,tech_df
     
     def convertirEmojis(texto, switch):  # convierte un emoji en un conjunto de palabras en inglés que lo representa. Si switch es False, entonces se eliminan los emojis
         if switch:
