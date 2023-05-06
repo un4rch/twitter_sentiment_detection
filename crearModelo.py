@@ -79,6 +79,9 @@ outputModelName = None
 evaluation = None
 esMixedNB = None
 switch = True
+clustering = False
+vector = ""
+airline, sentiment = "Virgin America", "negative"
 
 def signal_handler(sig_num, frame):
     print("[!] Saliendo del programa...")
@@ -424,7 +427,9 @@ def predecirRazones(pml_dataset):   #Clustering con LDA
     palabras = pml_dataset.columns.tolist()     #Crea una lista con las palabras del dataset
     documentos = [doc.split() for doc in palabras]      #Divide cada columna en palabras y crea una lista de listas con todas las palabras de todas las columnas.
     diccionario = corpora.Dictionary(documentos)       #Crea un diccionario de palabras a partir de la lista de listas creada anteriormente (cada palabra con un ID único)
-    corpus = [diccionario.doc2bow(doc) for doc in documentos]   #Lista de tuplas donde cada tupla representa un documento y contiene pares (palabra, frecuencia)
+    corpus = vector
+    print(corpus)
+    #corpus = [diccionario.doc2bow(doc) for doc in documentos]   #Lista de tuplas donde cada tupla representa un documento y contiene pares (palabra, frecuencia)
     #with open('tfidf.pkl', 'rb') as f:
     #    tfidf_vectorizer = pickle.load(f)
 #
@@ -556,8 +561,10 @@ if __name__ == '__main__':
     print("[*] Preprocesando dataframe...")
     #print(f'{targetColumn}, {algorithms[algorithm]}, {excludedColumns}, {imputeOption}, {rescaleOption}')
     preprocessor = Preprocessor()
-    ml_dataset,target_map = preprocessor.preprocessDataset(ml_dataset, targetColumn, algorithms[algorithm], excludedColumns, imputeOption, rescaleOption, NLcolumns, NLtechnique, "train", switch)
-
+    if not clustering:
+        ml_dataset, target_map = preprocessor.preprocessDataset(ml_dataset, targetColumn, algorithms[algorithm], excludedColumns, imputeOption, rescaleOption, NLcolumns, NLtechnique, "train", switch)
+    else:
+        ml_dataset, vector = preprocessor.preprocessEvolved(ml_dataset, excludedColumns, imputeOption, NLcolumns, NLtechnique, "train", switch, airline, sentiment)
     print("[*] Creando el modelo...")
     ml_model = crearModelo(ml_dataset, algorithm, target_map)
     
