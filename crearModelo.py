@@ -79,9 +79,10 @@ outputModelName = None
 evaluation = None
 esMixedNB = None
 switch = True
-clustering = False
+clustering = True
 vector = ""
-airline, sentiment = "Virgin America", "negative"
+airline = "Virgin America"
+sentiment = "negative"
 
 def signal_handler(sig_num, frame):
     print("[!] Saliendo del programa...")
@@ -564,7 +565,7 @@ if __name__ == '__main__':
     if not clustering:
         ml_dataset, target_map = preprocessor.preprocessDataset(ml_dataset, targetColumn, algorithms[algorithm], excludedColumns, imputeOption, rescaleOption, NLcolumns, NLtechnique, "train", switch)
     else:
-        ml_dataset, vector = preprocessor.preprocessEvolved(ml_dataset, excludedColumns, imputeOption, NLcolumns, NLtechnique, "train", switch, airline, sentiment)
+        ml_dataset, vector = preprocessor.preprocessEvolved(ml_dataset, targetColumn, excludedColumns, imputeOption, NLcolumns, NLtechnique, "train", switch, airline, sentiment)
     print("[*] Creando el modelo...")
     ml_model = crearModelo(ml_dataset, algorithm, target_map)
     
