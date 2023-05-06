@@ -224,28 +224,31 @@ class Preprocessor:
         
         return pMl_dataset,target_map
     
-    # este método tiene como objetivo servir de preproceso para un ejercicio de clustering LDA. Para alimentar el corpus, devuelve el BOW o tf-idf
-    def preprocessEvolved(self, pMl_dataset, pExcludedColumns, pImputeOption, pNLcolumns, pNLtechnique, pTarinTest, pSwitch, airline, sentiment):
+    def preprocessEvolved(self, pMl_dataset, pTargetColumn, pExcludedColumns, pImputeOption, pNLcolumns, pNLtechnique, pTarinTest, pSwitch, airline, sentiment):
         # Eliminar columnas que no interesan
         if pExcludedColumns != None:
             columnNames = pExcludedColumns.split(',')
             pMl_dataset = self.dropColumns(pMl_dataset ,columnNames)
 
-        # Filtrar para obtener sólo filas de la aerolínea que nos interesa
-        df_airline = pMl_dataset[pMl_dataset["airline"] == airline]
-
-        # Filtrar para obtener sólo las filas del sentimiento que nos interesa
-        df_airline_sentiment = df_airline[df_airline["airline_sentiment"] == sentiment]
+        # Filtrar por aerolinea y sentimiento
+        pMl_dataset = pMl_dataset[pMl_dataset["airline"] == airline]
+        pMl_dataset = pMl_dataset[pMl_dataset["airline_sentiment"] == sentiment]
+    
+        # Eliminar las lineas donde el valor del TARGET sea desconocido
+        pMl_dataset = self.dropNullTargetRows(pMl_dataset, pTargetColumn)
 
         # Imputar valores que falten
         if pImputeOption != None:
             if pImputeOption.split(',')[0] == 'CONSTANT':
-                df_airline_sentiment = self.imputeMissingValues(df_airline_sentiment, pImputeOption.split(',')[0], pImputeOption.split(',')[1])
+                pMl_dataset = self.imputeMissingValues(pMl_dataset,pImputeOption.split(',')[0], pImputeOption.split(',')[1])
             else:
-                df_airline_sentiment = self.imputeMissingValues(df_airline_sentiment, pImputeOption, None)
+                pMl_dataset = self.imputeMissingValues(pMl_dataset,pImputeOption, None)
 
         # Convertir los datos del dataset a float o unicode
-        df_airline_sentiment = self.parseDataTypes(df_airline_sentiment)
+        pMl_dataset = self.parseDataTypes(pMl_dataset)
+
+        # Enumerar los valores de la columna TARGET para clasificarlos por numeros
+        pMl_dataset, target_map = self.convertTargetToClassifyInt(pMl_dataset, pTargetColumn)
 
         # Preprocesar lenguaje natural
         # escogemos la técnica de preproceso de lenguaje natural
@@ -263,19 +266,18 @@ class Preprocessor:
                 vectorizador = TfidfVectorizer()
             elif pNLtechnique == "bow":
                 vectorizador = CountVectorizer()
-            print(pNLcolumns)
             # realizamos el preprocesado
             for columnaLN in pNLcolumns:
-                df_airline_sentiment[columnaLN] = Preprocessor.preprocesarLenguajeNatural(df_airline_sentiment[columnaLN], pSwitch)
-                columnaTech = vectorizador.fit_transform(df_airline_sentiment[columnaLN])
+                pMl_dataset[columnaLN] = Preprocessor.preprocesarLenguajeNatural(pMl_dataset[columnaLN], pSwitch)
+                columnaTech = vectorizador.fit_transform(pMl_dataset[columnaLN])
                 tech_df = pd.DataFrame(columnaTech.toarray(), columns=vectorizador.get_feature_names_out())
-                df_airline_sentiment = pd.concat([df_airline_sentiment, tech_df], axis=1)
+                pMl_dataset = pd.concat([pMl_dataset, tech_df], axis=1)
             for columnaLN in pNLcolumns:
-                df_airline_sentiment = df_airline_sentiment.drop(columnaLN, axis=1)
+                pMl_dataset = pMl_dataset.drop(columnaLN, axis=1)
             with open(pNLtechnique + '.pkl', 'wb') as f:
                 pickle.dump(vectorizador, f)
         
-        return df_airline_sentiment, tech_df # devuelve el dataframe correspondiente a la aerolínea y el sentimiento. También devuelve el vector BOW o tf-idf
+        return pMl_dataset,target_map
     
     def convertirEmojis(texto, switch):  # convierte un emoji en un conjunto de palabras en inglés que lo representa. Si switch es False, entonces se eliminan los emojis
         if switch:
