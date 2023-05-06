@@ -54,6 +54,8 @@ from gensim.models import LdaModel
 from sklearn.decomposition import LatentDirichletAllocation
 import chardet
 from gensim.matutils import Sparse2Corpus
+from scipy import sparse
+
 
 inputFile = None
 excludedColumns = None
@@ -427,7 +429,9 @@ def predecirRazones(pml_dataset, vector):   #Clustering con LDA
     palabras = pml_dataset.columns.tolist()     #Crea una lista con las palabras del dataset
     documentos = [doc.split() for doc in palabras]      #Divide cada columna en palabras y crea una lista de listas con todas las palabras de todas las columnas.
     diccionario = corpora.Dictionary(documentos)       #Crea un diccionario de palabras a partir de la lista de listas creada anteriormente (cada palabra con un ID único)
-    corpus = vector
+    sparse_matrix = sparse.csr_matrix(vector.values)
+    corpus = Sparse2Corpus(sparse_matrix)
+
     print(corpus)
     #corpus = [diccionario.doc2bow(doc) for doc in documentos]   #Lista de tuplas donde cada tupla representa un documento y contiene pares (palabra, frecuencia)
     #with open('tfidf.pkl', 'rb') as f:
