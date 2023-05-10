@@ -226,6 +226,44 @@ class Preprocessor:
         return pMl_dataset,target_map
     
     def preprocessEvolved(self, pMl_dataset, pTargetColumn, pExcludedColumns, pImputeOption, pNLcolumns, pNLtechnique, pTarinTest, pSwitch, airline, sentiment):
+
+        def imputarCoords(pml_dataset):
+            geolocator = Nominatim(user_agent="my_geocoder")
+        
+            # Diccionario para almacenar las localizaciones ya calculadas
+            localizaciones_cache = {}
+        
+            def get_coordinates(location, timezone):
+                if f"{location},{timezone}" in localizaciones_cache:
+                    # Devolver las coordenadas desde la caché si ya se calculó anteriormente
+                    print("pasa por el if")
+                    return localizaciones_cache[f"{location},{timezone}"]
+
+                else:
+                    try:
+                        # Concatenar la ubicación y la zona horaria en un formato reconocible por el geocodificador
+                        query = f"{location}, {timezone}"
+            
+                        # Utilizar el geocodificador para obtener las coordenadas geográficas
+                        location = geolocator.geocode(query, exactly_one=True)
+            
+                        if location:
+                            # Almacenar las coordenadas en la caché
+                            print("bbbbb", location.latitude, location.longitude)
+                            coordenadas = (location.latitude, location.longitude)
+                            localizaciones_cache[f"{location},{timezone}"] = coordenadas
+                            print("aaaaaa", coordenadas)
+                            return coordenadas
+                    except:
+                        pass
+            
+                return None, None
+        
+            # Aplicar la función get_coordinates a cada fila del DataFrame
+            pml_dataset["tweet_coord"] = pml_dataset.apply(lambda row: get_coordinates(row["tweet_location"], row["user_timezone"])
+                                                   if pd.isnull(row["tweet_coord"]) or row["tweet_coord"] == [0.0, 0.0] else row["tweet_coord"], axis=1)
+        
+
         # Eliminar columnas que no interesan
         if pExcludedColumns != None:
             columnNames = pExcludedColumns.split(',')
@@ -233,6 +271,9 @@ class Preprocessor:
 
         # Eliminar las lineas donde el valor del TARGET sea desconocido
         pMl_dataset = self.dropNullTargetRows(pMl_dataset, pTargetColumn)
+
+        # Imputar valores en "tweet_coord" conociendo "tweet_location" y "user_timezone"
+        imputarCoords(pMl_dataset)
 
         # Imputar valores que falten
         if pImputeOption != None:

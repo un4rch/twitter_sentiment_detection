@@ -435,7 +435,7 @@ def crearModelo(pml_dataset, palgorithm, ptarget_map):
             ml_model = modelo
             fScoreBest = modelo[1]
     return ml_model
-# TODO elegir el pico de coherencia mejor
+# TODO elegir el pico de coherencia mejor -> Esto lo razonamos viendo el gráfico ya que nos aparece uno muy bueni
 # TODO fusionar clasificacion y clustering en crearModelo
 # TODO predecir tanto clasificacion como clustering (de los negativos) en probarModelo
 # TODO modificar preprocesado para tweet_cord de Ruben
@@ -628,6 +628,7 @@ if __name__ == '__main__':
             #print('TODO: exportar el mejor modelo entrenado de todo el for')
     else:
         ml_dataset = preprocessor.preprocessEvolved(ml_dataset, targetColumn, excludedColumns, imputeOption, NLcolumns, NLtechnique, "train", switch, airline, sentiment)
+        #print(ml_dataset['tweet_coord'])   #ESTA LINEA ES PARA PROBAR QUE GEOPY FUNCIONA BIEN
         print("[*] Creando el modelo...")
         topic_column = predecirRazones(ml_dataset)
         ml_dataset['topic'] = topic_column
