@@ -249,10 +249,10 @@ class Preprocessor:
             
                         if location:
                             # Almacenar las coordenadas en la caché
-                            print("bbbbb", location.latitude, location.longitude)
+                            #print("bbbbb", location.latitude, location.longitude)
                             coordenadas = (location.latitude, location.longitude)
                             localizaciones_cache[f"{location},{timezone}"] = coordenadas
-                            print("aaaaaa", coordenadas)
+                            #print("aaaaaa", coordenadas)
                             return coordenadas
                     except:
                         pass
