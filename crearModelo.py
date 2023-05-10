@@ -435,10 +435,10 @@ def crearModelo(pml_dataset, palgorithm, ptarget_map):
             ml_model = modelo
             fScoreBest = modelo[1]
     return ml_model
-# elegir el pico de coherencia mejor
-# fusionar clasificacion y clustering en crearModelo
-# predecir tanto clasificacion como clustering (de los negativos) en probarModelo
-# modificar preprocesado para tweet_cord de Ruben
+# TODO elegir el pico de coherencia mejor
+# TODO fusionar clasificacion y clustering en crearModelo
+# TODO predecir tanto clasificacion como clustering (de los negativos) en probarModelo
+# TODO modificar preprocesado para tweet_cord de Ruben
 def predecirRazones(pml_dataset):   #Clustering con LDA
     # Coger solo las columnas con texto (lenguaje natural)
     pml_dataset = pml_dataset[NLcolumns]
@@ -463,10 +463,14 @@ def predecirRazones(pml_dataset):   #Clustering con LDA
         coherence_lda = coherence_model_lda.get_coherence()
         modelos.append([lda_model, coherence_lda])
     mejorModelo = None
+    mejorCoherencia = 0
     for modelo in modelos:
         lda_model = modelo[0]
         coherencia = modelo[1]
         # TODO calcular el mejor modelo con las coherencias
+        if(mejorCoherencia < coherencia):
+            mejorCoherencia = coherencia
+            mejorModelo = lda_model
     lda_model = mejorModelo
     # Imprimir todos los topicos que tiene el modelo después de entrenarse con las 15 palabras más representativas
     #for idx, topic in lda_model.print_topics(num_topics=num_topics, num_words=15):
