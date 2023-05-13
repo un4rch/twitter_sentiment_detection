@@ -1,5 +1,7 @@
 # PredicemeEsta
- Para gestionar las dependencias de python primero hay que ejecutar un par de comandos:
+ Para gestionar las dependencias de python primero hay que crear un nuevo entorno de anaconda y descargar las dependencias:
+ $ conda create -n PredicemeEsta python=3.7
+ $ conda activate PredicemeEsta
  $ chmod +x installer.sh
  $ ./installer.sh
 
