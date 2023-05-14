@@ -230,22 +230,23 @@ class Preprocessor:
                         # Concatenar la ubicación y la zona horaria en un formato reconocible por el geocodificador
                         query = f"{location}, {timezone}"
                         # Utilizar el geocodificador para obtener las coordenadas geográficas
-                        location = geolocator.geocode(query, exactly_one=True)
+                        location = geolocator.geocode(query, language='en', exactly_one=True)
                         if location:
-                            coordenadas = (location.latitude, location.longitude)
+                            coordenadas = str(location.latitude) + ";" + str(location.longitude)
+                            coordenadas = coordenadas.replace(".",",")
                             print("Airline:", airline, "\tSentiment:", airline_sentiment, "\tCoords:", coordenadas)
                             return coordenadas
                     else:
-                        return None, None
+                        return "None;None"
                 except:
                     pass
-        
             # Aplicar la función get_coordinates a cada fila del DataFrame
+
             pml_dataset["tweet_coord"] = pml_dataset.apply(lambda row: get_coordinates(row["tweet_location"], row["user_timezone"], row["airline"], row["airline_sentiment"])   # columnas necesarias
-                                                   if pd.isnull(row["tweet_coord"]) or row["tweet_coord"] == [0.0, 0.0] else row["tweet_coord"], axis=1)                # condiciones
-            
+                                                   if pd.isnull(row["tweet_coord"]) or row["tweet_coord"] == "[0.0, 0.0]" else row["tweet_coord"], axis=1)                # condiciones
+            print(pml_dataset["tweet_coord"])
             # Guardar dataset con coordenadas en las filas negativas de Southwest en un csv
-            pml_dataset.to_csv("dataset_con_coords.csv", index=False)
+            pml_dataset.to_csv("dataset_con_coords.csv", index=False, decimal=",")
         
 
         # Eliminar columnas que no interesan
