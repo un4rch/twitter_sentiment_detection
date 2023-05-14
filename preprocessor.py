@@ -244,6 +244,10 @@ class Preprocessor:
             pml_dataset["tweet_coord"] = pml_dataset.apply(lambda row: get_coordinates(row["tweet_location"], row["user_timezone"], row["airline"], row["airline_sentiment"])   # columnas necesarias
                                                    if pd.isnull(row["tweet_coord"]) or row["tweet_coord"] == [0.0, 0.0] else row["tweet_coord"], axis=1)                # condiciones
             
+            # Agregar columnas de longitud y latitud al dataset
+            pml_dataset["latitude"] = pml_dataset["tweet_coord"].apply(lambda coord: coord[0] if coord else None)
+            pml_dataset["longitude"] = pml_dataset["tweet_coord"].apply(lambda coord: coord[1] if coord else None)
+            
             # Guardar dataset con coordenadas en las filas negativas de Southwest en un csv
             pml_dataset.to_csv("dataset_con_coords.csv", index=False)
         
