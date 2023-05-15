@@ -258,10 +258,10 @@ class Preprocessor:
         
             # Aplicar la función get_latitude y get_longitude a cada fila del DataFrame
             pml_dataset["latitude"] = pml_dataset.apply(lambda row: get_latitude(row["tweet_location"], row["user_timezone"], row["airline"], row["airline_sentiment"])   # columnas necesarias
-                                                   if pd.isnull(row["tweet_coord"]) or row["tweet_coord"] == [0.0, 0.0] else row["tweet_coord"], axis=1)                # condiciones
+                                                   , axis=1)                # condiciones
 
             pml_dataset["longitude"] = pml_dataset.apply(lambda row: get_longitude(row["tweet_location"], row["user_timezone"], row["airline"], row["airline_sentiment"])   # columnas necesarias
-                                                   if pd.isnull(row["tweet_coord"]) or row["tweet_coord"] == [0.0, 0.0] else row["tweet_coord"], axis=1)                # condiciones
+                                                   , axis=1)                # condiciones
             
             # Agregar columnas de longitud y latitud al dataset
             #pml_dataset["latitude"] = pml_dataset["tweet_coord"].apply(lambda coord: coord[0] if coord else None)
