@@ -234,7 +234,7 @@ class Preprocessor:
                         if location:
                             coordenadas = (location.latitude, location.longitude)
                             print("Airline:", airline, "\tSentiment:", airline_sentiment, "\tCoords:", coordenadas)
-                            return location.latitude
+                            return str(location.latitude).replace('.', ',')
                     else:
                         return None
                 except:
@@ -250,7 +250,7 @@ class Preprocessor:
                         if location:
                             coordenadas = (location.latitude, location.longitude)
                             print("Airline:", airline, "\tSentiment:", airline_sentiment, "\tCoords:", coordenadas)
-                            return location.longitude
+                            return str(location.longitude).replace('.', ',')
                     else:
                         return None
                 except:
