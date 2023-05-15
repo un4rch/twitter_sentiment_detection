@@ -234,7 +234,7 @@ class Preprocessor:
                         if location:
                             coordenadas = (location.latitude, location.longitude)
                             print("Airline:", airline, "\tSentiment:", airline_sentiment, "\tCoords:", coordenadas)
-                            return str(location.latitude).replace('.', ',')
+                            return location.latitude
                     else:
                         return None
                 except:
@@ -250,7 +250,7 @@ class Preprocessor:
                         if location:
                             coordenadas = (location.latitude, location.longitude)
                             print("Airline:", airline, "\tSentiment:", airline_sentiment, "\tCoords:", coordenadas)
-                            return str(location.longitude).replace('.', ',')
+                            return location.longitude
                     else:
                         return None
                 except:
@@ -268,7 +268,7 @@ class Preprocessor:
             #pml_dataset["longitude"] = pml_dataset["tweet_coord"].apply(lambda coord: coord[1] if coord else None)
             
             # Guardar dataset con coordenadas en las filas negativas de Southwest en un csv
-            pml_dataset.to_csv("dataset_con_coords.csv", index=False)
+            pml_dataset.to_csv("dataset_con_coords.csv", index=False, decimal=',')
         
 
         # Eliminar columnas que no interesan
