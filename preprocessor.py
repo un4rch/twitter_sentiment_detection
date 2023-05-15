@@ -224,7 +224,7 @@ class Preprocessor:
         def imputarCoords(pml_dataset):
             geolocator = Nominatim(user_agent="my_geocoder")
         
-            def get_coordinates(location, timezone, airline, airline_sentiment):
+            def get_latitude(location, timezone, airline, airline_sentiment):
                 try:
                     if location and airline == "Southwest" and airline_sentiment == "negative":
                         # Concatenar la ubicación y la zona horaria en un formato reconocible por el geocodificador
@@ -234,19 +234,38 @@ class Preprocessor:
                         if location:
                             coordenadas = (location.latitude, location.longitude)
                             print("Airline:", airline, "\tSentiment:", airline_sentiment, "\tCoords:", coordenadas)
-                            return coordenadas
+                            return location.latitude
                     else:
-                        return None, None
+                        return None
+                except:
+                    pass
+
+            def get_longitude(location, timezone, airline, airline_sentiment):
+                try:
+                    if location and airline == "Southwest" and airline_sentiment == "negative":
+                        # Concatenar la ubicación y la zona horaria en un formato reconocible por el geocodificador
+                        query = f"{location}, {timezone}"
+                        # Utilizar el geocodificador para obtener las coordenadas geográficas
+                        location = geolocator.geocode(query, exactly_one=True)
+                        if location:
+                            coordenadas = (location.latitude, location.longitude)
+                            print("Airline:", airline, "\tSentiment:", airline_sentiment, "\tCoords:", coordenadas)
+                            return location.longitude
+                    else:
+                        return None
                 except:
                     pass
         
-            # Aplicar la función get_coordinates a cada fila del DataFrame
-            pml_dataset["tweet_coord"] = pml_dataset.apply(lambda row: get_coordinates(row["tweet_location"], row["user_timezone"], row["airline"], row["airline_sentiment"])   # columnas necesarias
+            # Aplicar la función get_latitude y get_longitude a cada fila del DataFrame
+            pml_dataset["latitude"] = pml_dataset.apply(lambda row: get_latitude(row["tweet_location"], row["user_timezone"], row["airline"], row["airline_sentiment"])   # columnas necesarias
+                                                   if pd.isnull(row["tweet_coord"]) or row["tweet_coord"] == [0.0, 0.0] else row["tweet_coord"], axis=1)                # condiciones
+
+            pml_dataset["longitude"] = pml_dataset.apply(lambda row: get_longitude(row["tweet_location"], row["user_timezone"], row["airline"], row["airline_sentiment"])   # columnas necesarias
                                                    if pd.isnull(row["tweet_coord"]) or row["tweet_coord"] == [0.0, 0.0] else row["tweet_coord"], axis=1)                # condiciones
             
             # Agregar columnas de longitud y latitud al dataset
-            pml_dataset["latitude"] = pml_dataset["tweet_coord"].apply(lambda coord: coord[0] if coord else None)
-            pml_dataset["longitude"] = pml_dataset["tweet_coord"].apply(lambda coord: coord[1] if coord else None)
+            #pml_dataset["latitude"] = pml_dataset["tweet_coord"].apply(lambda coord: coord[0] if coord else None)
+            #pml_dataset["longitude"] = pml_dataset["tweet_coord"].apply(lambda coord: coord[1] if coord else None)
             
             # Guardar dataset con coordenadas en las filas negativas de Southwest en un csv
             pml_dataset.to_csv("dataset_con_coords.csv", index=False)
