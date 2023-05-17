@@ -185,7 +185,8 @@ if __name__ == '__main__':
         topic_probs = lda_model.get_document_topics(doc)
         predicciones.append(max(topic_probs, key=lambda x: x[1])[0])
     ml_dataset_clustering['predicted_topic'] = predicciones
-    print(ml_dataset_clustering)
+    ml_dataset_clustering = ml_dataset_clustering[ml_dataset_clustering[predictedTargetColumnName] == sentiment]
+    ml_dataset_clustering.to_csv(airline+"_"+sentiment+".csv", index=False)
     """try:
         predictions = clf.predict(testX)
         probas = clf.predict_proba(testX)

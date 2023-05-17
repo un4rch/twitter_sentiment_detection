@@ -1,0 +1,473 @@
+tweet_id,airline_sentiment,airline,text,tweet_coord,tweet_created,tweet_location,user_timezone,predicted_sentiment,predicted_topic
+5.7029446047676e+17,positive,Delta,jetblue thank information,"[0.0, 0.0]",2015-02-24 10:49:29 -0800,"Boston, MA",Athens,positive,1
+5.70289518194127e+17,positive,Delta,jetblue great,"[0.0, 0.0]",2015-02-24 10:29:51 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.70288803849638e+17,positive,Delta,jetblue thanks great recap wouldnt able sleep nervous bad guy get away,"[0.0, 0.0]",2015-02-24 10:27:00 -0800,Canton MA,Eastern Time (US & Canada),positive,1
+5.70287704728085e+17,positive,Delta,jetblue flight proud fly jet blue,"[0.0, 0.0]",2015-02-24 10:22:38 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.70287622343541e+17,positive,Delta,jetblue awesome thanks hold,"[0.0, 0.0]",2015-02-24 10:22:19 -0800,"Boston, MA ",Eastern Time (US & Canada),positive,1
+5.70280008557548e+17,positive,Delta,jetblue see work pick trip two type,"[0.0, 0.0]",2015-02-24 09:52:03 -0800,New York-ish + Airport Bars,Eastern Time (US & Canada),positive,0
+5.70278619416695e+17,positive,Delta,jetblue thanks quick reply want make sure wasnt account,"[0.0, 0.0]",2015-02-24 09:46:32 -0800,Seattle,Pacific Time (US & Canada),positive,1
+5.70276843812733e+17,positive,Delta,jetblue wouldnt mind pay snack tix great job guy,"[0.0, 0.0]",2015-02-24 09:39:29 -0800,US,Eastern Time (US & Canada),positive,1
+5.70251142942171e+17,positive,Delta,jetblue go napkin pretty much say httptcooxyjnpjm,"[0.0, 0.0]",2015-02-24 07:57:21 -0800,anaheim,Eastern Time (US & Canada),positive,1
+5.70246294582772e+17,positive,Delta,jetblueheart arrow,"[0.0, 0.0]",2015-02-24 07:38:05 -0800,"Boston, MA",Atlantic Time (Canada),positive,5
+5.70243767585935e+17,positive,Delta,jetblue longing look blue eye firstlove,"[0.0, 0.0]",2015-02-24 07:28:03 -0800,"Boston, MA",Eastern Time (US & Canada),positive,4
+5.70242512012452e+17,positive,Delta,jetblue best flyfi ondemand leatherseats hipunis legroom,"[0.0, 0.0]",2015-02-24 07:23:04 -0800,"Boston, MA",Eastern Time (US & Canada),positive,2
+5.70239272575316e+17,positive,Delta,eatgregeat wowthx think u greg heard sobewff amaze weve heard jetblue p thx info teamnkh,"[0.0, 0.0]",2015-02-24 07:10:11 -0800,"Washington, DC",Eastern Time (US & Canada),positive,4
+5.70237343669608e+17,positive,Delta,jetblue thank much,"[0.0, 0.0]",2015-02-24 07:02:31 -0800,All over ...,Eastern Time (US & Canada),positive,1
+5.70233869212856e+17,positive,Delta,jetblue glow crew aircraft sparkle guy know nokidhungry right might good partnership,"[34.02763089, -118.49627894]",2015-02-24 06:48:43 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.70232616755929e+17,positive,Delta,jetblue glad like feel free steal,"[0.0, 0.0]",2015-02-24 06:43:44 -0800,"Boston, MA",Eastern Time (US & Canada),positive,0
+5.70231750959329e+17,positive,Delta,jetblue blue help bring color eye promise didnt eat free snack,"[34.02764112, -118.49636416]",2015-02-24 06:40:18 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.70229813937463e+17,positive,Delta,jetblue thanks customer like stay loyal check land,"[0.0, 0.0]",2015-02-24 06:32:36 -0800,"Boston, MA",America/New_York,positive,3
+5.7022719976618e+17,positive,Delta,jetblue thx quick response yep try cant find flight input confirmation,"[0.0, 0.0]",2015-02-24 06:22:13 -0800,"iPhone: 40.955353,-73.813942",Central Time (US & Canada),positive,5
+5.70226143045034e+17,positive,Delta,jetblue wish everyone felt like,"[0.0, 0.0]",2015-02-24 06:18:01 -0800,"NY,NY",Eastern Time (US & Canada),positive,5
+5.70225899964129e+17,positive,Delta,jetblue sound great thank,"[0.0, 0.0]",2015-02-24 06:17:03 -0800,"Buffalo, New York",Quito,positive,1
+5.70222626712515e+17,positive,Delta,jetblue nice see veteran advantage program gate sunday mcokeep good work jetblue,"[0.0, 0.0]",2015-02-24 06:04:03 -0800,"NY,NY",Eastern Time (US & Canada),positive,5
+5.70221178658419e+17,positive,Delta,jetblue incredible pr team,"[0.0, 0.0]",2015-02-24 05:58:17 -0800,Boston,Atlantic Time (Canada),positive,0
+5.70208115205022e+17,positive,Delta,jetblue jannasaurusrex thanks kind word janna weappreciateyou trueblue im feel like bos jetbluefame,"[0.0, 0.0]",2015-02-24 05:06:23 -0800,central mass,Eastern Time (US & Canada),positive,1
+5.7020607782604e+17,positive,Delta,jetblue boarding back airplane first like bos sosmart jetblue frequentflyerappreciates alsoyayforsnacks,"[0.0, 0.0]",2015-02-24 04:58:17 -0800,central mass,Eastern Time (US & Canada),positive,5
+5.70195036782133e+17,positive,Delta,jetblue always amaze jetblue trueblue httptcoiimtjxcvlg,"[0.0, 0.0]",2015-02-24 04:14:25 -0800,boston ma,Atlantic Time (Canada),positive,1
+5.70190438281249e+17,positive,Delta,jetblue great land jfk,"[0.0, 0.0]",2015-02-24 03:56:08 -0800,Austin,Central Time (US & Canada),positive,1
+5.70179466716176e+17,positive,Delta,jetblue haha ty know time lane open logan,"[0.0, 0.0]",2015-02-24 03:12:32 -0800,Logan International Airport,Atlantic Time (Canada),positive,0
+5.70095219091362e+17,positive,Delta,jetblue second call customer service fifth person talk amaze rep fix min persistence,"[0.0, 0.0]",2015-02-23 21:37:46 -0800,"Boston, MA",Eastern Time (US & Canada),positive,5
+5.70088573598355e+17,positive,Delta,jetblue thanks much,"[0.0, 0.0]",2015-02-23 21:11:22 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.70075711433609e+17,positive,Delta,jetblue make two u lol blushing,"[0.0, 0.0]",2015-02-23 20:20:15 -0800,805 CA,Eastern Time (US & Canada),positive,0
+5.70073661241057e+17,positive,Delta,jetblue happy anniversary hard believe youre youre young,"[0.0, 0.0]",2015-02-23 20:12:06 -0800,805 CA,Eastern Time (US & Canada),positive,1
+5.70070740566991e+17,positive,Delta,jetblue super smooth flight land nicely do,"[0.0, 0.0]",2015-02-23 20:00:30 -0800,DC SF,Eastern Time (US & Canada),positive,3
+5.70049623697461e+17,positive,Delta,jetblue fyi im onboard comfortably travel jfk seat problem say thanks make fly civilize,"[0.0, 0.0]",2015-02-23 18:36:35 -0800,"San Francisco, CA",Pacific Time (US & Canada),positive,5
+5.70012934287569e+17,positive,Delta,jetblue btw thanks respond quickly,"[0.0, 0.0]",2015-02-23 16:10:48 -0800,"Boston, Austin, Kansas City ",Eastern Time (US & Canada),positive,5
+5.70010882069152e+17,positive,Delta,jetblue found camera thank rock,"[41.21681145, -73.12508256]",2015-02-23 16:02:39 -0800,"Stratford, CT",Eastern Time (US & Canada),positive,4
+5.70002674747367e+17,positive,Delta,jetblue gotcha thanks update im ready go whenever enjoy even,"[0.0, 0.0]",2015-02-23 15:30:02 -0800,"Los Angeles, CA",Eastern Time (US & Canada),positive,5
+5.70001191796679e+17,positive,Delta,jetblue well thankfully theyve get nice food court herewhen update post,"[0.0, 0.0]",2015-02-23 15:24:08 -0800,"Los Angeles, CA",Eastern Time (US & Canada),positive,0
+5.69991184120193e+17,positive,Delta,jetblue work ty,"[0.0, 0.0]",2015-02-23 14:44:22 -0800,"Los Angeles, Calif.",Pacific Time (US & Canada),positive,0
+5.69983421549834e+17,positive,Delta,jetblue would prefer similar picture full e tail great shot,"[0.0, 0.0]",2015-02-23 14:13:32 -0800,Brazil,Eastern Time (US & Canada),positive,0
+5.69983338880115e+17,positive,Delta,relieve im fly jetblue listen everyone neighbor gate bitch spirit airline well,"[0.0, 0.0]",2015-02-23 14:13:12 -0800,Somewhere,Eastern Time (US & Canada),positive,0
+5.69979057028227e+17,positive,Delta,jetbluetcogsnqsqz yall well,"[0.0, 0.0]",2015-02-23 13:56:11 -0800,"Boston, MA",Eastern Time (US & Canada),positive,2
+5.69978537953903e+17,positive,Delta,jetblue great flight bahamas even bad weather northeast thanks great service,"[0.0, 0.0]",2015-02-23 13:54:07 -0800,"Boston, MA",Atlantic Time (Canada),positive,1
+5.69968565513626e+17,positive,Delta,jetblue excite hear move towards international travel long beach airport,"[0.0, 0.0]",2015-02-23 13:14:30 -0800,Los Angeles,Pacific Time (US & Canada),positive,5
+5.69967910417867e+17,positive,Delta,jetblue thanks much talk article twitter chat come great httptcorkorhvrz contentmarketing,"[0.0, 0.0]",2015-02-23 13:11:53 -0800,"Austin, TX",Central Time (US & Canada),positive,0
+5.69959122331836e+17,positive,Delta,jetblue guy operate world class company thank,"[0.0, 0.0]",2015-02-23 12:36:58 -0800,"Boston, MA",Eastern Time (US & Canada),positive,2
+5.69957094788624e+17,positive,Delta,jetblue love service staff newark today good service go along wayi appreciate preciation nj tampa,"[0.0, 0.0]",2015-02-23 12:28:55 -0800,"Boston, MA",Quito,positive,2
+5.69951324508447e+17,positive,Delta,jetblue lolol myc,"[0.0, 0.0]",2015-02-23 12:05:59 -0800,"Brooklyn, NY",Eastern Time (US & Canada),positive,5
+5.69948686228296e+17,positive,Delta,jetblue true maybe wish expedite security haha,"[0.0, 0.0]",2015-02-23 11:55:30 -0800,Logan International Airport,Atlantic Time (Canada),positive,5
+5.69948345583563e+17,positive,Delta,jetbluetcoanvbjipx,"[0.0, 0.0]",2015-02-23 11:54:09 -0800,"El Paso, TX",Mountain Time (US & Canada),positive,2
+5.6994715133943e+17,positive,Delta,lmfaooo jetbluetcogrnmyuqe,"[0.0, 0.0]",2015-02-23 11:49:24 -0800,Friend Zone ,Quito,positive,4
+5.6994270349407e+17,positive,Delta,lol guy month agojetbluetcolycarltfhl,"[0.0, 0.0]",2015-02-23 11:31:44 -0800,"Detroit, MI",Quito,positive,4
+5.69942253365535e+17,positive,Delta,jetblue wow keep time,"[0.0, 0.0]",2015-02-23 11:29:56 -0800,"Boston, MA",Eastern Time (US & Canada),positive,3
+5.69939611650167e+17,positive,Delta,always look forward jb rt jetblue look forward welcome onboard,"[0.0, 0.0]",2015-02-23 11:19:27 -0800,"Boston, Austin, Kansas City ",Eastern Time (US & Canada),positive,2
+5.69938880495026e+17,positive,Delta,jetblue toss ticketits great pr im sure every college student follow willing rock wit,"[0.0, 0.0]",2015-02-23 11:16:32 -0800,"Boston, MA",Eastern Time (US & Canada),positive,2
+5.69937722804212e+17,positive,Delta,lovely rt jetbluetcohiflaxe,"[0.0, 0.0]",2015-02-23 11:11:56 -0800,Worldwide,Caracas,positive,0
+5.69934977963573e+17,positive,Delta,yall try jetbluetcogodfaknb,"[33.78310211, -84.21250227]",2015-02-23 11:01:02 -0800,"Jersey bred, Atlanta resident",Eastern Time (US & Canada),positive,2
+5.69929507945234e+17,positive,Delta,jetblue family excite see,"[0.0, 0.0]",2015-02-23 10:39:18 -0800,"Boston, MA",Eastern Time (US & Canada),positive,3
+5.69928989231354e+17,positive,Delta,jetblue love fly u question one ur plane call ny jet,"[0.0, 0.0]",2015-02-23 10:37:14 -0800,"south gate, california",Pacific Time (US & Canada),positive,5
+5.69927792781087e+17,positive,Delta,jetblue sound good,"[0.0, 0.0]",2015-02-23 10:32:29 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.69927127350407e+17,positive,Delta,jetbluetcojmnkjbmc jet blizzue hizouse,"[42.35829164, -71.06163025]",2015-02-23 10:29:50 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.69926945535861e+17,positive,Delta,jetblue excite first time sunday march get fly jetblue flight mint jfk look forward,"[0.0, 0.0]",2015-02-23 10:29:07 -0800,Wall Street • Manhattan • NYC ,Eastern Time (US & Canada),positive,0
+5.69926659219923e+17,positive,Delta,jetblue hahah love fly jet blue tho httptcoveemacm,"[0.0, 0.0]",2015-02-23 10:27:58 -0800,Out There,Arizona,positive,2
+5.69925929713189e+17,positive,Delta,jetblue lmfao love,"[0.0, 0.0]",2015-02-23 10:25:05 -0800,RVA-804\757,Hawaii,positive,5
+5.69925551475057e+17,positive,Delta,jetblue little time thatlol well actually lot day im excite,"[0.0, 0.0]",2015-02-23 10:23:34 -0800,"Boston, MA",Eastern Time (US & Canada),positive,3
+5.69924145380635e+17,positive,Delta,lmao jetbluetcoaiycwvoq,"[0.0, 0.0]",2015-02-23 10:17:59 -0800,Jupiter,Central Time (US & Canada),positive,4
+5.69924116335108e+17,positive,Delta,jetblue brandssayingbae well go,"[0.0, 0.0]",2015-02-23 10:17:52 -0800,greater los angeles ,Pacific Time (US & Canada),positive,2
+5.69923934054806e+17,positive,Delta,jetbluetcokvxslcqlp alynewton new fav airline,"[0.0, 0.0]",2015-02-23 10:17:09 -0800,KΔ. Boston. ,Eastern Time (US & Canada),positive,0
+5.69923825179054e+17,positive,Delta,jetblue hopefully application jetblue donut designer finally go proper channel,"[0.0, 0.0]",2015-02-23 10:16:43 -0800,NYC,Eastern Time (US & Canada),positive,2
+5.69923685848654e+17,positive,Delta,jetblue look cool,"[0.0, 0.0]",2015-02-23 10:16:10 -0800,Queens New York City,Eastern Time (US & Canada),positive,2
+5.69922420624069e+17,positive,Delta,jetblue definitely lot announcement app great,"[0.0, 0.0]",2015-02-23 10:11:08 -0800,New York City,Eastern Time (US & Canada),positive,1
+5.69921467552567e+17,positive,Delta,jetblue bet,"[0.0, 0.0]",2015-02-23 10:07:21 -0800,"Burlington, Vermont",Eastern Time (US & Canada),positive,1
+5.69920515542004e+17,positive,Delta,jetblue thank appreciate,"[41.06865736, -73.70398273]",2015-02-23 10:03:34 -0800,"Bronx, NY",Eastern Time (US & Canada),positive,1
+5.69918453722657e+17,positive,Delta,jetblue thanks use phone instead computer work thx,"[0.0, 0.0]",2015-02-23 09:55:22 -0800,"Boston, Austin, Kansas City ",Eastern Time (US & Canada),positive,4
+5.69911600934752e+17,positive,Delta,alright jetblue do alternatively youd like charter private jet pitt gladly accept,"[0.0, 0.0]",2015-02-23 09:28:08 -0800,NEW YORK,Eastern Time (US & Canada),positive,3
+5.69904537739383e+17,positive,Delta,jetblue good know thanks much,"[0.0, 0.0]",2015-02-23 09:00:04 -0800,"Boston, MA.",Eastern Time (US & Canada),positive,1
+5.69899437662863e+17,positive,Delta,jetblue thank quick response try request abassinet son would great help request,"[0.0, 0.0]",2015-02-23 08:39:48 -0800,USA,Eastern Time (US & Canada),positive,4
+5.69892980712014e+17,positive,Delta,jetblue mark austin great handle bag issue thanks,"[0.0, 0.0]",2015-02-23 08:14:09 -0800,Cape Cod Ma,Eastern Time (US & Canada),positive,1
+5.69890099917247e+17,positive,Delta,jetblue jeff hofmann denisejtaylor laurieameacham good one indeed jetblues fine day history,"[0.0, 0.0]",2015-02-23 08:02:42 -0800,"Salt Lake City, Utah",Mountain Time (US & Canada),positive,5
+5.69889139593646e+17,positive,Delta,jetblue thanks call right,"[0.0, 0.0]",2015-02-23 07:58:53 -0800,Puerto Rico,Hawaii,positive,5
+5.69884948091396e+17,positive,Delta,jetblue haha thanks guy great unlike nyjets gopatriots,"[0.0, 0.0]",2015-02-23 07:42:14 -0800,Massachusetts,Eastern Time (US & Canada),positive,1
+5.69883383930622e+17,positive,Delta,jetblue thanks,"[0.0, 0.0]",2015-02-23 07:36:01 -0800,"Cambridge, MA",Eastern Time (US & Canada),positive,1
+5.69879547908207e+17,positive,Delta,jetblue thank free flyfi make already great airline even well jetblue boston westpalmbeach flybetter,"[0.0, 0.0]",2015-02-23 07:20:46 -0800,A Galaxy Far Far Away,Eastern Time (US & Canada),positive,1
+5.69877622869664e+17,positive,Delta,jetblue thank,"[0.0, 0.0]",2015-02-23 07:13:07 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.69873065464574e+17,positive,Delta,jetblue wish best luck im enjoy luxurious free amount leg space rn thanks,"[0.0, 0.0]",2015-02-23 06:55:01 -0800,"Boston, MA",Arizona,positive,5
+5.6986771987465e+17,positive,Delta,jetblue great see redsox plane reminder ny side side jfk catsanddogslivingtogether httptcokfuyyokufv,"[0.0, 0.0]",2015-02-23 06:33:46 -0800,NYC/Austin,Eastern Time (US & Canada),positive,5
+5.69851813706539e+17,positive,Delta,jetblue orlando dca awesome flight attendant robert,"[0.0, 0.0]",2015-02-23 05:30:34 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.69836232999612e+17,positive,Delta,jetblue thanks jb actually birder love need outside shouldnt hard trap move,"[0.0, 0.0]",2015-02-23 04:28:39 -0800,"40.41,-73.19",Eastern Time (US & Canada),positive,3
+5.69775081636782e+17,positive,Delta,jetblue flight jfksfo pure awesomeness mint class tim attendant best airline take note,"[0.0, 0.0]",2015-02-23 00:25:40 -0800,California,Arizona,positive,0
+5.69741756968919e+17,positive,Delta,jetblue last sleep cali back jfk tomorrow night look forward another amaze flight,"[33.7008468, -118.0192094]",2015-02-22 22:13:14 -0800,New York City,Atlantic Time (Canada),positive,5
+5.69736434803978e+17,positive,Delta,jetblue free wifi impressive flyfi httptcotrypzebc,"[0.0, 0.0]",2015-02-22 21:52:05 -0800,New York,Eastern Time (US & Canada),positive,2
+5.69722367343137e+17,positive,Delta,jetblue mint seat awesome emaleesugano best business class u,"[0.0, 0.0]",2015-02-22 20:56:11 -0800,"Boston, MA",Eastern Time (US & Canada),positive,2
+5.69718205524128e+17,positive,Delta,jetblue thank get home despite odds reunite delinquent southwest luggage homeward,"[0.0, 0.0]",2015-02-22 20:39:39 -0800,Boston,Eastern Time (US & Canada),positive,4
+5.69707583646376e+17,positive,Delta,jetblue ok thanks safety first,"[0.0, 0.0]",2015-02-22 19:57:27 -0800,Planet Brooklyn,Atlantic Time (Canada),positive,1
+5.69702567573369e+17,positive,Delta,kudos well deserve wish rest jetblue experience today measure example,"[0.0, 0.0]",2015-02-22 19:37:31 -0800,"Brooklyn, NY",Eastern Time (US & Canada),positive,3
+5.6970049931996e+17,positive,Delta,jetblue ha ha get wake call boarding time please large coffee extralight extra sweet please,"[40.89343356, -74.29961359]",2015-02-22 19:29:18 -0800,Right Coast,Eastern Time (US & Canada),positive,4
+5.69692158287962e+17,positive,Delta,jetblue thank new big fan,"[0.0, 0.0]",2015-02-22 18:56:09 -0800,"Los Angeles, California",Monterrey,positive,1
+5.69691489179021e+17,positive,Delta,jetblue best airline wifi ever thank,"[0.0, 0.0]",2015-02-22 18:53:30 -0800,"Boston, MA",Eastern Time (US & Canada),positive,0
+5.69686267354599e+17,positive,Delta,jetblue pilot dont worry folk there backup backup every part plane thanks guy,"[0.0, 0.0]",2015-02-22 18:32:45 -0800,Austin + Brooklyn,Eastern Time (US & Canada),positive,2
+5.69685096527057e+17,positive,Delta,jetblue thank,"[0.0, 0.0]",2015-02-22 18:28:05 -0800,"Boston, MA",Quito,positive,1
+5.69684947151094e+17,positive,Delta,jetblue awesome,"[0.0, 0.0]",2015-02-22 18:27:30 -0800,"San Francisco, California",Greenland,positive,1
+5.6967613825305e+17,positive,Delta,jetblue ok thanks help,"[0.0, 0.0]",2015-02-22 17:52:30 -0800,New York,Eastern Time (US & Canada),positive,1
+5.69675848770408e+17,positive,Delta,jetblue love guy httptcoxnruovts,"[0.0, 0.0]",2015-02-22 17:51:21 -0800,Mexico-Colombia,Eastern Time (US & Canada),positive,2
+5.69672563506459e+17,positive,Delta,jetblue youre still best,"[0.0, 0.0]",2015-02-22 17:38:17 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.69672010734969e+17,positive,Delta,jetblue thanks make,"[0.0, 0.0]",2015-02-22 17:36:06 -0800,"Boston, MA",Central Time (US & Canada),positive,1
+5.6967143530981e+17,positive,Delta,jetblue thanks quick response finger cross plane get,"[0.0, 0.0]",2015-02-22 17:33:48 -0800,New York City,Eastern Time (US & Canada),positive,5
+5.69671000486502e+17,positive,Delta,jetblue thank finger cross,"[0.0, 0.0]",2015-02-22 17:32:05 -0800,New York,Eastern Time (US & Canada),positive,5
+5.69659473804947e+17,positive,Delta,jetblue aha ok thanks worried might seat airport tomorrow,"[0.0, 0.0]",2015-02-22 16:46:16 -0800,"San Francisco, CA",Pacific Time (US & Canada),positive,5
+5.69650423318983e+17,positive,Delta,jetbluefolded hand,"[0.0, 0.0]",2015-02-22 16:10:19 -0800,"Boston, MA",Central Time (US & Canada),positive,3
+5.69648229295329e+17,positive,Delta,jetblue thanks response hopeful,"[0.0, 0.0]",2015-02-22 16:01:36 -0800,"Boston, MA",Atlantic Time (Canada),positive,1
+5.69642730932064e+17,positive,Delta,jetblue thank refund change fee recent flight affected bizarre winter excellent customer service focus,"[0.0, 0.0]",2015-02-22 15:39:45 -0800,"Boston, MA",Eastern Time (US & Canada),positive,3
+5.69638848214508e+17,positive,Delta,jetblue thanks help cant wait travel get snow,"[0.0, 0.0]",2015-02-22 15:24:19 -0800,Merrimack NH,Eastern Time (US & Canada),positive,5
+5.69633562879619e+17,positive,Delta,jetblue thanks answer question,"[0.0, 0.0]",2015-02-22 15:03:19 -0800,3Ø4 ,Quito,positive,1
+5.69630240512877e+17,positive,Delta,jetblue cool stair jfk walk short distance stair,"[0.0, 0.0]",2015-02-22 14:50:07 -0800,"Boston, MA",Atlantic Time (Canada),positive,3
+5.6962199185202e+17,positive,Delta,jetblue record less minute turnaround time answer question jetblue rock,"[0.0, 0.0]",2015-02-22 14:17:20 -0800,Right Coast,Eastern Time (US & Canada),positive,3
+5.69614500044919e+17,positive,Delta,jetblue btw robin hayes speak next month uschamber aviation summit ought give shout twitter team rock,"[0.0, 0.0]",2015-02-22 13:47:34 -0800,"Washington, D.C.",Quito,positive,4
+5.6960943671468e+17,positive,Delta,jetblue oh thank respond,"[0.0, 0.0]",2015-02-22 13:27:27 -0800,"Washington, DC",Eastern Time (US & Canada),positive,1
+5.69605593159352e+17,positive,Delta,jetblue thanks ticket stand flight hope make finger cross,"[0.0, 0.0]",2015-02-22 13:12:10 -0800,"Boston, MA",Eastern Time (US & Canada),positive,5
+5.69603641767793e+17,positive,Delta,jetblue thank guy best,"[0.0, 0.0]",2015-02-22 13:04:25 -0800,"Miami, FL",Central Time (US & Canada),positive,1
+5.69603002278945e+17,positive,Delta,jetblue love always,"[0.0, 0.0]",2015-02-22 13:01:53 -0800,"Port-au-Prince, NYC.",Quito,positive,2
+5.69596394819883e+17,positive,Delta,jetblue great experience flight sfo jfk seat service food everything top quality back soon,"[0.0, 0.0]",2015-02-22 12:35:37 -0800,Palo Alto CA,Pacific Time (US & Canada),positive,5
+5.69586189776372e+17,positive,Delta,jetblue thanks replyingi feel little well well see go,"[0.0, 0.0]",2015-02-22 11:55:04 -0800,the burg nj,Eastern Time (US & Canada),positive,3
+5.69581126215438e+17,positive,Delta,jetblue guy rock,"[0.0, 0.0]",2015-02-22 11:34:57 -0800,NYC,Quito,positive,1
+5.69580001672237e+17,positive,Delta,jetblue awesome bestairlineever,"[0.0, 0.0]",2015-02-22 11:30:29 -0800,NYC,Quito,positive,1
+5.69576074050474e+17,positive,Delta,jetblue fly jet blue,"[0.0, 0.0]",2015-02-22 11:14:52 -0800,San Francisco,Pacific Time (US & Canada),positive,1
+5.69574221216662e+17,positive,Delta,jetblue thanks use extra time shopping somebody say duty free,"[4.69840554, -74.14134323]",2015-02-22 11:07:31 -0800,Fort Lauderdale,Eastern Time (US & Canada),positive,3
+5.69573843825791e+17,positive,Delta,jetblues flight flight book problem experience pretty great,"[0.0, 0.0]",2015-02-22 11:06:01 -0800,Boston,London,positive,1
+5.69572707299299e+17,positive,Delta,jetblue thanks make trip home mintyfresh next brandmance flight ill take selfies love travel business,"[0.0, 0.0]",2015-02-22 11:01:30 -0800,"New York, NY",Eastern Time (US & Canada),positive,5
+5.69563087964996e+17,positive,Delta,jetblue enjoy ride thank,"[38.6485933, -121.11740707]",2015-02-22 10:23:16 -0800,LA CA USA,Pacific Time (US & Canada),positive,1
+5.69558235897688e+17,positive,Delta,jetblue thanks good sunday,"[0.0, 0.0]",2015-02-22 10:03:59 -0800,"New Orleans, LA",Eastern Time (US & Canada),positive,5
+5.69543615862723e+17,positive,Delta,jetblue thank finally gate,"[0.0, 0.0]",2015-02-22 09:05:54 -0800,"New York City, NY",Eastern Time (US & Canada),positive,1
+5.69543457452065e+17,positive,Delta,jetblue flight orlando unable serve hot bevy theyve make movie alcohol complimentary work,"[0.0, 0.0]",2015-02-22 09:05:16 -0800,scarborough ontario canada,Eastern Time (US & Canada),positive,0
+5.69542242983125e+17,positive,Delta,jetblue land usual great flight wiyh great crew hello sunny west palm beach jetbluerocks,"[0.0, 0.0]",2015-02-22 09:00:26 -0800,"Boston, MA",America/Detroit,positive,1
+5.69540050821763e+17,positive,Delta,jetblue amaze thank,"[0.0, 0.0]",2015-02-22 08:51:44 -0800,"New York, sort of!",Eastern Time (US & Canada),positive,1
+5.69538135916352e+17,positive,Delta,jetblue littlebirds beautiful shot thanks share use flyfi post welcome flight quickie,"[38.69255098, -121.58854512]",2015-02-22 08:44:07 -0800,LA CA USA,Pacific Time (US & Canada),positive,2
+5.69537388986421e+17,positive,Delta,jetblue help problem easily nice guy rock,"[0.0, 0.0]",2015-02-22 08:41:09 -0800,• PSU '19 • faith • ,Eastern Time (US & Canada),positive,4
+5.69533479362408e+17,positive,Delta,jetblue customer service agent bonnie amaze phone deserves promotion,"[0.0, 0.0]",2015-02-22 08:25:37 -0800,• PSU '19 • faith • ,Eastern Time (US & Canada),positive,3
+5.69533355248767e+17,positive,Delta,jetblue bos everything current thanks follow,"[0.0, 0.0]",2015-02-22 08:25:07 -0800,The Old Dominion,Central Time (US & Canada),positive,5
+5.69533098402009e+17,positive,Delta,jetblue thanks info already board look forward future upgrade jetblue httptcodbesbnzg,"[0.0, 0.0]",2015-02-22 08:24:06 -0800,"Florham Park, NJ",Eastern Time (US & Canada),positive,4
+5.69532566610571e+17,positive,Delta,jetblue thing happen ok wish beach airport,"[0.0, 0.0]",2015-02-22 08:21:59 -0800,"Boston, MA",Central Time (US & Canada),positive,5
+5.69530599129502e+17,positive,Delta,jetblue love jetblue flyfi able charge device domestic flight thanks httptcoobqirobuj,"[0.0, 0.0]",2015-02-22 08:14:10 -0800,"Florham Park, NJ",Eastern Time (US & Canada),positive,3
+5.69530159247827e+17,positive,Delta,jetblue touchdown jfk well do pilot jetblue flight jetbluerocks,"[0.0, 0.0]",2015-02-22 08:12:25 -0800,"Larchmont, New York",Eastern Time (US & Canada),positive,1
+5.69527641025307e+17,positive,Delta,jetblue thanks personalize customer service cannedtweet autoresponse,"[0.0, 0.0]",2015-02-22 08:02:25 -0800,"New York, NY",Central Time (US & Canada),positive,3
+5.69526493023498e+17,positive,Delta,jetblue knew reason u favorite airline read answer twitter globe morning great job,"[0.0, 0.0]",2015-02-22 07:57:51 -0800,"Boston, MA",Eastern Time (US & Canada),positive,0
+5.69524116769915e+17,positive,Delta,jetblue yup know fault ideal sittin hour always staff great,"[0.0, 0.0]",2015-02-22 07:48:25 -0800,"Southbury, CT",Eastern Time (US & Canada),positive,2
+5.69521778797744e+17,positive,Delta,jetblue get thanks quick reply,"[0.0, 0.0]",2015-02-22 07:39:07 -0800,"Brooklyn, NY",Eastern Time (US & Canada),positive,1
+5.6951747929641e+17,positive,Delta,jetblue great experience work glenn cole buffaloniagara airport top notch employee,"[0.0, 0.0]",2015-02-22 07:22:02 -0800,Buffalo,Eastern Time (US & Canada),positive,4
+5.69516908195815e+17,positive,Delta,jetblue well last update right direction least ill keep finger cross,"[0.0, 0.0]",2015-02-22 07:19:46 -0800,"Malden, MA",Eastern Time (US & Canada),positive,5
+5.69514688809181e+17,positive,Delta,jetblue thx social medium person,"[0.0, 0.0]",2015-02-22 07:10:57 -0800,brooklyn,Eastern Time (US & Canada),positive,4
+5.69510849846612e+17,positive,Delta,jetblue always mosaicmecrazy sunrise bestairline nofilterneeded amp love flyfi httptconycsjruv,"[0.0, 0.0]",2015-02-22 06:55:42 -0800,"New York, NY",Eastern Time (US & Canada),positive,2
+5.69509408939487e+17,positive,Delta,jetblue miraculously fix plane kudos shoe ever,"[0.0, 0.0]",2015-02-22 06:49:58 -0800,"Boston, MA",Eastern Time (US & Canada),positive,5
+5.69506389397283e+17,positive,Delta,jetblue yall really well american airline though,"[0.0, 0.0]",2015-02-22 06:37:58 -0800,"Boston, MA",Mountain Time (US & Canada),positive,0
+5.69503518224212e+17,positive,Delta,jetblue great service pbi hpn thanks,"[0.0, 0.0]",2015-02-22 06:26:34 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.69501556275606e+17,positive,Delta,jetblue do thank,"[0.0, 0.0]",2015-02-22 06:18:46 -0800,Grimsby - UK,Eastern Time (US & Canada),positive,1
+5.6947940442812e+17,positive,Delta,jetblue fll mde great flight great customer service thanks mths wait americanair speak human customer service,"[0.0, 0.0]",2015-02-22 04:50:45 -0800,"Boston, MA",Quito,positive,3
+5.69462004332646e+17,positive,Delta,jetblue okay thank ill check,"[0.0, 0.0]",2015-02-22 03:41:36 -0800,"Austin, TX",Eastern Time (US & Canada),positive,1
+5.69447456896918e+17,positive,Delta,jetblue sylvie good morning sylvie great flight yourock gt thank jetblue mxo henrikwagner jetbluerocks,"[0.0, 0.0]",2015-02-22 02:43:48 -0800,"Larchmont, New York",Eastern Time (US & Canada),positive,1
+5.69439829328409e+17,positive,Delta,jetblue come thanks followup thats youre best,"[0.0, 0.0]",2015-02-22 02:13:29 -0800,new york city,Eastern Time (US & Canada),positive,1
+5.69439674294338e+17,positive,Delta,jetblue thanks see soon,"[0.0, 0.0]",2015-02-22 02:12:52 -0800,new york city,Eastern Time (US & Canada),positive,5
+5.69435866902303e+17,positive,Delta,jetblue thanks get u nyc jfk really safely srsly long take get checked bag eternity ammisery,"[0.0, 0.0]",2015-02-22 01:57:44 -0800,new york city,Eastern Time (US & Canada),positive,0
+5.69394918675784e+17,positive,Delta,jetblue thanks response next flight flight,"[0.0, 0.0]",2015-02-21 23:15:02 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.69386956435489e+17,positive,Delta,jetblue great flight brand new jet great seat beautiful plane big fan airline,"[0.0, 0.0]",2015-02-21 22:43:23 -0800,New York City,Arizona,positive,1
+5.69382239131169e+17,positive,Delta,jetblue thank know weather boston isnt great everyones tire,"[0.0, 0.0]",2015-02-21 22:24:39 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.69364648576872e+17,positive,Delta,jetblue thank thank finally set jetblue app yay,"[0.0, 0.0]",2015-02-21 21:14:45 -0800,NY,Eastern Time (US & Canada),positive,1
+5.69359788120908e+17,positive,Delta,jetblue thanks take back home today despite pandora best effort cancel flight flight jetblue backhome noplacelikehome,"[0.0, 0.0]",2015-02-21 20:55:26 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.69353033915585e+17,positive,Delta,jetblue maddie flood airline sound outstanding twitter feed clearly extremely useful keep great work,"[34.546788, -87.012305]",2015-02-21 20:28:36 -0800,From the South to 'THE' South ,Central Time (US & Canada),positive,4
+5.6934826815461e+17,positive,Delta,jetblue thank stand line,"[0.0, 0.0]",2015-02-21 20:09:39 -0800,new york,Eastern Time (US & Canada),positive,1
+5.69346428839064e+17,positive,Delta,jetblue thank,"[0.0, 0.0]",2015-02-21 20:02:21 -0800,New York City,Quito,positive,1
+5.69332001720967e+17,positive,Delta,jetblue l burley best,"[0.0, 0.0]",2015-02-21 19:05:01 -0800,"Washington, DC",Eastern Time (US & Canada),positive,2
+5.69330782537437e+17,positive,Delta,jetblue thanks bring son home,"[0.0, 0.0]",2015-02-21 19:00:10 -0800,"Sands Point, NY",Mid-Atlantic,positive,1
+5.6933009564466e+17,positive,Delta,jetblue get hot lady fly air life loyal,"[0.0, 0.0]",2015-02-21 18:57:27 -0800,D.C,Atlantic Time (Canada),positive,3
+5.6933009185722e+17,positive,Delta,jetblue nothing praise help lady make flight chs tonight impressed,"[0.0, 0.0]",2015-02-21 18:57:26 -0800,"Boston, MA",Quito,positive,4
+5.69320520728113e+17,positive,Delta,jetblue thanks much cant wait fly guy,"[0.0, 0.0]",2015-02-21 18:19:24 -0800,New Jersey,Quito,positive,1
+5.69313006406013e+17,positive,Delta,jetblue ok thank,"[0.0, 0.0]",2015-02-21 17:49:32 -0800,Massachusetts,Quito,positive,1
+5.69312396097004e+17,positive,Delta,jetblue thanks speedy flight time recovery,"[0.0, 0.0]",2015-02-21 17:47:07 -0800,"Miami/Ft. Lauderdale, FL",Eastern Time (US & Canada),positive,1
+5.69311730540683e+17,positive,Delta,jetblue thank take care drink since inflight entertainment wasnt work goodcustomerservice,"[0.0, 0.0]",2015-02-21 17:44:28 -0800,Southern California,Pacific Time (US & Canada),positive,0
+5.69310070825226e+17,positive,Delta,jetblue would say delay likely thanks much,"[0.0, 0.0]",2015-02-21 17:37:52 -0800,New Jersey,Quito,positive,1
+5.69308292893291e+17,positive,Delta,jetblue shes woman who lead work gate c,"[0.0, 0.0]",2015-02-21 17:30:48 -0800,"sweatertown, new england",Atlantic Time (Canada),positive,0
+5.69307917712806e+17,positive,Delta,jetblue follow able dm thanks,"[0.0, 0.0]",2015-02-21 17:29:19 -0800,"Boston, MA",Eastern Time (US & Canada),positive,5
+5.69305409925874e+17,positive,Delta,jetblue want give warm thanks crew logan airport still get dc area cancel flightlations morning,"[0.0, 0.0]",2015-02-21 17:19:21 -0800,"sweatertown, new england",Atlantic Time (Canada),positive,1
+5.69304186548048e+17,positive,Delta,jetblue another awesome telephone experience jetblue thank cory greatcustomerservice,"[0.0, 0.0]",2015-02-21 17:14:29 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.69300522705883e+17,positive,Delta,jetblue thank,"[0.0, 0.0]",2015-02-21 16:59:56 -0800,Brooklyn,Eastern Time (US & Canada),positive,1
+5.69300264349364e+17,positive,Delta,jetblue go beyond helpful,"[0.0, 0.0]",2015-02-21 16:58:54 -0800,Brooklyn,Eastern Time (US & Canada),positive,2
+5.69296877902041e+17,positive,Delta,jetblue best cant wait use travel bank fun trip,"[0.0, 0.0]",2015-02-21 16:45:27 -0800,metro Boston,Istanbul,positive,5
+5.6929407012993e+17,positive,Delta,jetblue plane hopefully longer mercy playlist thanks,"[0.0, 0.0]",2015-02-21 16:34:17 -0800,Boston,Eastern Time (US & Canada),positive,5
+5.69278644943757e+17,positive,Delta,jetblue thanks prompt response know put safety first unfortunately hit freeze rainsleet ride home,"[0.0, 0.0]",2015-02-21 15:33:00 -0800,"Boston, MA",Eastern Time (US & Canada),positive,4
+5.69276518305821e+17,positive,Delta,jetblue ok thats super helpful thank ill reach question,"[0.0, 0.0]",2015-02-21 15:24:33 -0800,"Boston, MA",Eastern Time (US & Canada),positive,3
+5.69275935905722e+17,positive,Delta,jetblue thanks instant reply still first bag free important,"[0.0, 0.0]",2015-02-21 15:22:14 -0800,By mile 3 of the NYC Marathon,Eastern Time (US & Canada),positive,1
+5.69271994212069e+17,positive,Delta,jetblue excite time ahead,"[40.67851205, -73.43465391]",2015-02-21 15:06:34 -0800,"Long Island, New York",Eastern Time (US & Canada),positive,3
+5.69249704543965e+17,positive,Delta,jetblue great flight httptcoerntotr,"[0.0, 0.0]",2015-02-21 13:38:00 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.69249554236879e+17,positive,Delta,jetblue cant beat jetblue space matter httptconrpwmgyve,"[0.0, 0.0]",2015-02-21 13:37:24 -0800,"Boston, MA",Eastern Time (US & Canada),positive,5
+5.69248721139048e+17,positive,Delta,jetblue great thank,"[0.0, 0.0]",2015-02-21 13:34:05 -0800,"New York, sort of!",Eastern Time (US & Canada),positive,1
+5.69244956663149e+17,positive,Delta,jetblue good hear thx responsive,"[0.0, 0.0]",2015-02-21 13:19:08 -0800,"Washington, DC",Eastern Time (US & Canada),positive,5
+5.69242143748964e+17,positive,Delta,cool thx couple pgashow flight til im mosaiccant wait easy change flight weather badjetblue,"[41.05811177, -73.53637216]",2015-02-21 13:07:57 -0800,"Stamford, CT",Eastern Time (US & Canada),positive,3
+5.69239947061928e+17,positive,Delta,jetblue thanks much help u u r amaze,"[0.0, 0.0]",2015-02-21 12:59:14 -0800,"Boston, MA",Bogota,positive,1
+5.69238666654196e+17,positive,Delta,jetblue kudos do head warmer weather,"[0.0, 0.0]",2015-02-21 12:54:08 -0800,Long Island/Westchester,Eastern Time (US & Canada),positive,2
+5.69235924544045e+17,positive,Delta,jetblue awesome thank,"[0.0, 0.0]",2015-02-21 12:43:14 -0800,Virginia & Cali,Eastern Time (US & Canada),positive,1
+5.69230515833856e+17,positive,Delta,jetblue thanks update httptcokubotmrr,"[0.0, 0.0]",2015-02-21 12:21:45 -0800,NYC✈️MIA,Eastern Time (US & Canada),positive,5
+5.69223830759059e+17,positive,Delta,jetblue thanks still book trip lb slc see grand kid frustrate try app web etc still love u guy,"[0.0, 0.0]",2015-02-21 11:55:11 -0800,"Fullerton, CA",Eastern Time (US & Canada),positive,2
+5.69222694778106e+17,positive,Delta,jetblue thank im excite fly first time,"[0.0, 0.0]",2015-02-21 11:50:40 -0800,"Boston, MA",Eastern Time (US & Canada),positive,3
+5.69222108200477e+17,positive,Delta,thank u jetblue,"[0.0, 0.0]",2015-02-21 11:48:20 -0800,"ÜT: 27.947395,-82.215546",Eastern Time (US & Canada),positive,1
+5.69221909231104e+17,positive,Delta,jetblue kudos jetblue social medium team jumping help last snow storm web site downthanks,"[0.0, 0.0]",2015-02-21 11:47:33 -0800,"Boston, MA",Eastern Time (US & Canada),positive,4
+5.69213183455564e+17,positive,Delta,jetblue thanks much condolence quick response much appreciate,"[0.0, 0.0]",2015-02-21 11:12:53 -0800,CONCRETE JUNGLE,Pacific Time (US & Canada),positive,1
+5.69204185318724e+17,positive,Delta,jetblue thank alicia exceptionalservice,"[0.0, 0.0]",2015-02-21 10:37:07 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.69188266089382e+17,positive,Delta,jetblue thanks chat nice fella give lowdown,"[0.0, 0.0]",2015-02-21 09:33:52 -0800,"face, space",America/New_York,positive,0
+5.69177868221202e+17,positive,Delta,jetblue ok thank quick response jetblue still best comp,"[0.0, 0.0]",2015-02-21 08:52:33 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.69176746735632e+17,positive,Delta,jetblue im session present one beloved traveler paulgordonbrowni see love much httptcovvcfyhkvb,"[0.0, 0.0]",2015-02-21 08:48:05 -0800,"Virginia Beach, VA",Eastern Time (US & Canada),positive,5
+5.69157073906176e+17,positive,Delta,jetblue oh definitely kind fly jetblue,"[0.0, 0.0]",2015-02-21 07:29:55 -0800,LA & Boston,Eastern Time (US & Canada),positive,1
+5.6915450318807e+17,positive,Delta,jetblue thanks get orlando early happiness,"[28.42301907, -81.29654204]",2015-02-21 07:19:42 -0800,"Boston, MA",Eastern Time (US & Canada),positive,0
+5.69130620963697e+17,positive,Delta,jetblue get thanks,"[0.0, 0.0]",2015-02-21 05:44:48 -0800,"Troy, NY",Eastern Time (US & Canada),positive,1
+5.69125697530102e+17,positive,Delta,jetblue even though flight didnt much need hot beverage u nyers land super smooth happytweet,"[0.0, 0.0]",2015-02-21 05:25:14 -0800,NYC ,Eastern Time (US & Canada),positive,1
+5.69121160149012e+17,positive,Delta,jetblue thanks get boston early tuftsenergyconf break barrier clean energy future,"[0.0, 0.0]",2015-02-21 05:07:12 -0800,"Cambridge, MA",Eastern Time (US & Canada),positive,4
+5.69118085245899e+17,positive,Delta,jetblue thanks,"[0.0, 0.0]",2015-02-21 04:54:59 -0800,#theBronx ,Central Time (US & Canada),positive,1
+5.69113910776881e+17,positive,Delta,jetblue thanks complimentary upgrade first best,"[0.0, 0.0]",2015-02-21 04:38:24 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.69109515657826e+17,positive,Delta,jetblue ah staff perfect morning jfk sleep,"[0.0, 0.0]",2015-02-21 04:20:56 -0800,"New York, NY",Quito,positive,0
+5.69103956795904e+17,positive,Delta,jetblue airbus wow awesome video guy httpstcodbcvepnqc great work bluemanity corevalues passion aerojobmarket avgeek,"[0.0, 0.0]",2015-02-21 03:58:51 -0800,Worldwide,London,positive,0
+5.69102757875077e+17,positive,Delta,jetblue airbus wow amaze video httpstcodbcvepnqc great world guy bluemanity corevalues passion aerojobmarket,"[0.0, 0.0]",2015-02-21 03:54:05 -0800,Worldwide,London,positive,0
+5.69096740676223e+17,positive,Delta,jetblue today family get experience mosaic status w lifeisgood,"[0.0, 0.0]",2015-02-21 03:30:10 -0800,"Salem, NH",Eastern Time (US & Canada),positive,0
+5.69091378438746e+17,positive,Delta,jetblue word thanks,"[0.0, 0.0]",2015-02-21 03:08:52 -0800,ravioli,Eastern Time (US & Canada),positive,1
+5.68984446487167e+17,positive,Delta,jetblue thank,"[40.7171667, -73.96415608]",2015-02-20 20:03:57 -0800,"Brooklyn, NY",Eastern Time (US & Canada),positive,1
+5.68983580585517e+17,positive,Delta,jetblue thanks ill,"[0.0, 0.0]",2015-02-20 20:00:31 -0800,Ft. Lauderdale,Eastern Time (US & Canada),positive,1
+5.68983310438806e+17,positive,Delta,jetblue ferrissalameh love jetblues speedy twitter customer service,"[0.0, 0.0]",2015-02-20 19:59:27 -0800,"New York, NY",Eastern Time (US & Canada),positive,3
+5.68976617453658e+17,positive,Delta,jetblue thanks,"[0.0, 0.0]",2015-02-20 19:32:51 -0800,Bushwood,Eastern Time (US & Canada),positive,1
+5.68974096161235e+17,positive,Delta,jetblue thank much effort,"[0.0, 0.0]",2015-02-20 19:22:50 -0800,new york,Eastern Time (US & Canada),positive,1
+5.68973348840944e+17,positive,Delta,jetblue thanks let u know hop delay,"[0.0, 0.0]",2015-02-20 19:19:52 -0800,Central Perk,Eastern Time (US & Canada),positive,1
+5.68964945259467e+17,positive,Delta,jetblue thanks,"[0.0, 0.0]",2015-02-20 18:46:28 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.68955077165261e+17,positive,Delta,jetblue save day expedia lose costumer jetblue makingthingseasy feelbetter,"[0.0, 0.0]",2015-02-20 18:07:15 -0800,"Boston, MA",Eastern Time (US & Canada),positive,3
+5.68937402837787e+17,positive,Delta,jetblue yes terra blue chip favorite,"[0.0, 0.0]",2015-02-20 16:57:01 -0800,"los angeles, ca",Pacific Time (US & Canada),positive,0
+5.68932998051017e+17,positive,Delta,jetblue dmd confirmation code thanks help mommy daddy kid appreciate,"[0.0, 0.0]",2015-02-20 16:39:31 -0800,"Hastings on Hudson, NY",Eastern Time (US & Canada),positive,4
+5.68929935273931e+17,positive,Delta,cool jetbluetcosgckbopata,"[26.07159064, -80.14770942]",2015-02-20 16:27:21 -0800,"Fort Lauderdale, FL",Eastern Time (US & Canada),positive,3
+5.68929608566837e+17,positive,Delta,jetblue love guy sooooooo much ridiculously appreciate service,"[0.0, 0.0]",2015-02-20 16:26:03 -0800,"Hastings on Hudson, NY",Eastern Time (US & Canada),positive,1
+5.68926268772581e+17,positive,Delta,jetblue officially favorite thank wonderful service jfk,"[0.0, 0.0]",2015-02-20 16:12:47 -0800,"Boston, MA",Pacific Time (US & Canada),positive,1
+5.68921315069043e+17,positive,Delta,jetblue thanks,"[0.0, 0.0]",2015-02-20 15:53:06 -0800,Here & There,Eastern Time (US & Canada),positive,1
+5.68910753652199e+17,positive,Delta,jetblue thanks,"[0.0, 0.0]",2015-02-20 15:11:08 -0800,South jamaica.. Queens,Pacific Time (US & Canada),positive,1
+5.6890514388385e+17,positive,Delta,jetblue look forward finally take,"[0.0, 0.0]",2015-02-20 14:48:50 -0800,"Suburb of Boston, MA",Eastern Time (US & Canada),positive,2
+5.6889197468783e+17,positive,Delta,jetblue okay thanks hope fly guy soon,"[0.0, 0.0]",2015-02-20 13:56:30 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.68888413308391e+17,positive,Delta,jetblue love natural beefjerky snack,"[0.0, 0.0]",2015-02-20 13:42:21 -0800,"New York, New York",Central Time (US & Canada),positive,2
+5.68888167681696e+17,positive,Delta,jetblue thanks reply flight,"[0.0, 0.0]",2015-02-20 13:41:23 -0800,"New York, NY",Eastern Time (US & Canada),positive,1
+5.68885004610241e+17,positive,Delta,jetblue must send note good word,"[0.0, 0.0]",2015-02-20 13:28:49 -0800,"San Francisco, CA",Pacific Time (US & Canada),positive,1
+5.68882606634369e+17,positive,Delta,jetblue love capt joe flight bos sfo fun,"[0.0, 0.0]",2015-02-20 13:19:17 -0800,"Suburb of Boston, MA",Eastern Time (US & Canada),positive,5
+5.68877772828881e+17,positive,Delta,jetblue fabulous pleased,"[0.0, 0.0]",2015-02-20 13:00:04 -0800,"Hong Kong, SAR",Hong Kong,positive,4
+5.68875212202078e+17,positive,Delta,jetblue u real mvp httptcojwlglrw,"[0.0, 0.0]",2015-02-20 12:49:54 -0800,Boston,Eastern Time (US & Canada),positive,0
+5.68872365146251e+17,positive,Delta,jetblue worry time flew terminal take thanks,"[0.0, 0.0]",2015-02-20 12:38:35 -0800,New York,Eastern Time (US & Canada),positive,2
+5.68871330495406e+17,positive,Delta,jetblue message thanks,"[0.0, 0.0]",2015-02-20 12:34:28 -0800,New York,Pacific Time (US & Canada),positive,1
+5.68864286266815e+17,positive,Delta,jetblue thank,"[0.0, 0.0]",2015-02-20 12:06:29 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.68857976733377e+17,positive,Delta,jetblue thanks reminder old flight id take easy access add point new jb account awesome service,"[0.0, 0.0]",2015-02-20 11:41:25 -0800,"Brooklyn, NY",Pacific Time (US & Canada),positive,1
+5.68854763057476e+17,positive,Delta,jetblue americanair ah ha misread end date thanks clarify,"[0.0, 0.0]",2015-02-20 11:28:38 -0800,New York City,Eastern Time (US & Canada),positive,3
+5.68851381769134e+17,positive,Delta,jetblue ill see board soon,"[0.0, 0.0]",2015-02-20 11:15:12 -0800,Global,Eastern Time (US & Canada),positive,5
+5.68849719625159e+17,positive,Delta,jetblue head buffalo trading cold boston colder buffalo maybe caribbean next time,"[0.0, 0.0]",2015-02-20 11:08:36 -0800,Global,Eastern Time (US & Canada),positive,2
+5.68843160224453e+17,positive,Delta,smart make angry mt jetbluetcoliwecasoe,"[0.0, 0.0]",2015-02-20 10:42:32 -0800,"Boston, MA",Eastern Time (US & Canada),positive,0
+5.68842695864504e+17,positive,Delta,jetblue ooh good one speak miamore know iadore httpstcofwzclbvug love lovesongfriday,"[0.0, 0.0]",2015-02-20 10:40:41 -0800,"New York, NY",Eastern Time (US & Canada),positive,5
+5.68840506148573e+17,positive,Delta,jetblue love song lt thanks jetblue,"[0.0, 0.0]",2015-02-20 10:31:59 -0800,"Boston, MA",Eastern Time (US & Canada),positive,5
+5.68837619372593e+17,positive,Delta,jetblue currently dance terminal love stevie,"[0.0, 0.0]",2015-02-20 10:20:31 -0800,so cal,Pacific Time (US & Canada),positive,2
+5.68836750598124e+17,positive,Delta,jetblue thank jetblue jetgreen jetred blue favorite color jet blue make well,"[0.0, 0.0]",2015-02-20 10:17:04 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.68834558268973e+17,positive,Delta,chair selfie jetblue stacycrossb phlairport saharasams everyone look flawless proud phl crew blueheros,"[0.0, 0.0]",2015-02-20 10:08:21 -0800,"West Berlin, NJ",Eastern Time (US & Canada),positive,2
+5.6883418269424e+17,positive,Delta,jetblue wsj jetblue treat right disabledtraveler thanks hassle flight jamaica,"[0.0, 0.0]",2015-02-20 10:06:52 -0800,JAMAICA&USA,Central Time (US & Canada),positive,5
+5.68827568973066e+17,positive,Delta,jetblue totally would outside view even camera ready haha evenmorespace evenmoreview httptcodxuxdbfd,"[0.0, 0.0]",2015-02-20 09:40:35 -0800,"Brooklyn, NY",Eastern Time (US & Canada),positive,4
+5.68826055324099e+17,positive,Delta,jetblue sent curious see kind comp get,"[0.0, 0.0]",2015-02-20 09:34:34 -0800,San Francisco,Pacific Time (US & Canada),positive,4
+5.68825255604699e+17,positive,Delta,jetblue cant wait hear back regard internship opportunity,"[0.0, 0.0]",2015-02-20 09:31:23 -0800,"Boston, MA",Eastern Time (US & Canada),positive,5
+5.68818695562261e+17,positive,Delta,jetblue thanks credit hr delay tell customer service mean lot thankful,"[0.0, 0.0]",2015-02-20 09:05:19 -0800,The Eastside of the Far Side,Eastern Time (US & Canada),positive,3
+5.68810170383536e+17,positive,Delta,jetblue thank always amaze customer service bring disney princess half marathon,"[0.0, 0.0]",2015-02-20 08:31:27 -0800,"Boston, MA",Eastern Time (US & Canada),positive,4
+5.68808318560551e+17,positive,Delta,jetblue definitely thanks,"[0.0, 0.0]",2015-02-20 08:24:05 -0800,"Hoboken, NJ",Eastern Time (US & Canada),positive,1
+5.68807823187976e+17,positive,Delta,jetblue im makingloveoutofnothingatall brandloveaffair lax httpstcokdhrufsw,"[0.0, 0.0]",2015-02-20 08:22:07 -0800,"New York, NY",Eastern Time (US & Canada),positive,5
+5.68805624164852e+17,positive,Delta,jetblue hi want see new route plan year newark love fly guy hope,"[0.0, 0.0]",2015-02-20 08:13:23 -0800,"Hoboken, NJ",Eastern Time (US & Canada),positive,5
+5.68801701378929e+17,positive,Delta,jetblue oh totally look par americanairs admiral club way slide u couple pass,"[0.0, 0.0]",2015-02-20 07:57:48 -0800,New York,Eastern Time (US & Canada),positive,2
+5.68799543698936e+17,positive,Delta,jetblue gr mint crew flight lax theyre mintalicious truebluelove shelleyandmarcrock travel air,"[0.0, 0.0]",2015-02-20 07:49:13 -0800,"New York, NY",Eastern Time (US & Canada),positive,0
+5.68799486392144e+17,positive,Delta,jetblue thanks offering service guy httptcoxdjzkcgb,"[0.0, 0.0]",2015-02-20 07:48:59 -0800,Orlando,Eastern Time (US & Canada),positive,1
+5.68798853656224e+17,positive,Delta,jetblue say im lostinlove wour brandmance httpstcobzwgpadve wemosaictogether mint love,"[0.0, 0.0]",2015-02-20 07:46:29 -0800,"New York, NY",Eastern Time (US & Canada),positive,5
+5.68798045799784e+17,positive,Delta,jetblue guy rock httptcolazaoay,"[0.0, 0.0]",2015-02-20 07:43:16 -0800,"Cambridge, MA",Eastern Time (US & Canada),positive,1
+5.68797557914149e+17,positive,Delta,would great never thought id sort whod really make fly experience bearable jetblue,"[0.0, 0.0]",2015-02-20 07:41:20 -0800,New York,Eastern Time (US & Canada),positive,0
+5.68796340714639e+17,positive,Delta,jetblue thanks gent phone fix bosmco flight fee waiver,"[0.0, 0.0]",2015-02-20 07:36:30 -0800,Logan International Airport,Atlantic Time (Canada),positive,5
+5.68794248654426e+17,positive,Delta,thanks hope dont look like complainer ive write good experience wyou past make terminal jetblue,"[0.0, 0.0]",2015-02-20 07:28:11 -0800,New York,Eastern Time (US & Canada),positive,5
+5.68786394656723e+17,positive,Delta,jetblue success good work jetblue team,"[0.0, 0.0]",2015-02-20 06:56:58 -0800,"New York, NY",Central Time (US & Canada),positive,0
+5.68785094430884e+17,positive,Delta,jetblue great flight great view tcoyxnpnoav,"[0.0, 0.0]",2015-02-20 06:51:48 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.68784868257214e+17,positive,Delta,jetblue beautiful ride thanks,"[0.0, 0.0]",2015-02-20 06:50:54 -0800,"East Greenwich,RI",Eastern Time (US & Canada),positive,1
+5.68782407698149e+17,positive,Delta,jetblue perfect probably need coffee stay awake night,"[0.0, 0.0]",2015-02-20 06:41:08 -0800,Germany ,Berlin,positive,4
+5.687796153233e+17,positive,Delta,well holdon everythingsgonnabealright jetblue brandloveaffair httpstcokngeep truebluelove travel business,"[0.0, 0.0]",2015-02-20 06:30:02 -0800,"New York, NY",Eastern Time (US & Canada),positive,5
+5.68766295761682e+17,positive,Delta,jetblue haha need apologize ill flight book problem sooner late flightr love jetblue,"[0.0, 0.0]",2015-02-20 05:37:06 -0800,Orlando - ΜΣΥ,Eastern Time (US & Canada),positive,5
+5.68752793999286e+17,positive,Delta,jetblue big thanks ricardo olavarria reagan airport fix ticket make sure make friend wedding greatservice,"[0.0, 0.0]",2015-02-20 04:43:27 -0800,"Boston, MA",Eastern Time (US & Canada),positive,5
+5.68752061682209e+17,positive,Delta,jetblue really thats good hear thanks update wall may make business meeting,"[0.0, 0.0]",2015-02-20 04:40:33 -0800,The Eastside of the Far Side,Eastern Time (US & Canada),positive,5
+5.6873547584795e+17,positive,Delta,jetblue pdx jfk suuuuper hot,"[0.0, 0.0]",2015-02-20 03:34:38 -0800,"Boston, MA",Eastern Time (US & Canada),positive,0
+5.68652268305666e+17,positive,Delta,jetblue love bae jetbae,"[40.79248745, -111.98778056]",2015-02-19 22:04:00 -0800,"Salt Lake City, Utah ",Mountain Time (US & Canada),positive,2
+5.686423573794e+17,positive,Delta,jetblue definitely,"[0.0, 0.0]",2015-02-19 21:24:37 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.68632557836866e+17,positive,Delta,jetblue thank guy brilliant customer service,"[0.0, 0.0]",2015-02-19 20:45:41 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.68631189856264e+17,positive,Delta,jetblue great thank let hope could please notify flight leaf jfk thank,"[0.0, 0.0]",2015-02-19 20:40:14 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.68629820306952e+17,positive,Delta,jetblue great get buffalo able leave get jfk there issue still buffalo airport,"[0.0, 0.0]",2015-02-19 20:34:48 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.68623875468227e+17,positive,Delta,jetblue far less painful come avis,"[0.0, 0.0]",2015-02-19 20:11:11 -0800,Upstate New York,Eastern Time (US & Canada),positive,3
+5.68619425886122e+17,positive,Delta,jetblue flight attendant angel awesome kudos,"[0.0, 0.0]",2015-02-19 19:53:30 -0800,"Boston, MA",Pacific Time (US & Canada),positive,1
+5.68616851531379e+17,positive,Delta,jetblue thank loyalmosaicmember,"[40.64661043, -73.776003]",2015-02-19 19:43:16 -0800,Buffalo,Eastern Time (US & Canada),positive,1
+5.68612181480243e+17,positive,Delta,jetblue thank much,"[0.0, 0.0]",2015-02-19 19:24:43 -0800,NY,Eastern Time (US & Canada),positive,1
+5.68611819864117e+17,positive,Delta,jetblue awww thank b glad hear make day amp one last question idea tail operating flt maro,"[0.0, 0.0]",2015-02-19 19:23:16 -0800,NY,Eastern Time (US & Canada),positive,5
+5.6860818908987e+17,positive,Delta,jetblue sky flight bos sfo awesome crew helene rock,"[0.0, 0.0]",2015-02-19 19:08:51 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.68602933035602e+17,positive,Delta,jetblue love jet blue,"[0.0, 0.0]",2015-02-19 18:47:58 -0800,10 ring,Pacific Time (US & Canada),positive,1
+5.68602015456215e+17,positive,Delta,ninadavuluri think treat onboard enjoy flight,"[0.0, 0.0]",2015-02-19 18:44:19 -0800,1-800-JETBLUE,Eastern Time (US & Canada),positive,5
+5.68601554275721e+17,positive,Delta,jetblue ninadavuluri cool,"[0.0, 0.0]",2015-02-19 18:42:29 -0800,"Manchester,CT",Eastern Time (US & Canada),positive,3
+5.68601051584197e+17,positive,Delta,jetblue yes always treat fly guy,"[0.0, 0.0]",2015-02-19 18:40:29 -0800,Across America,Atlantic Time (Canada),positive,1
+5.68600552814174e+17,positive,Delta,jetblue thank really would prefer jet blue guy best seat business,"[0.0, 0.0]",2015-02-19 18:38:30 -0800,10 ring,Pacific Time (US & Canada),positive,1
+5.68583737417605e+17,positive,Delta,jetblue safety first lovejetblue,"[0.0, 0.0]",2015-02-19 17:31:41 -0800,MA,Eastern Time (US & Canada),positive,3
+5.68574897988874e+17,positive,Delta,jetblue theyre busy awesome try get u asap ill deal,"[0.0, 0.0]",2015-02-19 16:56:33 -0800,"Boston, MA",Eastern Time (US & Canada),positive,4
+5.68569662717313e+17,positive,Delta,jetblue thanks much relax flight,"[0.0, 0.0]",2015-02-19 16:35:45 -0800,"Boston, MA",Pacific Time (US & Canada),positive,1
+5.6856103364148e+17,positive,Delta,jetblue excellent guy best,"[0.0, 0.0]",2015-02-19 16:01:28 -0800,NYC,Eastern Time (US & Canada),positive,1
+5.68560914779079e+17,positive,Delta,jetblue although wasnt totally answer look appreciate prompt response,"[0.0, 0.0]",2015-02-19 16:01:00 -0800,"Boston, MA",Eastern Time (US & Canada),positive,4
+5.68558562810544e+17,positive,Delta,jetblue oh yes hope expand airport soon fly see family year,"[0.0, 0.0]",2015-02-19 15:51:39 -0800,NYC,Eastern Time (US & Canada),positive,5
+5.68556148368019e+17,positive,Delta,jetblue thanks jb,"[0.0, 0.0]",2015-02-19 15:42:03 -0800,"Buffalo, NY",Eastern Time (US & Canada),positive,1
+5.68554719934845e+17,positive,Delta,jetblue thank love anxious flyer,"[0.0, 0.0]",2015-02-19 15:36:23 -0800,"Boston, MA",Eastern Time (US & Canada),positive,2
+5.68554542897308e+17,positive,Delta,jetblue exact flight love jetblue really want fly yall thats little pricey basic mint bos sfo,"[0.0, 0.0]",2015-02-19 15:35:40 -0800,"Boston, MA",Eastern Time (US & Canada),positive,3
+5.68547839636333e+17,positive,Delta,jetblue offer hot tea coffeeat gate guy make wonder ever flown airline,"[0.0, 0.0]",2015-02-19 15:09:02 -0800,MA & NJ,Eastern Time (US & Canada),positive,0
+5.68547201208566e+17,positive,Delta,jetblue awesome thanks,"[0.0, 0.0]",2015-02-19 15:06:30 -0800,Boston College,Eastern Time (US & Canada),positive,1
+5.68545438976102e+17,positive,Delta,jetblue keep go back forth able board great agent savannah,"[0.0, 0.0]",2015-02-19 14:59:30 -0800,"Boston, MA",Central Time (US & Canada),positive,4
+5.68542766860542e+17,positive,Delta,jetblue thatd nice hop rack enough mile take trip seattle enjoy perfect latte city coffee,"[0.0, 0.0]",2015-02-19 14:48:53 -0800,"Burlington, MA",Eastern Time (US & Canada),positive,2
+5.6854121971182e+17,positive,Delta,jetblue vega san francisco baltimore san diego philadelphia far im frequent business traveler,"[0.0, 0.0]",2015-02-19 14:42:44 -0800,"Burlington, MA",Eastern Time (US & Canada),positive,5
+5.68540063216198e+17,positive,Delta,jetblue reimburse everyone flight portion ticket still love jetblue best american airline,"[0.0, 0.0]",2015-02-19 14:38:08 -0800,"Naples, Fl",Eastern Time (US & Canada),positive,2
+5.68531076915663e+17,positive,Delta,jetblue thanks help jetbluesofly,"[0.0, 0.0]",2015-02-19 14:02:26 -0800,Boston College,Eastern Time (US & Canada),positive,1
+5.68524724256444e+17,positive,Delta,jetblue okie doke know fix,"[0.0, 0.0]",2015-02-19 13:37:11 -0800,Logan International Airport,Atlantic Time (Canada),positive,5
+5.68510973469856e+17,positive,Delta,jetblue wish would make austin tx hub miss airline biz travel since move bos,"[0.0, 0.0]",2015-02-19 12:42:33 -0800,"ÜT: 48.837756,2.320214",Eastern Time (US & Canada),positive,0
+5.68509302505378e+17,positive,Delta,jetblue crisis avert flight bos fll boarding let hope new pilot arent clarence oveur roger murdock,"[0.0, 0.0]",2015-02-19 12:35:54 -0800,South Florida,Eastern Time (US & Canada),positive,5
+5.68502766747972e+17,positive,Delta,jetblue thanks julian login get onto earlier flight back dca,"[0.0, 0.0]",2015-02-19 12:09:56 -0800,NOVA,America/New_York,positive,1
+5.68501157452231e+17,positive,Delta,fault jetblue social medium awesome people know everyone work hard get u way,"[42.36834942, -71.0152744]",2015-02-19 12:03:32 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.68490190194516e+17,positive,Delta,jetblue thanks,"[0.0, 0.0]",2015-02-19 11:19:58 -0800,South Florida,Eastern Time (US & Canada),positive,1
+5.68487677114364e+17,positive,Delta,jetblue make safe sound thank safe travel,"[0.0, 0.0]",2015-02-19 11:09:58 -0800,"Alexandria, VA",Eastern Time (US & Canada),positive,5
+5.68475439460516e+17,positive,Delta,jetblue flight attendant wendi flt newark orlando,"[0.0, 0.0]",2015-02-19 10:21:21 -0800,"Boston, MA",Eastern Time (US & Canada),positive,0
+5.68474423742738e+17,positive,Delta,jetblue there many choice yall south border know every airline equal low price best value,"[0.0, 0.0]",2015-02-19 10:17:19 -0800,Richmond BC,Pacific Time (US & Canada),positive,2
+5.68472330097332e+17,positive,Delta,jetblue love,"[0.0, 0.0]",2015-02-19 10:08:59 -0800,✖️ || 4/5 || ✖️,Eastern Time (US & Canada),positive,1
+5.68464487931613e+17,positive,Delta,jetblue fly soon nyc airline airline ive flown youre still,"[0.0, 0.0]",2015-02-19 09:37:50 -0800,"Miami, Florida",Eastern Time (US & Canada),positive,1
+5.68450407204139e+17,positive,Delta,jetblue utah think thanks,"[0.0, 0.0]",2015-02-19 08:41:53 -0800,New York City,Atlantic Time (Canada),positive,1
+5.6844811025664e+17,positive,Delta,jetblue thank,"[0.0, 0.0]",2015-02-19 08:32:45 -0800,"Alexandria, VA",Eastern Time (US & Canada),positive,1
+5.68444650903749e+17,positive,Delta,jetblue never delayed tpa bdl well safe sorry lovejetblue onlyblue jetblueforever,"[0.0, 0.0]",2015-02-19 08:19:00 -0800,Upstate New York,Eastern Time (US & Canada),positive,3
+5.68443892569236e+17,positive,Delta,jetblue great flight crew flight bos mco,"[0.0, 0.0]",2015-02-19 08:15:59 -0800,New Jersey,Eastern Time (US & Canada),positive,1
+5.68442965661762e+17,positive,Delta,jetblue thats love jetblue truebluememberlife,"[0.0, 0.0]",2015-02-19 08:12:18 -0800,"Long Island, NY",Eastern Time (US & Canada),positive,2
+5.68442328794464e+17,positive,Delta,jetblue awesome thanks ill give call late flightr today appreciate help,"[0.0, 0.0]",2015-02-19 08:09:46 -0800,Chasing the dream,Eastern Time (US & Canada),positive,5
+5.68441576206287e+17,positive,Delta,jetblue thanks th bday saturday aviation theme surprise party,"[0.0, 0.0]",2015-02-19 08:06:47 -0800,"Long Island, NY",Eastern Time (US & Canada),positive,4
+5.68435364349809e+17,positive,Delta,jetblue best airline name ever whenever see want get plane blue sky amp sea deliver promise,"[0.0, 0.0]",2015-02-19 07:42:06 -0800,"Washington, D.C.",Eastern Time (US & Canada),positive,5
+5.6843495922618e+17,positive,Delta,jetblue gettin fancy mint lieflat nice work menu saxonandparole lobstermac bloodymary jetsetter httptcozfwjgtxzt,"[0.0, 0.0]",2015-02-19 07:40:29 -0800,NYC,Eastern Time (US & Canada),positive,0
+5.6843240548223e+17,positive,Delta,jetblue guy lucky love,"[0.0, 0.0]",2015-02-19 07:30:21 -0800,Where the food at,Quito,positive,2
+5.68427870055305e+17,positive,Delta,jetblue thank guy awesome,"[0.0, 0.0]",2015-02-19 07:12:19 -0800,"Boston, MA",Quito,positive,1
+5.68426494554481e+17,positive,Delta,jetblue definitely,"[0.0, 0.0]",2015-02-19 07:06:51 -0800,"Long Island, NY",Eastern Time (US & Canada),positive,1
+5.68425693828133e+17,positive,Delta,jetblue okay awesome thank,"[0.0, 0.0]",2015-02-19 07:03:40 -0800,"Boston, MA",Quito,positive,1
+5.68424725929701e+17,positive,Delta,jetblue excite saw fly ionlyflyblue,"[0.0, 0.0]",2015-02-19 06:59:50 -0800,"Long Island, NY",Eastern Time (US & Canada),positive,3
+5.6842388676257e+17,positive,Delta,jetblue mine sadly yea fly fi awesome,"[0.0, 0.0]",2015-02-19 06:56:30 -0800,"Boston, MA",Quito,positive,1
+5.68423278555087e+17,positive,Delta,jetblue thank,"[0.0, 0.0]",2015-02-19 06:54:05 -0800,"Queens, NY",Eastern Time (US & Canada),positive,1
+5.68419991030088e+17,positive,Delta,jetblue ready go disneyworld rundisney princesshalf httptcostqyv,"[0.0, 0.0]",2015-02-19 06:41:01 -0800,"Queens, NY",Eastern Time (US & Canada),positive,2
+5.68413198518329e+17,positive,Delta,jetblue thank jetblue credit nice save,"[0.0, 0.0]",2015-02-19 06:14:01 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.68411980542775e+17,positive,Delta,jetblue bluemanity airlineadviser love great time fly,"[0.0, 0.0]",2015-02-19 06:09:11 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.68397325820957e+17,positive,Delta,jetblue yes minute spare fyi employee amaze keep good work,"[0.0, 0.0]",2015-02-19 05:10:57 -0800,"Boston, MA",Eastern Time (US & Canada),positive,4
+5.68394078817268e+17,positive,Delta,jetblue oh yeah great flight mexico wonderful crew thank,"[0.0, 0.0]",2015-02-19 04:58:03 -0800,Bay Shore NY,Eastern Time (US & Canada),positive,1
+5.68385676737167e+17,positive,Delta,jetblue thanks,"[0.0, 0.0]",2015-02-19 04:24:40 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.68335451741749e+17,positive,Delta,jetblue airway reveals bluemanity livery travelpulse httptcofttfyfmvco,"[0.0, 0.0]",2015-02-19 01:05:05 -0800,USA,Sydney,positive,2
+5.68279415370736e+17,positive,Delta,jetblue haha thanks jetblue,"[0.0, 0.0]",2015-02-18 21:22:25 -0800,NBMA,Eastern Time (US & Canada),positive,1
+5.68270768989082e+17,positive,Delta,know lot baggage want know really enjoy inside jetblue jetbae,"[0.0, 0.0]",2015-02-18 20:48:03 -0800,Inquiries: CAA  •  Miller PR ,Eastern Time (US & Canada),positive,1
+5.68260165759308e+17,positive,Delta,jetblue thank much wasnt sure since know limit ozs excite fly jetblue,"[0.0, 0.0]",2015-02-18 20:05:55 -0800,LA & Boston,Eastern Time (US & Canada),positive,1
+5.68253469129187e+17,positive,Delta,hey jetblue thats sexy tattoo get left engine jetbae httptcooxwktsgi,"[0.0, 0.0]",2015-02-18 19:39:19 -0800,Inquiries: CAA  •  Miller PR ,Eastern Time (US & Canada),positive,4
+5.68251373189349e+17,positive,Delta,jetblue thanks stbernard take time read page find info supervisor felt insist tho show previous comm,"[0.0, 0.0]",2015-02-18 19:30:59 -0800,On the road to paradise,Eastern Time (US & Canada),positive,2
+5.68246340246999e+17,positive,Delta,jetblue jua jfk ask desk incredibly helpful thanks,"[0.0, 0.0]",2015-02-18 19:10:59 -0800,"Boston, Massachusetts",Mountain Time (US & Canada),positive,1
+5.68243600196297e+17,positive,Delta,jetblue closepwcs please tweet fly jetblue every time btw,"[0.0, 0.0]",2015-02-18 19:00:06 -0800,im 5sos af :))),Eastern Time (US & Canada),positive,5
+5.68240048384152e+17,positive,Delta,jetblue thank,"[40.64610291, -73.78666687]",2015-02-18 18:45:59 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.68237879337423e+17,positive,Delta,jetblue u cool,"[0.0, 0.0]",2015-02-18 18:37:22 -0800,"Boston, MA",Atlantic Time (Canada),positive,1
+5.68232942612447e+17,positive,Delta,jetblue amazingly awesome customer service reservation agent tonight help correct mistake love airline,"[0.0, 0.0]",2015-02-18 18:17:45 -0800,"Boston, MA",Arizona,positive,4
+5.68231725970506e+17,positive,Delta,jetblue th annual marthas vineyard african american film festival august attendee deserve great flight mv,"[0.0, 0.0]",2015-02-18 18:12:55 -0800,New York,Eastern Time (US & Canada),positive,2
+5.68219452929663e+17,positive,Delta,jetblue tsparrow love theyre cute,"[0.0, 0.0]",2015-02-18 17:24:09 -0800,"New York, New York",Eastern Time (US & Canada),positive,2
+5.68214398474433e+17,positive,Delta,jetblue best airline world,"[0.0, 0.0]",2015-02-18 17:04:04 -0800,"Boston, MA",Pacific Time (US & Canada),positive,2
+5.68213769098109e+17,positive,Delta,jetblue wow guy answer people wow care love jet blue,"[0.0, 0.0]",2015-02-18 17:01:34 -0800,"Boston, MA",Pacific Time (US & Canada),positive,1
+5.68213658117005e+17,positive,Delta,jetblue thanks appreciate prompt response,"[0.0, 0.0]",2015-02-18 17:01:07 -0800,#ManorvilleInExile,Eastern Time (US & Canada),positive,1
+5.68210186755813e+17,positive,Delta,jetblue good luck thanks,"[0.0, 0.0]",2015-02-18 16:47:20 -0800,"Boston, MA",Eastern Time (US & Canada),positive,5
+5.68209287517835e+17,positive,Delta,really nice though snack fridgethat get take stuff like dorm common room genius jetblue,"[0.0, 0.0]",2015-02-18 16:43:45 -0800,Inquiries: CAA  •  Miller PR ,Eastern Time (US & Canada),positive,0
+5.68205359208231e+17,positive,Delta,jetblue tell like warrior pick get bump first class,"[0.0, 0.0]",2015-02-18 16:28:09 -0800,"Boston, MA",Central Time (US & Canada),positive,0
+5.68198336651649e+17,positive,Delta,jetblue ill pas along advice guy rock,"[0.0, 0.0]",2015-02-18 16:00:14 -0800,Massachusetts,Central Time (US & Canada),positive,2
+5.68187334111289e+17,positive,Delta,jetblue ok ill book jb jfk book ath thank,"[0.0, 0.0]",2015-02-18 15:16:31 -0800,"Boston, MA",Pacific Time (US & Canada),positive,1
+5.68183785558311e+17,positive,Delta,jetblue yes thats true bit pricey look love guy,"[0.0, 0.0]",2015-02-18 15:02:25 -0800,"South Miami Heights, Florida",Eastern Time (US & Canada),positive,3
+5.68178422175949e+17,positive,Delta,jetblue flew san francisco fort lauderdale last year fantastic time would like go back,"[0.0, 0.0]",2015-02-18 14:41:06 -0800,Wirral England,Eastern Time (US & Canada),positive,5
+5.6817709803835e+17,positive,Delta,jetblue flyingitforward affect one small family four would make huge difference life,"[0.0, 0.0]",2015-02-18 14:35:51 -0800,"Washington, DC",Eastern Time (US & Canada),positive,3
+5.68173938292986e+17,positive,Delta,jetblue thx confirm yr team awesome thanks prompt amp helpful response cheer less snow everyones future,"[0.0, 0.0]",2015-02-18 14:23:17 -0800,PHL,Eastern Time (US & Canada),positive,4
+5.68173309747048e+17,positive,Delta,jetblue great idea cometoaustin,"[0.0, 0.0]",2015-02-18 14:20:47 -0800,"Austin, Texas",Central Time (US & Canada),positive,1
+5.68172923531481e+17,positive,Delta,jetblue would go la vega gorgeous go every year fly guy vega gorgeous amp much,"[0.0, 0.0]",2015-02-18 14:19:15 -0800,NBMA,Eastern Time (US & Canada),positive,2
+5.68172386903851e+17,positive,Delta,jetblue dmed thanks much address quickly,"[0.0, 0.0]",2015-02-18 14:17:07 -0800,Boston,Eastern Time (US & Canada),positive,5
+5.68159336104636e+17,positive,Delta,jetblue aw okay thanks,"[0.0, 0.0]",2015-02-18 13:25:16 -0800,Atlantic City ,Eastern Time (US & Canada),positive,1
+5.68157857151103e+17,positive,Delta,jetblue best seat e board early ready set go,"[0.0, 0.0]",2015-02-18 13:19:23 -0800,Logan International Airport,Atlantic Time (Canada),positive,5
+5.68156758025187e+17,positive,Delta,jetblue im set fly bad first date giant metal bird machine even brought snack,"[0.0, 0.0]",2015-02-18 13:15:01 -0800,Inquiries: CAA  •  Miller PR ,Eastern Time (US & Canada),positive,3
+5.68155933832045e+17,positive,Delta,jetblue okay new screen laptoplarge amp real nice amp wifi appreciate thanks god tiny lil man middle seat,"[0.0, 0.0]",2015-02-18 13:11:45 -0800,New York City,Pacific Time (US & Canada),positive,2
+5.68152534507856e+17,positive,Delta,jetblue incidentally sheila jfk deserves raise shes awesome,"[0.0, 0.0]",2015-02-18 12:58:14 -0800,Inquiries: CAA  •  Miller PR ,Eastern Time (US & Canada),positive,0
+5.68149912665199e+17,positive,Delta,jetblue delete tweet one wonderful employee swoop helpfaith restore one good one,"[0.0, 0.0]",2015-02-18 12:47:49 -0800,Inquiries: CAA  •  Miller PR ,Eastern Time (US & Canada),positive,5
+5.6812839048779e+17,positive,Delta,jetblue thanks line move quick already do,"[0.0, 0.0]",2015-02-18 11:22:18 -0800,The Suite Lounge,Eastern Time (US & Canada),positive,1
+5.68124733851443e+17,positive,Delta,jetblue name angel seriously cool truly fantastic service,"[0.0, 0.0]",2015-02-18 11:07:46 -0800,"Boston, MA",Hawaii,positive,1
+5.68122440934658e+17,positive,Delta,jetblue thank,"[0.0, 0.0]",2015-02-18 10:58:39 -0800,"Miami, FL",Atlantic Time (Canada),positive,1
+5.68118442454356e+17,positive,Delta,jetblue thanks,"[0.0, 0.0]",2015-02-18 10:42:46 -0800,"Mill Creek, WA",Pacific Time (US & Canada),positive,1
+5.68116088631792e+17,positive,Delta,jetblue also emergency exit seat thats huge win,"[0.0, 0.0]",2015-02-18 10:33:25 -0800,"Mill Creek, WA",Pacific Time (US & Canada),positive,3
+5.68115928044405e+17,positive,Delta,jetblue friendly engage personable handle clarify question baggage fee well take interest,"[0.0, 0.0]",2015-02-18 10:32:46 -0800,"Mill Creek, WA",Pacific Time (US & Canada),positive,3
+5.68115075266974e+17,positive,Delta,jetblue hey dre seatac check need raise stat dude give amaze customer service make feel value,"[0.0, 0.0]",2015-02-18 10:29:23 -0800,"Mill Creek, WA",Pacific Time (US & Canada),positive,3
+5.68107822275305e+17,positive,Delta,jetblue magic eight ball never steer wrong,"[0.0, 0.0]",2015-02-18 10:00:34 -0800,right behind you,Eastern Time (US & Canada),positive,3
+5.68102992110465e+17,positive,Delta,jetblue thanks,"[0.0, 0.0]",2015-02-18 09:41:22 -0800,San Francisco,Pacific Time (US & Canada),positive,1
+5.68101669809947e+17,positive,Delta,jetblue mark th year new bluemanity plane design sun sentinel httptcosjveelween,"[0.0, 0.0]",2015-02-18 09:36:07 -0800,USA,Sydney,positive,0
+5.68100786657317e+17,positive,Delta,jetblue youre welcome httptcokneqe,"[0.0, 0.0]",2015-02-18 09:32:36 -0800,"Boston, MA",Atlantic Time (Canada),positive,1
+5.68098794031714e+17,positive,Delta,jetblue great airline ever truebluepoints jetbluemember,"[0.0, 0.0]",2015-02-18 09:24:41 -0800,"Boston, MA",Eastern Time (US & Canada),positive,0
+5.68098769847218e+17,positive,Delta,jetblue free wifi board best thing thats happen since slice bread,"[0.0, 0.0]",2015-02-18 09:24:36 -0800,"Boston, MA",Atlantic Time (Canada),positive,0
+5.6809501443523e+17,positive,Delta,jetblue handle xjareds question like social medium pro good practice transportation system run friendly ai,"[0.0, 0.0]",2015-02-18 09:09:40 -0800,"Pescadero, CA",Eastern Time (US & Canada),positive,4
+5.68094548141978e+17,positive,Delta,jetblue wonderful thing,"[0.0, 0.0]",2015-02-18 09:07:49 -0800,"iPhone: 33.761105,-118.193817",Pacific Time (US & Canada),positive,1
+5.68091845848232e+17,positive,Delta,jetblue flight book problem flight dc visit easter weekend start difficult end well guy big fan,"[0.0, 0.0]",2015-02-18 08:57:05 -0800,Boston,Eastern Time (US & Canada),positive,1
+5.68090890549375e+17,positive,Delta,jetblue flyfi thank seattle udub come cameron roe httptcokbhymgkap,"[0.0, 0.0]",2015-02-18 08:53:17 -0800,Newport Beach,Pacific Time (US & Canada),positive,2
+5.68087713972236e+17,positive,Delta,jetblue great flight orlando hartford week ago great get time arrive early,"[0.0, 0.0]",2015-02-18 08:40:40 -0800,"Stratford, CT",Eastern Time (US & Canada),positive,0
+5.68086156899967e+17,positive,Delta,jetblue guy continue impress crew mco gate help family seat issue professional,"[0.0, 0.0]",2015-02-18 08:34:28 -0800,New York ,Eastern Time (US & Canada),positive,1
+5.68084948948685e+17,positive,Delta,jetblue love free wifi legroom seattlebound,"[0.0, 0.0]",2015-02-18 08:29:40 -0800,Newport Beach,Pacific Time (US & Canada),positive,2
+5.68074993856336e+17,positive,Delta,jetblue thanks,"[0.0, 0.0]",2015-02-18 07:50:07 -0800,"Florida, USA",Eastern Time (US & Canada),positive,1
+5.68068942771696e+17,positive,Delta,jetblue credit reply ill look forward hopefully one flight home tonight,"[0.0, 0.0]",2015-02-18 07:26:04 -0800,Parkland Fl,Eastern Time (US & Canada),positive,2
+5.68066927723213e+17,positive,Delta,jetblue great flight always thank great crew flight travel jetblue,"[28.4261453, -81.2998841]",2015-02-18 07:18:04 -0800,Rhode Island ,Eastern Time (US & Canada),positive,1
+5.68064005048152e+17,positive,Delta,jetblue youre kill get smitten trueblue,"[0.0, 0.0]",2015-02-18 07:06:27 -0800,New York,Eastern Time (US & Canada),positive,1
+5.68056665821413e+17,positive,Delta,jetblue min response time im impressed im official trueblue jetblue get social,"[0.0, 0.0]",2015-02-18 06:37:17 -0800,New York,Eastern Time (US & Canada),positive,4
+5.68052101504373e+17,positive,Delta,jetblue thanks listen doesnt mean dont appreciate,"[0.0, 0.0]",2015-02-18 06:19:09 -0800,"New York, NY",Eastern Time (US & Canada),positive,1
+5.68045949999661e+17,positive,Delta,jetblue thank incredible customer svc gate flight mint experience magic,"[0.0, 0.0]",2015-02-18 05:54:42 -0800,San Francisco Bay Area,Arizona,positive,0
+5.68045766280933e+17,positive,Delta,thanks jetblue next see slog jfk city go,"[0.0, 0.0]",2015-02-18 05:53:59 -0800,planet earth,Eastern Time (US & Canada),positive,5
+5.68041225174954e+17,positive,Delta,jetblue huge thanks crew flight flew dca sju monday night snow could plane,"[18.22245647, -63.00369733]",2015-02-18 05:35:56 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.68041051182617e+17,positive,Delta,jetblue planning btw excellent service crew dca sju sxm,"[18.22245647, -63.00369733]",2015-02-18 05:35:14 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.68039128001937e+17,positive,Delta,jetblue yes yes great trip thanks lift,"[18.22245747, -63.00369895]",2015-02-18 05:27:36 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.68036279989858e+17,positive,Delta,jetblue hotspot free wifi make happy jfk itsthelittlethings,"[0.0, 0.0]",2015-02-18 05:16:17 -0800,"Round Rock, TX",Central Time (US & Canada),positive,0
+5.6802744305272e+17,positive,Delta,jetblue gorgeous day hope flight back tomorrow pleasant thanks,"[0.0, 0.0]",2015-02-18 04:41:10 -0800,London,London,positive,5
+5.6802030451087e+17,positive,Delta,jetblue okayim actually tea kinda guy anyway thanks,"[0.0, 0.0]",2015-02-18 04:12:48 -0800,"Cambridge, MA",Eastern Time (US & Canada),positive,0
+5.68008802865275e+17,positive,Delta,jetblue always pleasure,"[0.0, 0.0]",2015-02-18 03:27:06 -0800,"Boston, MA",Quito,positive,2
+5.68005720026661e+17,positive,Delta,jetblue lovely,"[0.0, 0.0]",2015-02-18 03:14:51 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.67915499868131e+17,positive,Delta,jetblue great trip today thanks crew fly u home fantastic httptcoskwxqaqb,"[0.0, 0.0]",2015-02-17 21:16:21 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.67911142955311e+17,positive,Delta,jetblue awe guy great cant wait travel soon,"[0.0, 0.0]",2015-02-17 20:59:02 -0800,"New York City, NY",Central Time (US & Canada),positive,5
+5.67910969856229e+17,positive,Delta,jetblue yes announce take youre thank,"[0.0, 0.0]",2015-02-17 20:58:21 -0800,NYC,Eastern Time (US & Canada),positive,1
+5.67907212154118e+17,positive,Delta,jetblue also thanks prompt reply im really impressedand youre brushing much appreciate,"[0.0, 0.0]",2015-02-17 20:43:25 -0800,"Provo, UT",Central Time (US & Canada),positive,1
+5.67906374870528e+17,positive,Delta,jetblue since ive angry tweet airline apparently read mind could bitch thank credit,"[0.0, 0.0]",2015-02-17 20:40:05 -0800,"Brooklyn, NY",Quito,positive,0
+5.67905158346207e+17,positive,Delta,jetblues valentinesday email point amp clever thanks amaze jetblue loveisintheair httptcodocmvotwti,"[0.0, 0.0]",2015-02-17 20:35:15 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.67899906150703e+17,positive,Delta,jetblue thank help quick response,"[0.0, 0.0]",2015-02-17 20:14:23 -0800,"Boston, MA",Eastern Time (US & Canada),positive,4
+5.67894002286096e+17,positive,Delta,jetblue big shoutout crew bosgtjfk amp jfkgtroc amp gate crew c bos amp jfk long day delay make well,"[0.0, 0.0]",2015-02-17 19:50:55 -0800,"Boston, MA",Eastern Time (US & Canada),positive,0
+5.67891805867483e+17,positive,Delta,jetblue thanks u hang tampa airport forever today really awesome experience,"[0.0, 0.0]",2015-02-17 19:42:12 -0800,"New Vernon,  NJ",Eastern Time (US & Canada),positive,1
+5.67878078782898e+17,positive,Delta,jetblue awesome thanks thanks quick response guy rock,"[0.0, 0.0]",2015-02-17 18:47:39 -0800,Boston,Eastern Time (US & Canada),positive,1
+5.67874970463781e+17,positive,Delta,jetblue want say flight attendant fitz best tonight flight bwibos great guy make flight fantastic,"[0.0, 0.0]",2015-02-17 18:35:18 -0800,Bahhhston.,Eastern Time (US & Canada),positive,1
+5.6786275455776e+17,positive,Delta,jetblue definitely new favorite airline,"[0.0, 0.0]",2015-02-17 17:46:45 -0800,"Boston, MA",Eastern Time (US & Canada),positive,0
+5.67862628460159e+17,positive,Delta,jetblue try thanks else fails old fashion method tomorrow morning,"[0.0, 0.0]",2015-02-17 17:46:15 -0800,"Boston, MA",Eastern Time (US & Canada),positive,4
+5.67856962521661e+17,positive,Delta,jetblue thank excellent customer service resolve issue quickly,"[0.0, 0.0]",2015-02-17 17:23:44 -0800,"Long Island, NY",Eastern Time (US & Canada),positive,3
+5.67849376925618e+17,positive,Delta,jetblue thats great thank,"[0.0, 0.0]",2015-02-17 16:53:36 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.67846268090741e+17,positive,Delta,jetblue agree frequent tweeter discount could fly see friend tinmanironman meggersrocks,"[0.0, 0.0]",2015-02-17 16:41:15 -0800,"Arlington, Virginia ",Eastern Time (US & Canada),positive,5
+5.67841828411552e+17,positive,Delta,jetblue philly lose read program customer get hot tea great crewmembers top notch info amp book httptcoragncwbk,"[0.0, 0.0]",2015-02-17 16:23:36 -0800,Philadelphia,Eastern Time (US & Canada),positive,0
+5.678367281002e+17,positive,Delta,jetblue glad see go fix professorpaul please dm confirmation check,"[0.0, 0.0]",2015-02-17 16:03:20 -0800,"Washington, D.C.",Eastern Time (US & Canada),positive,5
+5.67831434838159e+17,positive,Delta,jetblue call thank,"[0.0, 0.0]",2015-02-17 15:42:18 -0800,NYC,Eastern Time (US & Canada),positive,1
+5.67829349727212e+17,positive,Delta,jetblue still love guy get vega already,"[0.0, 0.0]",2015-02-17 15:34:01 -0800,"Miami, FL ",Eastern Time (US & Canada),positive,5
+5.6782908838092e+17,positive,Delta,jetblue gary serve u fll airport counter really true blue make feel home even jetblue flight delayedl,"[0.0, 0.0]",2015-02-17 15:32:59 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.67825891209912e+17,positive,Delta,jetblue try lovely customer service thank,"[0.0, 0.0]",2015-02-17 15:20:16 -0800,"Boston, Massachusetts",Mountain Time (US & Canada),positive,1
+5.6782183978494e+17,positive,Delta,jetblue professorpaul always happy help,"[0.0, 0.0]",2015-02-17 15:04:10 -0800,"Washington, D.C.",Eastern Time (US & Canada),positive,1
+5.67821528424845e+17,positive,Delta,jetblue land thank anyway btw flight staff flight wonderful despite full day heavy load,"[0.0, 0.0]",2015-02-17 15:02:56 -0800,CT,Quito,positive,1
+5.67810683485753e+17,positive,Delta,jetblue make happy hope arent empty promise,"[0.0, 0.0]",2015-02-17 14:19:51 -0800,NYC | CT,Eastern Time (US & Canada),positive,5
+5.67803467282047e+17,positive,Delta,jetblue thanks,"[0.0, 0.0]",2015-02-17 13:51:10 -0800,District of Columbia,Eastern Time (US & Canada),positive,1
+5.67798973008994e+17,positive,Delta,jetblue love travel jetblue cant wait go paris oui oui nyc awesomeee,"[0.0, 0.0]",2015-02-17 13:33:19 -0800,"Boston, MA",Eastern Time (US & Canada),positive,5
+5.67796029056385e+17,positive,Delta,jetblue thanks,"[0.0, 0.0]",2015-02-17 13:21:37 -0800,North Carolina,Eastern Time (US & Canada),positive,1
+5.67795026307326e+17,positive,Delta,jetblue thanks upgrade far good keepitup httptcobkmfeyqol,"[0.0, 0.0]",2015-02-17 13:17:38 -0800,"Boston, MA",Eastern Time (US & Canada),positive,5
+5.67794802394407e+17,positive,Delta,jetblue cinziannap thank like quick response twitter,"[0.0, 0.0]",2015-02-17 13:16:44 -0800,"Boston, MA",Eastern Time (US & Canada),positive,4
+5.67783456420012e+17,positive,Delta,jetblue haha youre everything right dont change thing slash twitter engagement make even cooler bestairline,"[0.0, 0.0]",2015-02-17 12:31:39 -0800,"Boston, MA",Eastern Time (US & Canada),positive,5
+5.67781694183186e+17,positive,Delta,jetblue thank sent msg,"[0.0, 0.0]",2015-02-17 12:24:39 -0800,"New York, NY",Eastern Time (US & Canada),positive,1
+5.67778149132665e+17,positive,Delta,jetblue great smooth flight,"[0.0, 0.0]",2015-02-17 12:10:34 -0800,"Olean, NY",Eastern Time (US & Canada),positive,1
+5.67776348828361e+17,positive,Delta,jetblue would love fly best friend home pvd weekend httptcochnmjymgh,"[0.0, 0.0]",2015-02-17 12:03:24 -0800,✈️✈️,Eastern Time (US & Canada),positive,2
+5.67773326631821e+17,positive,Delta,jetblue thank service credit pamgrout positive thought,"[0.0, 0.0]",2015-02-17 11:51:24 -0800,"austin, texas",Paris,positive,3
+5.67772770604298e+17,positive,Delta,jetblue great thanks,"[0.0, 0.0]",2015-02-17 11:49:11 -0800,New York City,Quito,positive,1
+5.67769879759962e+17,positive,Delta,jetblue love fly great service,"[0.0, 0.0]",2015-02-17 11:37:42 -0800,"Portland, OR",Pacific Time (US & Canada),positive,1
+5.67768330624373e+17,positive,Delta,jetblue thank livery culture crewmembers embody daily thanksdave httptcoinnpkkyby,"[0.0, 0.0]",2015-02-17 11:31:33 -0800,"Boston, MA",Eastern Time (US & Canada),positive,4
+5.67766269810582e+17,positive,Delta,jetblue learn awesome twitter management today social medium marketing class keep good work sxu phd mama,"[0.0, 0.0]",2015-02-17 11:23:21 -0800,"Boston, MA",Eastern Time (US & Canada),positive,4
+5.67761644802294e+17,positive,Delta,jetblue bluemanity brought tear eye jetblue commitment give back crewmembers community aww inspire,"[0.0, 0.0]",2015-02-17 11:04:59 -0800,"New York, NY",Central Time (US & Canada),positive,3
+5.67758927111402e+17,positive,Delta,jetblue jayvig like inflight snack im fly guy jvmchat,"[0.0, 0.0]",2015-02-17 10:54:11 -0800,New York City,Eastern Time (US & Canada),positive,1
+5.67758065320362e+17,positive,Delta,jetblue jayvig yes great realtime example thanks awesome jetblue jvmchat,"[0.0, 0.0]",2015-02-17 10:50:45 -0800,"Charlotte, NC",Eastern Time (US & Canada),positive,1
+5.67758007912907e+17,positive,Delta,jetblue roxydigital haha didnt disappoint well do jvmchat,"[0.0, 0.0]",2015-02-17 10:50:32 -0800,"Jersey City, NJ",Eastern Time (US & Canada),positive,3
+5.67756085583303e+17,positive,Delta,jetblue little month ago jetblue guy great thanks everything,"[0.0, 0.0]",2015-02-17 10:42:53 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.67750136223519e+17,positive,Delta,jetblue thank,"[0.0, 0.0]",2015-02-17 10:19:15 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.67743028215837e+17,positive,Delta,jetblue huge fan great brand people great thing guy rock happy share love,"[0.0, 0.0]",2015-02-17 09:51:00 -0800,"Phoenix, Az",Arizona,positive,1
+5.67740211384168e+17,positive,Delta,jetblue tough choice simultaneously business traveler best experience long time wishmyflightwaslonger,"[0.0, 0.0]",2015-02-17 09:39:49 -0800,ELL LAY,Pacific Time (US & Canada),positive,2
+5.67740053967737e+17,positive,Delta,jetblue thanks great service already lovejetblue,"[0.0, 0.0]",2015-02-17 09:39:11 -0800,New Hampshire,Eastern Time (US & Canada),positive,1
+5.67739036425806e+17,positive,Delta,jetblue didflyfi work well free aboard flight,"[0.0, 0.0]",2015-02-17 09:35:09 -0800,"Queens, NY",Eastern Time (US & Canada),positive,0
+5.6773281177208e+17,positive,Delta,jetblue well lucky fly jbi guess would even squish airline,"[0.0, 0.0]",2015-02-17 09:10:24 -0800,NYC | NOLA  ,Eastern Time (US & Canada),positive,2
+5.67731944151323e+17,positive,Delta,jetblue phone agent pls peggy pleasant informative deliver,"[40.78521842, -74.07232899]",2015-02-17 09:06:58 -0800,"Old Greenwich, CT",Eastern Time (US & Canada),positive,4
+5.67730696656273e+17,positive,Delta,jetblue ellahenderson omg wish flight today haha there always next time fun lft,"[0.0, 0.0]",2015-02-17 09:02:00 -0800,NY,Eastern Time (US & Canada),positive,5
+5.67727526777074e+17,positive,Delta,jetblue thank miss much link blog change,"[0.0, 0.0]",2015-02-17 08:49:24 -0800,"Boston, MA",Eastern Time (US & Canada),positive,1
+5.67727329783583e+17,positive,Delta,jetblue thank,"[0.0, 0.0]",2015-02-17 08:48:37 -0800,New York,Eastern Time (US & Canada),positive,1
+5.67680108002292e+17,positive,Delta,jetblue worry delay minor dealt nicely captain flight way,"[0.0, 0.0]",2015-02-17 05:40:59 -0800,"Boston, MA",Eastern Time (US & Canada),positive,3
+5.67671602280923e+17,positive,Delta,jetblue thanks flight leaf shes arrive airport early wedding vt sept grateful fly btv,"[32.07301184, -81.09362691]",2015-02-17 05:07:11 -0800,"Savannah, GA",Eastern Time (US & Canada),positive,0

@@ -1,3 +1,6 @@
+# MEJORAS: en preprocessor no filtrar por aerolinea y sentimiento antes de generar los topicos, para que haya solo un lda_model (porque solo tiene en cuenta los NLcolumns, independientemente de la aerolinea y sentimiento), y más instancias para clustering y sea más preciso
+#          en su lugar, filtrar después de haber hecho lda_model.get_document_topics en probarModelo.py
+
 # Precision: TP/(TP+FP)
            # De todas las instancias que ha predecido como positive, realmente cuantas son 
 # Recall: TP/(TP+FN)
@@ -449,6 +452,7 @@ def predecirRazones(pml_dataset):   #Clustering con LDA
     diccionario= corpora.Dictionary(texts)
     corpus = [diccionario.doc2bow(text) for text in texts]
     modelos = []
+    coherencias = []
     #array_coherencias = []
     for num_topics in range(1,21,1):
           #Un tópico (o tema) es un cjto de palabras que tienden a aparecer juntas
@@ -465,37 +469,70 @@ def predecirRazones(pml_dataset):   #Clustering con LDA
         coherence_lda = coherence_model_lda.get_coherence()
         #array_coherencias.append(coherence_lda)
         modelos.append([lda_model, coherence_lda])
-    mejorModelo = None
-    mejorCoherencia = 0
-    for modelo in modelos:
-        lda_model = modelo[0]
-        coherencia = modelo[1]
-        # TODO calcular el mejor modelo con las coherencias
-        if(mejorCoherencia < coherencia):
-            mejorCoherencia = coherencia
-            mejorModelo = lda_model
-    lda_model = mejorModelo
+        coherencias.append(coherence_lda)
+    def modeloMayorCoherencia(pModelos):
+        mejorModelo = None
+        mejorCoherencia = 0
+        for modelo in pModelos:
+            lda_model = modelo[0]
+            coherencia = modelo[1]
+            # TODO calcular el mejor modelo con las coherencias
+            if(mejorCoherencia < coherencia):
+                mejorCoherencia = coherencia
+                mejorModelo = lda_model
+        return mejorModelo
+    def modeloCodo(pModelos, pCoherencias):
+        mejorModelo = None
+        deltas = np.diff(pCoherencias)
+        best_model_index = np.argmax(deltas)
+        best_model_coherence = pCoherencias[best_model_index + 1]
+        for modelo in pModelos:
+            lda_model = modelo[0]
+            coherencia = modelo[1]
+            if coherencia == best_model_coherence:
+                mejorModelo = lda_model
+        return mejorModelo
+    #lda_model = modeloMayorCoherencia(modelos)
+    #lda_model = modeloCodo(modelos, coherencias)
+    def imprimirGrafica(pAirline, pSentiment, pCoherencias):
+        plt.rcParams["figure.figsize"] = [20, 1]
+        plt.rcParams["figure.autolayout"] = True
+        y = np.array(pCoherencias)
+        x = np.sort(range(1,21,1))
+        plt.title(f"{pAirline}_{pSentiment}", size=12)
+        plt.xlabel("num_topics", size=12)
+        plt.ylabel("coherence", size=12)
+        plt.title("Line graph")
+        plt.plot(x, y, color="red")
+        plt.show()
+        sys.exit(0)
+    #imprimirGrafica(airline,sentiment,coherencias)
+    # Hardcodeado después de ver cada grafica y elegir manualmente el mejor num_topics
+    if airline == "Delta" and sentiment == "negative":
+        # 7 topicos
+        lda_model = modelos[6][0]
+    elif airline == "Delta" and sentiment == "positive":
+        # 6 topicos
+        lda_model = modelos[5][0]
+    elif airline == "Southwest" and sentiment == "positive":
+        # 6 topicos
+        lda_model = modelos[5][0]
+    elif airline == "Southwest" and sentiment == "negative":
+        # 5 topicos
+        lda_model = modelos[4][0]
     # Imprimir todos los topicos que tiene el modelo después de entrenarse con las 15 palabras más representativas
-    topics_dict = {}
-    for idx, topic in lda_model.print_topics(num_topics=num_topics, num_words=15):
-        topics_dict[idx] = {}
-        for prob_word in topic.split(" + "):
-            prob = prob_word.split("*")[0]
-            word = prob_word.split("*")[1].strip("\"")
-            topics_dict[idx][word] = prob
-    with open(airline+"_"+sentiment+"_topics_probs.json", "w") as outfile:
-        json.dump(topics_dict, outfile)
+    def exportarTopicWordProbs(pLda_model, pNum_topics, pNum_words):
+        topics_dict = {}
+        for idx, topic in pLda_model.print_topics(num_topics=pNum_topics, num_words=pNum_words):
+            topics_dict[idx] = {}
+            for prob_word in topic.split(" + "):
+                prob = prob_word.split("*")[0]
+                word = prob_word.split("*")[1].strip("\"")
+                topics_dict[idx][word] = prob
+        df = pd.DataFrame.from_dict(topics_dict, orient='index', dtype=float).fillna(0)
+        df.to_csv(airline+"_"+sentiment+"_topics_probs.csv", index=True)
+    exportarTopicWordProbs(lda_model, num_topics, 15)
         #print('Tópico: {} \nPalabras clave: {}\n'.format(idx, topic))
-    """plt.rcParams["figure.figsize"] = [20, 1]
-    plt.rcParams["figure.autolayout"] = True
-    y = np.array(array_coherencias)
-    x = np.sort(range(1,21,1))
-    plt.xlabel("num_topics", size=12)
-    plt.ylabel("coherence", size=12)
-    plt.title("Line graph")
-    plt.plot(x, y, color="red")
-    plt.show()
-    sys.exit(0)"""
     predicciones = []
     for doc in corpus:
         topic_probs = lda_model.get_document_topics(doc)
