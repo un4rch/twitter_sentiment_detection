@@ -439,10 +439,7 @@ def crearModelo(pml_dataset, palgorithm, ptarget_map):
             ml_model = modelo
             fScoreBest = modelo[1]
     return ml_model
-# TODO elegir el pico de coherencia mejor -> Esto lo razonamos viendo el gráfico ya que nos aparece uno muy bueni
-# TODO fusionar clasificacion y clustering en crearModelo
-# TODO predecir tanto clasificacion como clustering (de los negativos) en probarModelo
-# TODO modificar preprocesado para tweet_cord de Ruben
+
 def predecirRazones(pml_dataset):   #Clustering con LDA
     # Coger solo las columnas con texto (lenguaje natural)
     pml_dataset = pml_dataset[NLcolumns]
